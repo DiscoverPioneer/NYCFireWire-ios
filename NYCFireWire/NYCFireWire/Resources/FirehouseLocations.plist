@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>E-1/L-24</string>
+		<key>Coordinates</key>
+		<string>40.748628, -73.991062</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-3/TL-12/Bn-7</string>
+		<key>Coordinates</key>
+		<string>40.741230, -73.996881</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-4/TL-15</string>
+		<key>Coordinates</key>
+		<string>40.701952, -74.012032</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-5</string>
+		<key>Coordinates</key>
+		<string>40.731618, -73.983444</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-6</string>
+		<key>Coordinates</key>
+		<string>40.709968, -74.005419</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-7/TL-1/Bn-1</string>
+		<key>Coordinates</key>
+		<string>40.715451, -74.006174</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-8/L-2/Bn-8</string>
+		<key>Coordinates</key>
+		<string>40.756844, -73.970879</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 8</string>
+		<key>Coordinates</key>
+		<string>40.598033, -74.180013</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-9/L-6</string>
+		<key>Coordinates</key>
+		<string>40.715383, -73.992852</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-10/L-10</string>
+		<key>Coordinates</key>
+		<string>40.709935, -74.012556</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-14</string>
+		<key>Coordinates</key>
+		<string>40.738000, -73.991003</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-15/TL-18/Bn-4</string>
+		<key>Coordinates</key>
+		<string>40.716751, -73.983753</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-16/TL-7</string>
+		<key>Coordinates</key>
+		<string>40.741825, -73.978809</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 18</string>
+		<key>Coordinates</key>
+		<string>40.734487, -74.000320</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-21</string>
+		<key>Coordinates</key>
+		<string>40.748813, -73.973983</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-22/TL-13/Bn-10</string>
+		<key>Coordinates</key>
+		<string>40.778748, -73.955248</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-23</string>
+		<key>Coordinates</key>
+		<string>40.766775, -73.980376</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-24/L-5/Bn-2</string>
+		<key>Coordinates</key>
+		<string>40.728050, -74.003412</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-26</string>
+		<key>Coordinates</key>
+		<string>40.753157, -73.990344</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-28/L-11</string>
+		<key>Coordinates</key>
+		<string>40.721872, -73.982555</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-33/TL-9</string>
+		<key>Coordinates</key>
+		<string>40.726982, -73.992513</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-34/TL-21</string>
+		<key>Coordinates</key>
+		<string>40.756603, -73.996480</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-35/TL-14/Bn-12</string>
+		<key>Coordinates</key>
+		<string>40.803333, -73.936516</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-37/L-40</string>
+		<key>Coordinates</key>
+		<string>40.811929, -73.954802</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-38/TL-51</string>
+		<key>Coordinates</key>
+		<string>40.878018, -73.846524</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-39/L-16</string>
+		<key>Coordinates</key>
+		<string>40.767019, -73.963609</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-40/TL-35</string>
+		<key>Coordinates</key>
+		<string>40.774628, -73.984351</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 41</string>
+		<key>Coordinates</key>
+		<string>40.817386, -73.920130</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-42</string>
+		<key>Coordinates</key>
+		<string>40.846366, -73.906775</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-43/L-59</string>
+		<key>Coordinates</key>
+		<string>40.854631, -73.917142</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-44</string>
+		<key>Coordinates</key>
+		<string>40.771430, -73.958190</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-45/TL-58/Bn-18</string>
+		<key>Coordinates</key>
+		<string>40.841909, -73.883336</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-46/L-27</string>
+		<key>Coordinates</key>
+		<string>40.843955, -73.900246</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-47</string>
+		<key>Coordinates</key>
+		<string>40.804948, -73.962914</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-48/L-56/Div-7</string>
+		<key>Coordinates</key>
+		<string>40.859244, -73.893894</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-50/L-19/Bn-26</string>
+		<key>Coordinates</key>
+		<string>40.829738, -73.907979</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-52/L-52</string>
+		<key>Coordinates</key>
+		<string>40.892247, -73.907692</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-53/L-43</string>
+		<key>Coordinates</key>
+		<string>40.789014, -73.946961</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-54/L-4/Bn-9</string>
+		<key>Coordinates</key>
+		<string>40.760817, -73.986906</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-55</string>
+		<key>Coordinates</key>
+		<string>40.719941, -73.995743</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-58/L-26</string>
+		<key>Coordinates</key>
+		<string>40.798941, -73.947366</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-59/L-30</string>
+		<key>Coordinates</key>
+		<string>40.813342, -73.942455</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-60/TL-17/Bn-14</string>
+		<key>Coordinates</key>
+		<string>40.813155, -73.922136</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 61/Bn-20</string>
+		<key>Coordinates</key>
+		<string>40.845086, -73.846433</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-62/L-32</string>
+		<key>Coordinates</key>
+		<string>40.876341, -73.867400</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-63/L-39/Bn-15</string>
+		<key>Coordinates</key>
+		<string>40.893026, -73.855278</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-64/L-47</string>
+		<key>Coordinates</key>
+		<string>40.832439, -73.850954</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-65</string>
+		<key>Coordinates</key>
+		<string>40.755101, -73.981977</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-66/L-61</string>
+		<key>Coordinates</key>
+		<string>40.869756, -73.831114</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-67</string>
+		<key>Coordinates</key>
+		<string>40.841420, -73.937134</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-68/L-49</string>
+		<key>Coordinates</key>
+		<string>40.836679, -73.926886</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-69/L-28/Bn-16</string>
+		<key>Coordinates</key>
+		<string>40.820966, -73.941784</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-70/TL-53</string>
+		<key>Coordinates</key>
+		<string>40.845573, -73.784665</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-71/L-55/Div.6</string>
+		<key>Coordinates</key>
+		<string>40.820289, -73.915684</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-72/Sat.2</string>
+		<key>Coordinates</key>
+		<string>40.821364, -73.818249</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-73/L-42</string>
+		<key>Coordinates</key>
+		<string>40.815227, -73.903620</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-74</string>
+		<key>Coordinates</key>
+		<string>40.784734, -73.974545</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-75/TL-33/Bn-19</string>
+		<key>Coordinates</key>
+		<string>40.856184, -73.904380</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-76/TL-22/Bn-11</string>
+		<key>Coordinates</key>
+		<string>40.796361, -73.967102</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-79/L-37/Bn-27</string>
+		<key>Coordinates</key>
+		<string>40.870389, -73.886660</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-80/TL-23</string>
+		<key>Coordinates</key>
+		<string>40.821888, -73.950801</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-81/TL-46</string>
+		<key>Coordinates</key>
+		<string>40.876940, -73.903636</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-82/TL-31</string>
+		<key>Coordinates</key>
+		<string>40.828537, -73.895211</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-83/L-29</string>
+		<key>Coordinates</key>
+		<string>40.805838, -73.915802</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-84/L-34</string>
+		<key>Coordinates</key>
+		<string>40.835944, -73.940989</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-88/L-38</string>
+		<key>Coordinates</key>
+		<string>40.852142, -73.887796</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-89/TL-50</string>
+		<key>Coordinates</key>
+		<string>40.833300, -73.827046</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-90/TL-41</string>
+		<key>Coordinates</key>
+		<string>40.846349, -73.866694</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-91</string>
+		<key>Coordinates</key>
+		<string>40.793892, -73.940710</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-92/TL-44/Bn-17</string>
+		<key>Coordinates</key>
+		<string>40.834713, -73.913625</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-93/TL-45/Bn-13</string>
+		<key>Coordinates</key>
+		<string>40.848680, -73.931701</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-94/L-48/Bn-3</string>
+		<key>Coordinates</key>
+		<string>40.818673, -73.887742</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-95/L-36</string>
+		<key>Coordinates</key>
+		<string>40.864841, -73.925136</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-96/TL-54</string>
+		<key>Coordinates</key>
+		<string>40.822996, -73.869310</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-97</string>
+		<key>Coordinates</key>
+		<string>40.859386, -73.844179</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-151/TL-76</string>
+		<key>Coordinates</key>
+		<string>40.512787, -74.238972</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-152/Bn-21</string>
+		<key>Coordinates</key>
+		<string>40.611663, -74.070413</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-153/TL-77</string>
+		<key>Coordinates</key>
+		<string>40.625098, -74.077613</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-155/L-78</string>
+		<key>Coordinates</key>
+		<string>40.637644, -74.087725</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-156</string>
+		<key>Coordinates</key>
+		<string>40.630996, -74.116760</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-157/L-80</string>
+		<key>Coordinates</key>
+		<string>40.636229, -74.135417</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-158</string>
+		<key>Coordinates</key>
+		<string>40.635292, -74.160066</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-159/Sat.5</string>
+		<key>Coordinates</key>
+		<string>40.590764, -74.100577</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-160/Rescue 5/Div-8</string>
+		<key>Coordinates</key>
+		<string>40.607389, -74.089156</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-161/L-81</string>
+		<key>Coordinates</key>
+		<string>40.596713, -74.069877</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-162/L-82</string>
+		<key>Coordinates</key>
+		<string>40.543129, -74.147386</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-163/L-83</string>
+		<key>Coordinates</key>
+		<string>40.615282, -74.130857</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-164/L-84</string>
+		<key>Coordinates</key>
+		<string>40.535337, -74.195997</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-165/TL-85</string>
+		<key>Coordinates</key>
+		<string>40.576164, -74.123795</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-166/TL-86</string>
+		<key>Coordinates</key>
+		<string>40.614282, -74.158076</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-167/TL-87</string>
+		<key>Coordinates</key>
+		<string>40.554224, -74.175601</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-168</string>
+		<key>Coordinates</key>
+		<string>40.553840, -74.213298</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-201/TL-114/Bn-40</string>
+		<key>Coordinates</key>
+		<string>40.645442, -74.013227</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-202/L-101/Bn-32</string>
+		<key>Coordinates</key>
+		<string>40.680385, -74.006339</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-205/L-118</string>
+		<key>Coordinates</key>
+		<string>40.700011, -73.992284</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-206</string>
+		<key>Coordinates</key>
+		<string>40.715322, -73.928225</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-207/L-110/Bn-31/Div-11/Brooklyn Boro</string>
+		<key>Coordinates</key>
+		<string>40.695669, -73.982814</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-210</string>
+		<key>Coordinates</key>
+		<string>40.693104, -73.973096</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-211/TL-119</string>
+		<key>Coordinates</key>
+		<string>40.701374, -73.962201</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-214/TL-111</string>
+		<key>Coordinates</key>
+		<string>40.684361, -73.935746</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-216/L-108/Bn-35</string>
+		<key>Coordinates</key>
+		<string>40.706053, -73.950485</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-217</string>
+		<key>Coordinates</key>
+		<string>40.692734, -73.937986</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-218</string>
+		<key>Coordinates</key>
+		<string>40.698320, -73.926573</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-219/TL-105</string>
+		<key>Coordinates</key>
+		<string>40.681276, -73.973814</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-220/L-122</string>
+		<key>Coordinates</key>
+		<string>40.665018, -73.981427</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-221/L-104</string>
+		<key>Coordinates</key>
+		<string>40.7129836,-73.9612985</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-222/Bn-37</string>
+		<key>Coordinates</key>
+		<string>40.689446, -73.924164</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-224</string>
+		<key>Coordinates</key>
+		<string>40.693124, -73.997126</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-225/TL-107/Bn-39</string>
+		<key>Coordinates</key>
+		<string>40.669484, -73.865326</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-226</string>
+		<key>Coordinates</key>
+		<string>40.687085, -73.982746</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-227</string>
+		<key>Coordinates</key>
+		<string>40.674830, -73.921852</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-228</string>
+		<key>Coordinates</key>
+		<string>40.651858, -74.005253</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-229/TL-146</string>
+		<key>Coordinates</key>
+		<string>40.718568, -73.949048</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-230</string>
+		<key>Coordinates</key>
+		<string>40.698013, -73.947537</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-231/TL-120/Bn-44</string>
+		<key>Coordinates</key>
+		<string>40.670600, -73.907895</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-233/L-176/Field Com</string>
+		<key>Coordinates</key>
+		<string>40.682697, -73.911481</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-234/L-123/Bn-38</string>
+		<key>Coordinates</key>
+		<string>40.670532, -73.933476</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-235/Bn-57</string>
+		<key>Coordinates</key>
+		<string>40.685231, -73.951116</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-236</string>
+		<key>Coordinates</key>
+		<string>40.677800, -73.872800</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-237</string>
+		<key>Coordinates</key>
+		<string>40.705333, -73.931843</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-238/L-106</string>
+		<key>Coordinates</key>
+		<string>40.730778, -73.951186</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-239</string>
+		<key>Coordinates</key>
+		<string>40.671753, -73.987109</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-240/Bn-48</string>
+		<key>Coordinates</key>
+		<string>40.651449, -73.975598</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-241/L-109</string>
+		<key>Coordinates</key>
+		<string>40.638118, -74.025072</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-242</string>
+		<key>Coordinates</key>
+		<string>40.617383, -74.029392</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-243/L-168/Bn-42</string>
+		<key>Coordinates</key>
+		<string>40.606095, -74.003534</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-245/L-161/Bn-43</string>
+		<key>Coordinates</key>
+		<string>40.576818, -73.976249</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-246/L-169</string>
+		<key>Coordinates</key>
+		<string>40.584289, -73.959288</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-247/Bn-40</string>
+		<key>Coordinates</key>
+		<string>40.628145, -73.997670</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-248/Bn-41</string>
+		<key>Coordinates</key>
+		<string>40.648773, -73.950003</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-249/L-113</string>
+		<key>Coordinates</key>
+		<string>40.660291, -73.953316</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-250</string>
+		<key>Coordinates</key>
+		<string>40.627761, -73.975549</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-251</string>
+		<key>Coordinates</key>
+		<string>40.744544, -73.716121</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 252</string>
+		<key>Coordinates</key>
+		<string>40.688590, -73.908133</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-253</string>
+		<key>Coordinates</key>
+		<string>40.599027, -73.988448</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-254/TL-153</string>
+		<key>Coordinates</key>
+		<string>40.598406, -73.961958</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-255/TL-157</string>
+		<key>Coordinates</key>
+		<string>40.636451, -73.950620</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-258/TL-115</string>
+		<key>Coordinates</key>
+		<string>40.745311, -73.951683</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-259/L-128/Bn-45</string>
+		<key>Coordinates</key>
+		<string>40.736324, -73.933160</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-260</string>
+		<key>Coordinates</key>
+		<string>40.75864, -73.940072</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-262</string>
+		<key>Coordinates</key>
+		<string>40.767560, -73.929235</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-263/TL-117</string>
+		<key>Coordinates</key>
+		<string>40.768339, -73.908697</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-264/L-134/E-328</string>
+		<key>Coordinates</key>
+		<string>40.604882, -73.752157</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-265/TL-121/Bn-47</string>
+		<key>Coordinates</key>
+		<string>40.593646, -73.779203</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-266</string>
+		<key>Coordinates</key>
+		<string>40.586315, -73.816268</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-268/L-137</string>
+		<key>Coordinates</key>
+		<string>40.580897, -73.838093</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 270/Div-13</string>
+		<key>Coordinates</key>
+		<string>40.695272, -73.826020</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-271/TL-124/Bn-28</string>
+		<key>Coordinates</key>
+		<string>40.703712, -73.916012</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-273/L-129</string>
+		<key>Coordinates</key>
+		<string>40.759940, -73.826405</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-274/Bn-52</string>
+		<key>Coordinates</key>
+		<string>40.762581, -73.812685</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-275/L-133</string>
+		<key>Coordinates</key>
+		<string>40.693463, -73.781083</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-276/L-156/Bn-33</string>
+		<key>Coordinates</key>
+		<string>40.609527, -73.959104</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-277/L-112</string>
+		<key>Coordinates</key>
+		<string>40.696502, -73.914441</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-279/TL-131</string>
+		<key>Coordinates</key>
+		<string>40.672190, -73.999564</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-280/L-132</string>
+		<key>Coordinates</key>
+		<string>40.673504, -73.961718</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-281/L-147</string>
+		<key>Coordinates</key>
+		<string>40.640126, -73.966610</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-282/L-148</string>
+		<key>Coordinates</key>
+		<string>40.640183, -73.990688</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-283/Div-15</string>
+		<key>Coordinates</key>
+		<string>40.660930, -73.917935</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-284/L-149</string>
+		<key>Coordinates</key>
+		<string>40.619926,-74.012524</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-285/TL-142</string>
+		<key>Coordinates</key>
+		<string>40.682587, -73.841980</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-286/TL-135</string>
+		<key>Coordinates</key>
+		<string>40.701316, -73.886736</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-287/L-136/Bn-46</string>
+		<key>Coordinates</key>
+		<string>40.736447, -73.878851</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 288/HazMat 1</string>
+		<key>Coordinates</key>
+		<string>40.726071, -73.896371</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-289/TL-138</string>
+		<key>Coordinates</key>
+		<string>40.746507, -73.865352</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-290/L-103</string>
+		<key>Coordinates</key>
+		<string>40.665168, -73.895422</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-291/L-140</string>
+		<key>Coordinates</key>
+		<string>40.713060, -73.906618</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-292/Rescue 4</string>
+		<key>Coordinates</key>
+		<string>40.740789, -73.900972</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-293</string>
+		<key>Coordinates</key>
+		<string>40.688601, -73.855889</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-294/L-143</string>
+		<key>Coordinates</key>
+		<string>40.694863, -73.846210</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-295/TL-144</string>
+		<key>Coordinates</key>
+		<string>40.788972, -73.816099</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-297/L-130</string>
+		<key>Coordinates</key>
+		<string>40.785031, -73.848046</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-298/TL-127/Bn-50</string>
+		<key>Coordinates</key>
+		<string>40.707535, -73.804126</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-299/TL-152</string>
+		<key>Coordinates</key>
+		<string>40.738163, -73.793330</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-301/L-150</string>
+		<key>Coordinates</key>
+		<string>40.714555, -73.762911</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-302/TL-155</string>
+		<key>Coordinates</key>
+		<string>40.673998, -73.795005</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-303/L-126</string>
+		<key>Coordinates</key>
+		<string>40.693554, -73.806896</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-304/TL-162</string>
+		<key>Coordinates</key>
+		<string>40.716849, -73.735974</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-305/L-151</string>
+		<key>Coordinates</key>
+		<string>40.718287, -73.837759</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-306</string>
+		<key>Coordinates</key>
+		<string>40.763951, -73.769582</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-307/L-154</string>
+		<key>Coordinates</key>
+		<string>40.755823, -73.885600</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-308/Bn-51</string>
+		<key>Coordinates</key>
+		<string>40.683936, -73.823357</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-309/TL-159</string>
+		<key>Coordinates</key>
+		<string>40.615276, -73.928154</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-310/L-174</string>
+		<key>Coordinates</key>
+		<string>40.650466, -73.928902</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-311/TL-158</string>
+		<key>Coordinates</key>
+		<string>40.663570, -73.759811</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-312/Bn-49</string>
+		<key>Coordinates</key>
+		<string>40.773443, -73.910364</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-313/L-164</string>
+		<key>Coordinates</key>
+		<string>40.766815, -73.742278</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-314</string>
+		<key>Coordinates</key>
+		<string>40.664073, -73.740686</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-315/L-125</string>
+		<key>Coordinates</key>
+		<string>40.720146, -73.807740</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-316</string>
+		<key>Coordinates</key>
+		<string>40.762369, -73.869093</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-317/L-165/Bn-54</string>
+		<key>Coordinates</key>
+		<string>40.693086, -73.755714</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-318/L-166</string>
+		<key>Coordinates</key>
+		<string>40.577914, -73.993004</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-319</string>
+		<key>Coordinates</key>
+		<string>40.712600, -73.874924</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-320/L-167</string>
+		<key>Coordinates</key>
+		<string>40.763330, -73.787016</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-321</string>
+		<key>Coordinates</key>
+		<string>40.602236, -73.935299</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-323</string>
+		<key>Coordinates</key>
+		<string>40.620071, -73.915755</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-324/Sat.4/Div-14</string>
+		<key>Coordinates</key>
+		<string>40.737987, -73.851938</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-325/TL-163</string>
+		<key>Coordinates</key>
+		<string>40.745276, -73.93689</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-326/TL-160/Bn-53</string>
+		<key>Coordinates</key>
+		<string>40.747067, -73.756020</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-329</string>
+		<key>Coordinates</key>
+		<string>40.566005, -73.881623</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-331/L-173</string>
+		<key>Coordinates</key>
+		<string>40.659247, -73.839564</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-332/L-175</string>
+		<key>Coordinates</key>
+		<string>40.675462, -73.892640</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-330/TL-172</string>
+		<key>Coordinates</key>
+		<string>40.612158, -73.979128</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Squad 1</string>
+		<key>Coordinates</key>
+		<string>40.674722, -73.976589</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TL-79/Bn-22</string>
+		<key>Coordinates</key>
+		<string>40.634384, -74.122020</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>L-25/Div-3</string>
+		<key>Coordinates</key>
+		<string>40.782318, -73.979814</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>L-20/Div-1</string>
+		<key>Coordinates</key>
+		<string>40.723072, -73.996532</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>L-8</string>
+		<key>Coordinates</key>
+		<string>40.719598, -74.006611</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>L-102</string>
+		<key>Coordinates</key>
+		<string>40.695585, -73.956665</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>L-116</string>
+		<key>Coordinates</key>
+		<string>40.755467, -73.933297</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>L-3/Bn-6</string>
+		<key>Coordinates</key>
+		<string>40.733178, -73.989422</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Marine 1</string>
+		<key>Coordinates</key>
+		<string>40.740735,-74.012015</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Marine 3</string>
+		<key>Coordinates</key>
+		<string>40.587010, -73.898415</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Marine 4</string>
+		<key>Coordinates</key>
+		<string>40.792847, -73.780442</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Marine 6</string>
+		<key>Coordinates</key>
+		<string>40.705412, -73.972853</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Marine 8</string>
+		<key>Coordinates</key>
+		<string>40.537069, -74.132539</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>FDNY HQ</string>
+		<key>Coordinates</key>
+		<string>40.694384, -73.984302</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-257/TL-170/Bn-58</string>
+		<key>Coordinates</key>
+		<string>40.646609, -73.903603</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Rescue 1</string>
+		<key>Coordinates</key>
+		<string>40.760783, -73.996570</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Rescue 2</string>
+		<key>Coordinates</key>
+		<string>40.671009, -73.918726</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Rescue 3</string>
+		<key>Coordinates</key>
+		<string>40.841229, -73.901491</string>
+	</dict>
+</array>
+</plist>

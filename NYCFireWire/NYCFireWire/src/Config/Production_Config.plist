@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>apiBaseURI</key>
+    <string>https://nycfirewire.herokuapp.com/api/v1</string>
+    <key>webBaseURI</key>
+    <string>https://nycfirewire.herokuapp.com</string>
+    <key>onesignalAppID</key>
+    <string>8721de76-7494-4ec0-a4c1-a85f0c995cf5</string>
+    <key>liveStreamURI</key>
+    <string>http://108.6.32.103:4035/NYC+Fire.m3u</string>
+    <key>hideAdditionalAds</key>
+    <false/>
+    <key>availableScannerFeeds</key>
+    <array>
+        <dict>
+            <key>name</key>
+            <string>Citywide</string>
+            <key>url</key>
+            <string>http://108.6.32.103:4035/NYC+Fire.m3u</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Tactical 1</string>
+            <key>url</key>
+            <string>http://108.6.32.103:4035/NYC+Fire.m3u</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Manhattan</string>
+            <key>url</key>
+            <string>http://108.6.32.103:5449/NYC+Fire.m3u</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Queens</string>
+            <key>url</key>
+            <string>http://108.6.32.103:3591/NYC+Fire.m3u</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Other Boros (Coming soon)</string>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>E-27</string>
+		<key>Coordinates</key>
+		<string>40.71966, -74.009319</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-29</string>
+		<key>Coordinates</key>
+		<string>40.715786, -74.010378</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-31</string>
+		<key>Coordinates</key>
+		<string>40.717311, -74.001250</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-203</string>
+		<key>Coordinates</key>
+		<string>40.684852, -74.000622</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-204</string>
+		<key>Coordinates</key>
+		<string>40.6836876,-73.996633</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-208</string>
+		<key>Coordinates</key>
+		<string>40.702487, -73.984274</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-212</string>
+		<key>Coordinates</key>
+		<string>40.720414, -73.959722</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-278</string>
+		<key>Coordinates</key>
+		<string>40.642105, -74.006039</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>E-256</string>
+		<key>Coordinates</key>
+		<string>40.689581, -73.977356</string>
+	</dict>
+</array>
+</plist>

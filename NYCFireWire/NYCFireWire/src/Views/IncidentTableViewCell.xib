@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncidentCell" rowHeight="133" id="KGk-i7-Jjw" customClass="IncidentTableViewCell" customModule="NYCFireWire___Local" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="132.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brooklyn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5i-ih-V6P">
+                        <rect key="frame" x="4" y="0.0" width="65" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1od-lN-KbZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7th Ave &amp; 39th St." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wro-Oh-a7Q">
+                        <rect key="frame" x="4" y="113.5" width="105" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="CAc-tR-phJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                        <color key="textColor" red="0.32156862749999998" green="0.62745098040000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*10-60/Major Technical Response*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-tz-eFI">
+                        <rect key="frame" x="0.0" y="27" width="320" height="19"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOF-Jn-52N">
+                        <rect key="frame" x="0.0" y="54" width="320" height="47"/>
+                        <string key="text">BN-40 transmitting the 10-60, exterior wall 
+collapse in a  below grade excavation. 
+1 person confirmed buried</string>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box 1471" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4G-gN-rit">
+                        <rect key="frame" x="249" y="0.0" width="67" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Mf8-A4-Ljj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52 mins ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUA-AB-MHi">
+                        <rect key="frame" x="247" y="113.5" width="69" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="W57-fE-zju"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                        <color key="textColor" red="0.32156862749999998" green="0.62745098040000002" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58d-zv-ezr">
+                        <rect key="frame" x="0.0" y="129.5" width="320" height="3"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="5dg-bx-ORE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.16470588235294117" green="0.16862745098039217" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="Tc4-tz-eFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6ag-F6-Ofb"/>
+                    <constraint firstItem="Tc4-tz-eFI" firstAttribute="top" secondItem="C5i-ih-V6P" secondAttribute="bottom" constant="7" id="7BI-J3-0R4"/>
+                    <constraint firstItem="C5i-ih-V6P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="BKO-m4-wUb"/>
+                    <constraint firstAttribute="trailing" secondItem="c4G-gN-rit" secondAttribute="trailing" constant="4" id="DTI-eI-fCT"/>
+                    <constraint firstAttribute="trailing" secondItem="jOF-Jn-52N" secondAttribute="trailing" id="EX2-bk-SZ6"/>
+                    <constraint firstItem="jOF-Jn-52N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fl0-bb-RUm"/>
+                    <constraint firstAttribute="trailing" secondItem="LUA-AB-MHi" secondAttribute="trailing" constant="4" id="IZN-gt-gKG"/>
+                    <constraint firstAttribute="bottom" secondItem="Wro-Oh-a7Q" secondAttribute="bottom" constant="4" id="OD3-ox-GL4"/>
+                    <constraint firstItem="c4G-gN-rit" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OPL-qW-Cor"/>
+                    <constraint firstItem="58d-zv-ezr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Sln-4t-SqP"/>
+                    <constraint firstAttribute="bottom" secondItem="58d-zv-ezr" secondAttribute="bottom" id="Sy0-c9-nJz"/>
+                    <constraint firstItem="C5i-ih-V6P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UoZ-Lp-ALA"/>
+                    <constraint firstAttribute="trailing" secondItem="Tc4-tz-eFI" secondAttribute="trailing" id="bQ4-GF-z9w"/>
+                    <constraint firstAttribute="trailing" secondItem="58d-zv-ezr" secondAttribute="trailing" id="cCn-iR-lhh"/>
+                    <constraint firstItem="Wro-Oh-a7Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="d2d-mJ-EJn"/>
+                    <constraint firstAttribute="bottom" secondItem="jOF-Jn-52N" secondAttribute="bottom" constant="31.5" id="ecc-kr-S4e"/>
+                    <constraint firstItem="jOF-Jn-52N" firstAttribute="top" secondItem="Tc4-tz-eFI" secondAttribute="bottom" constant="8" id="l5Q-LG-EJo"/>
+                    <constraint firstAttribute="bottom" secondItem="LUA-AB-MHi" secondAttribute="bottom" constant="4" id="onq-22-wSy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.16476759314537048" green="0.16782128810882568" blue="0.2079494297504425" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="Wro-Oh-a7Q" id="Tcc-oO-Z2J"/>
+                <outlet property="boroLabel" destination="C5i-ih-V6P" id="zpW-7u-6LB"/>
+                <outlet property="boxLabel" destination="c4G-gN-rit" id="rmp-5L-ohA"/>
+                <outlet property="subtitleLabel" destination="jOF-Jn-52N" id="A96-qw-ZP3"/>
+                <outlet property="timeLabel" destination="LUA-AB-MHi" id="WGB-9f-90j"/>
+                <outlet property="titleLabel" destination="Tc4-tz-eFI" id="YZz-g3-VT2"/>
+            </connections>
+            <point key="canvasLocation" x="9.5999999999999996" y="13.043478260869566"/>
+        </tableViewCell>
+    </objects>
+</document>
