@@ -29,6 +29,13 @@ extension APIController {
         makeAuthRequest(url: url, data: data, completion: completion)
     }
     
+    func resetPassword(email: String, completion: @escaping () -> Void) {
+        let url = APIConstants.construct(endpoint: .resetPasswordEndpoint)
+        makeNonTokenRequest(type: .post, url: url, parameters: ["email":email]) { (success, error, data) in
+            completion()
+        }
+    }
+    
     func signup(email: String, password: String, firstName: String, lastName: String, phoneNumber: String?, rank: String?, completion: @escaping (_ user: FullUser?, _ errorMessage: String?) -> Void) {
         let url = APIConstants.construct(endpoint: .signupEndpoint)
         var data = [

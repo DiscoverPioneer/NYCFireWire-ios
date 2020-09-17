@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3g-7A-uYW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3g-7A-uYW">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -159,9 +159,20 @@
                                     <action selector="signUpButtonTappedWithSender:" destination="E9s-cG-SAw" eventType="touchUpInside" id="b16-pB-MFE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aax-6k-hRk">
+                                <rect key="frame" x="109" y="288" width="157" height="31"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <state key="normal" title="Forgot your password?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonTapped" destination="E9s-cG-SAw" eventType="touchUpInside" id="Ikj-0R-ITy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Aax-6k-hRk" firstAttribute="centerX" secondItem="HqF-em-BuK" secondAttribute="centerX" id="0Yw-1O-j8x"/>
                             <constraint firstItem="3Hd-TT-hhQ" firstAttribute="leading" secondItem="M5j-C6-5Jc" secondAttribute="leading" id="40Y-49-Mzc"/>
                             <constraint firstItem="HqF-em-BuK" firstAttribute="top" secondItem="m3C-lk-NKR" secondAttribute="bottom" constant="8" id="436-GW-kmO"/>
                             <constraint firstItem="XAg-MU-yAY" firstAttribute="centerX" secondItem="3Hd-TT-hhQ" secondAttribute="centerX" id="7N3-MT-seF"/>
@@ -176,6 +187,7 @@
                             <constraint firstItem="3Hd-TT-hhQ" firstAttribute="bottom" secondItem="7Lo-Mv-vOb" secondAttribute="bottom" id="Th8-e3-bkG"/>
                             <constraint firstItem="TJ6-RY-z07" firstAttribute="leading" secondItem="M5j-C6-5Jc" secondAttribute="leading" constant="8" id="YV4-fk-iF1"/>
                             <constraint firstItem="9lZ-ef-Rsj" firstAttribute="trailing" secondItem="M5j-C6-5Jc" secondAttribute="trailing" id="YeA-xd-5nP"/>
+                            <constraint firstItem="Aax-6k-hRk" firstAttribute="top" secondItem="HqF-em-BuK" secondAttribute="bottom" constant="8" id="Zik-IE-XCX"/>
                             <constraint firstItem="m3C-lk-NKR" firstAttribute="top" secondItem="PRU-yZ-Agp" secondAttribute="bottom" constant="8" id="bBU-K8-sCI"/>
                             <constraint firstItem="PRU-yZ-Agp" firstAttribute="top" secondItem="XAg-MU-yAY" secondAttribute="bottom" constant="52" id="gtt-1L-B0f"/>
                             <constraint firstItem="m3C-lk-NKR" firstAttribute="centerX" secondItem="7Lo-Mv-vOb" secondAttribute="centerX" id="hdH-x7-S7k"/>
@@ -192,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOb-Ei-FIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="1040"/>
+            <point key="canvasLocation" x="52" y="1039.4302848575712"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="akx-ux-RgO">

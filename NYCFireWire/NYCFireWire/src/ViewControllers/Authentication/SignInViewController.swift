@@ -80,4 +80,25 @@ extension SignInViewController {
             showAlert(title: "Hold on", message: "Please make sure all fields are correctly filled in.")
         }
     }
+    
+    @IBAction func forgotPasswordButtonTapped() {
+        let ac = UIAlertController(title: "Password Reset", message: "Please enter your email address associated with your acount", preferredStyle: .alert)
+        ac.addTextField { (tf) in
+            tf.keyboardType = .emailAddress
+            tf.placeholder = "Email address"
+        }
+
+        let submitAction = UIAlertAction(title: "Reset Password", style: .default) { [unowned ac] _ in
+            if let email = ac.textFields![0].text, email.isValidEmail() {
+                APIController().resetPassword(email: email) {
+                    self.showAlert(title: "Reset Sent", message: "Please check your email for a link to reset your password.")
+                }
+            }
+        }
+
+        ac.addAction(submitAction)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+
+        present(ac, animated: true)
+    }
 }

@@ -11,6 +11,7 @@ import Foundation
 enum APIEndpoint: String {
     case signinEndpoint = "/user/login"
     case signupEndpoint = "/user/signup"
+    case resetPasswordEndpoint = "/user/reset-password"
     case logoutEndpoint = "/user/logout"
     case meEndpoint = "/user/me"
     case verifyEndpoint = "/user/send-email-verification"
