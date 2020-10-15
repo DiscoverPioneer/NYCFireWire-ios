@@ -10,6 +10,7 @@ import Foundation
 
 
 struct AssetConstants {
-    static let like = "like"
-    static let likeFilled = "likeFilled"
+    static let like = "hand.thumbsup"
+    static let likeFilled = "hand.thumbsup.fill"
+    static let comment = "bubble.right.fill"
 }

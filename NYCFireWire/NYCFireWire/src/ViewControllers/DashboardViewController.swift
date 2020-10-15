@@ -251,6 +251,7 @@ extension DashboardViewController: UITableViewDataSource {
             //Incident
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentCell", for: indexPath) as! IncidentTableViewCell
 //            let incident = allIncidents[indexPath.row]
+            cell.incident = incident
             cell.boroLabel.text = incident.boro
             if let boxNumber = Int(incident.boxNumber) {
                 cell.boxLabel.text = "Box \(boxNumber)"
@@ -259,14 +260,8 @@ extension DashboardViewController: UITableViewDataSource {
             }
             cell.titleLabel.text = "*\(incident.title)*"
             cell.subtitleLabel.text = incident.subtitle
-            cell.timeLabel.text = incident.createdAt.smartStringFromDate()
             cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
-            
-            if incident.isLiked {
-                cell.likeButton.setImage(UIImage(named: AssetConstants.likeFilled), for: .normal)
-            } else {
-                cell.likeButton.setImage(UIImage(named: AssetConstants.like), for: .normal)
-            }
+            cell.numberOfCommentsLabel.text = "\(incident.numberOfComments)"
             return cell
         } else {
             //Ad

@@ -20,12 +20,13 @@ class IncidentTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     
+    @IBOutlet weak var numberOfCommentsLabel: UILabel!
+    
+    var incident: Incident?
     var isLiked: Bool = false
     var delegate: LikeButtonDelegate?
     
@@ -41,6 +42,12 @@ class IncidentTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeTapped() {
-        delegate?.incidentLiked()
+        guard let incident = incident else { return }
+        if incident.isLiked {
+            likeButton.setImage(UIImage(named: AssetConstants.likeFilled), for: .normal)
+            delegate?.incidentLiked()
+        } else {
+            likeButton.setImage(UIImage(named: AssetConstants.like), for: .normal)
+        }
     }
 }
