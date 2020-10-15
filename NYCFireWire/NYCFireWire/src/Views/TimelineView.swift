@@ -13,12 +13,13 @@ import Kingfisher
 
 protocol TimelineViewDelegate {
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int)
+    func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int)
 }
 
 /**
 	Represents an instance in the Timeline. A Timeline is built using one or more of these TimeFrames.
 */
-public struct TimeFrame{
+public struct TimeFrame {
 	/**
 		The date that the event occured.
 	*/
@@ -202,7 +203,7 @@ open class TimelineView: UIView {
 		var viewFromAbove = guideView
 		
 		for (index, element) in timeFrames.enumerated(){
-            let v = blockForTimeFrame(element, isFirst: index == 0, isLast: index == timeFrames.count - 1)
+            let v = blockForTimeFrame(element, isFirst: index == 0, isLast: index == timeFrames.count - 1, index: index)
             //Add Gesture Recognizer
             v.isUserInteractionEnabled = true
             v.tag = index
@@ -236,6 +237,10 @@ open class TimelineView: UIView {
         }
     }
 
+    @objc func buttonWasTapped(button: UIButton) {
+        delegate?.moreButtonWasTapped(timelineView: self,didTapElementAt: button.tag)
+    }
+    
     fileprivate func bulletView(_ width: CGFloat, bulletType: BulletType) -> UIView {
         var path: UIBezierPath
         switch bulletType {
@@ -280,7 +285,7 @@ open class TimelineView: UIView {
         return v
     }
     
-    fileprivate func blockForTimeFrame(_ element: TimeFrame, isFirst: Bool = false, isLast: Bool = false) -> UIView {
+    fileprivate func blockForTimeFrame(_ element: TimeFrame, isFirst: Bool = false, isLast: Bool = false, index: Int) -> UIView {
 		let v = UIView()
 		v.translatesAutoresizingMaskIntoConstraints = false
         v.addConstraint(NSLayoutConstraint(item: v, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: bulletSize))
@@ -339,8 +344,42 @@ open class TimelineView: UIView {
                 ])
             textLabel.textAlignment = .natural
             lastView = textLabel
+            
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.tag = index
+            button.tintColor = .lightGray
+            button.setTitle("", for: .normal)
+            button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+            button.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
+            v.addSubview(button)
+
+            v.addConstraints([
+                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: textLabel, attribute: .bottom, multiplier: 1.0, constant: 6),
+                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: textLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+                ])
+            lastView = button
+
+        } else {
+        
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.tag = index
+        button.tintColor = .lightGray
+        button.setTitle("", for: .normal)
+        button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        button.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+        button.backgroundColor = .green
+
+        v.addSubview(button)
+
+        v.addConstraints([
+            NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 6),
+            NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+            ])
         }
-		
+        
 		//image
 		if let imageURL = element.imageURL{
 			

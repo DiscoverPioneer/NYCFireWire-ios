@@ -95,7 +95,7 @@ class AdController: NSObject, GADInterstitialDelegate, GADBannerViewDelegate {
         bannerView.adUnitID = adUnitId.rawValue
         bannerView.rootViewController = viewController
         let request = GADRequest()
-        request.testDevices = ["ad9575036cdcf54b0123221a352d0d11",kGADSimulatorID ]
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["ad9575036cdcf54b0123221a352d0d11"]
         bannerView.delegate = self
         bannerView.load(request)
         
@@ -112,7 +112,7 @@ class AdController: NSObject, GADInterstitialDelegate, GADBannerViewDelegate {
         let interstitial = GADInterstitial(adUnitID: adUnitID.rawValue)
         print("Using adUnitID: \(adUnitID.rawValue)")
         let request = GADRequest()
-        request.testDevices = ["ad9575036cdcf54b0123221a352d0d11",kGADSimulatorID ]
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["ad9575036cdcf54b0123221a352d0d11"]
         interstitial.load(request)
         interstitial.delegate = self
         self.interstitial = interstitial

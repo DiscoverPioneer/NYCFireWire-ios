@@ -16,7 +16,7 @@ protocol ChatViewControllerDataSource {
 protocol ChatViewControllerDelegate {
     func chatViewController(chatViewController: ChatViewController, didTapPostFor comment: String)
     func chatViewController(chatViewController: ChatViewController, didTapUploadFor comment: String, image: UIImage)
-
+    
 }
 
 class ChatViewController: UIViewController, IndicatorInfoProvider {
@@ -69,7 +69,7 @@ class ChatViewController: UIViewController, IndicatorInfoProvider {
 
 //MARK: - Growing Text Field
 extension ChatViewController: GrowingTextViewDelegate {
-
+    
     
     func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
         UIView.animate(withDuration: 0.2) {
@@ -99,7 +99,7 @@ extension ChatViewController: GrowingTextViewDelegate {
     
     
     @objc func keyboardNotification(notification: NSNotification) {
-       
+        
         if let userInfo = notification.userInfo {
             let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
             let keyboardFrameInView = view.convert(endFrame, from: nil)
@@ -152,14 +152,14 @@ extension ChatViewController {
             timeline.addToScrollView(scrollView: scrollView)
             self.timeline = timeline
         }
-//        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
-//        scrollView.setContentOffset(bottomOffset, animated: true)
+        //        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+        //        scrollView.setContentOffset(bottomOffset, animated: true)
     }
 }
 
 //MARK: - Timeline
 extension ChatViewController: TimelineViewDelegate {
-    func timelineView(timelineView: TimelineView, didTapElementAt index: Int) {
+    func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int) {
         if let comments = dataSource?.commentsFor(vc: self) {
             let comment = comments[index]
             let sheet = UIAlertController(title: "Flag User Comment?", message: nil, preferredStyle: .actionSheet)
@@ -174,6 +174,11 @@ extension ChatViewController: TimelineViewDelegate {
             present(sheet, animated: true, completion: nil)
         }
     }
+    
+    func timelineView(timelineView: TimelineView, didTapElementAt index: Int) {
+        // replaced byt button for now
+    }
+    
 }
 
 //MARK: - Actions
@@ -186,7 +191,7 @@ extension ChatViewController {
         textView.resignFirstResponder()
         delegate?.chatViewController(chatViewController: self, didTapPostFor: textView.text!)
         AnalyticsController.logEvent(eventName: "Sent Chat Message")
-
+        
     }
     
     @IBAction func imageUploadTapped() {
