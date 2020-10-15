@@ -14,6 +14,7 @@ import Kingfisher
 protocol TimelineViewDelegate {
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int)
     func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int)
+    func linkWasTapped(timelineView: TimelineView, url: URL)
 }
 
 /**
@@ -134,6 +135,18 @@ open class TimelineView: UIView {
         }
     }
 	
+    open var configureTextView: ((UITextView) -> Void) = { textView in
+        textView.font = UIFont(name: "ArialMT", size: 17)
+        textView.textColor = UIColor(red: 110/255, green: 110/255, blue: 110/255, alpha: 1)
+        textView.isEditable = false
+        textView.isUserInteractionEnabled = true
+        textView.tintColor = .white
+        textView.dataDetectorTypes = .link
+    } {
+        didSet {
+            setupContent()
+        }
+    }
 	/**
 		The type of bullet shown next to each element.
 	*/
@@ -331,19 +344,22 @@ open class TimelineView: UIView {
         var lastView: UIView = dateLabel
         
         if let text = element.text {
-            let textLabel = UILabel()
-            textLabel.translatesAutoresizingMaskIntoConstraints = false
-            textLabel.text = text
-            textLabel.numberOfLines = 0
-            configureTextLabel(textLabel)
-            v.addSubview(textLabel)
+            let textView = UITextView()
+            textView.translatesAutoresizingMaskIntoConstraints = false
+            textView.backgroundColor = self.backgroundColor
+            textView.text = text
+            textView.delegate = self
+            configureTextView(textView)
+            v.addSubview(textView)
             v.addConstraints([
-                NSLayoutConstraint(item: textLabel, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: textLabel, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 6),
-                NSLayoutConstraint(item: textLabel, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+                textView.heightAnchor.constraint(equalToConstant: 30),
+                NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 3),
+                NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
                 ])
-            textLabel.textAlignment = .natural
-            lastView = textLabel
+            textView.textAlignment = .natural
+            lastView = textView
+            
             
             let button = UIButton()
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -356,8 +372,8 @@ open class TimelineView: UIView {
             v.addSubview(button)
 
             v.addConstraints([
-                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: textLabel, attribute: .bottom, multiplier: 1.0, constant: 6),
-                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: textLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: textView, attribute: .bottom, multiplier: 1.0, constant: 6),
+                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: textView, attribute: .leading, multiplier: 1.0, constant: 0)
                 ])
             lastView = button
 
@@ -456,6 +472,15 @@ open class TimelineView: UIView {
 		
 		return v
 	}
+}
+
+extension TimelineView: UITextViewDelegate {
+    
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        delegate?.linkWasTapped(timelineView: self, url: URL)
+        return true
+    }
+    
 }
 
 fileprivate extension CGFloat {
