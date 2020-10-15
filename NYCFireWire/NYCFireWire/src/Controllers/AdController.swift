@@ -51,6 +51,10 @@ class AdController: NSObject, GADInterstitialDelegate, GADBannerViewDelegate {
     
     func initialize() {
         //TODO: - Change
+        
+        GADMobileAds.sharedInstance().start { (status) in
+            print("Initialized ads....")
+        }
         GADMobileAds.configure(withApplicationID: appID)
 //        GADMobileAds.sharedInstance().tra
     }
