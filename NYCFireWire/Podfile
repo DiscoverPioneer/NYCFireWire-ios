@@ -3,7 +3,7 @@ platform :ios, '11.0'
 
 def shared_pods
     # Pods for PollPit
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 4.0'
     pod 'Kingfisher' #https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
     pod 'NVActivityIndicatorView' #https://github.com/ninjaprox/NVActivityIndicatorView
     pod 'XLPagerTabStrip', :git => 'https://github.com/xmartlabs/XLPagerTabStrip', :branch => 'master'

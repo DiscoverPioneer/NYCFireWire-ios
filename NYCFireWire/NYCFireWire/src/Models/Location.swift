@@ -19,9 +19,12 @@ class Location {
     let numberOfComments: Int
     let numberOfViews: Int
     let boro: String
+    let numberOfLikes: Int
+    let isLiked: Bool
     var units = [String]()
     
-    init(id: Int, createdAt: Date, location: CLLocation, title: String, subtitle: String?, address: String, numberOfComments: Int, numberOfViews: Int, boro: String) {
+    
+    init(id: Int, createdAt: Date, location: CLLocation, title: String, subtitle: String?, address: String, numberOfComments: Int, numberOfViews: Int, boro: String, numberOfLikes: Int, isLiked: Bool) {
         self.id = id
         self.createdAt = createdAt
         self.location = location
@@ -31,5 +34,7 @@ class Location {
         self.numberOfComments = numberOfComments
         self.numberOfViews = numberOfViews
         self.boro = boro
+        self.numberOfLikes = numberOfLikes
+        self.isLiked = isLiked
     }
 }

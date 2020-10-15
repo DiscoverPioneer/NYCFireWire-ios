@@ -31,6 +31,7 @@ class DashboardViewController: UIViewController {
     var allIncidents = [Incident]()
     var allAdsDict = [Int: GADUnifiedNativeAd]()
     var allTableViewItems = [Any]()
+    var isLiked: Bool = false
     
     let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
     
@@ -194,6 +195,10 @@ class DashboardViewController: UIViewController {
         showBoroPicker()
     }
     
+    func toggleLike() {
+        isLiked = !isLiked
+    }
+    
     func setTableViewItems() {
         
         var items = [Any]()
@@ -254,8 +259,14 @@ extension DashboardViewController: UITableViewDataSource {
             }
             cell.titleLabel.text = "*\(incident.title)*"
             cell.subtitleLabel.text = incident.subtitle
-            cell.addressLabel.text = incident.address
             cell.timeLabel.text = incident.createdAt.smartStringFromDate()
+            cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
+            
+            if incident.isLiked {
+                cell.likeButton.setImage(UIImage(named: AssetConstants.likeFilled), for: .normal)
+            } else {
+                cell.likeButton.setImage(UIImage(named: AssetConstants.like), for: .normal)
+            }
             return cell
         } else {
             //Ad
@@ -607,4 +618,11 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
 //        pickerView(picker, didSelectRow: 0, inComponent: 0)
     }
     
+}
+
+extension DashboardViewController: LikeButtonDelegate {
+    func incidentLiked() {
+        // make API call
+        tableView.reloadData()
+    }
 }

@@ -8,8 +8,11 @@
 
 import UIKit
 
-class IncidentTableViewCell: UITableViewCell {
+protocol LikeButtonDelegate {
+    func incidentLiked()
+}
 
+class IncidentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var boroLabel: UILabel!
     @IBOutlet weak var boxLabel: UILabel!
@@ -19,6 +22,12 @@ class IncidentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var numberOfLikesLabel: UILabel!
+    
+    var isLiked: Bool = false
+    var delegate: LikeButtonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,4 +40,7 @@ class IncidentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func likeTapped() {
+        delegate?.incidentLiked()
+    }
 }
