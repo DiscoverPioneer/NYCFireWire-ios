@@ -44,10 +44,10 @@ class IncidentTableViewCell: UITableViewCell {
     @IBAction func likeTapped() {
         guard let incident = incident else { return }
         if incident.isLiked {
-            likeButton.setImage(UIImage(named: AssetConstants.likeFilled), for: .normal)
+            likeButton.setImage(UIImage(systemName: AssetConstants.likeFilled), for: .normal)
             delegate?.incidentLiked()
         } else {
-            likeButton.setImage(UIImage(named: AssetConstants.like), for: .normal)
+            likeButton.setImage(UIImage(systemName: AssetConstants.like), for: .normal)
         }
     }
 }
