@@ -25,7 +25,7 @@ class Incident: Location {
             let boxNumber = dict["box_number"] as? String {
             let numberOfComments = (dict["number_of_comments"] as? Int) ?? 0
             let numberOfViews = (dict["total_views"] as? Int) ?? 0
-            let numberOfLikes = (dict["number_of_likes"] as? Int) ?? 1234
+            let numberOfLikes = (dict["number_of_likes"] as? Int) ?? 0
             let isLiked: Bool = false
             self.boxNumber = boxNumber
 
