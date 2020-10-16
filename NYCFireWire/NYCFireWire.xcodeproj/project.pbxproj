@@ -10,7 +10,7 @@
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
 		73920C59792A6B9F460BAD17 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
-		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		7C0765480A40A43FFDE45A06 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */; };
 		E301A8A4225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
 		E301A8A5225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
@@ -287,11 +287,11 @@
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.release.xcconfig"; sourceTree = "<group>"; };
-		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWire___Staging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A49B6C065E0425FECD3C51 /* Pods-NYCFireWire - Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.debug.xcconfig"; sourceTree = "<group>"; };
-		5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Prod.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWire___Prod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.release.xcconfig"; sourceTree = "<group>"; };
-		984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Local.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWire___Local.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98694E2FB3C3E9740D4F058 /* Pods-NYCFireWire - Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.release.xcconfig"; sourceTree = "<group>"; };
 		E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		E3075AFB2218E1A500B24846 /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C0765480A40A43FFDE45A06 /* (null) in Frameworks */,
+				7C0765480A40A43FFDE45A06 /* BuildFile in Frameworks */,
 				E338E3E0224FC5B50043F777 /* StoreKit.framework in Frameworks */,
 				90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */,
 			);
@@ -727,7 +727,7 @@
 				E309DF132187E55100E20F34 /* Sources */,
 				E309DF3B2187E55100E20F34 /* Frameworks */,
 				E309DF3D2187E55100E20F34 /* Resources */,
-				E309DF452187E55100E20F34 /* [CP] Embed Pods Frameworks */,
+				54B43EC56FB0232205646E90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -746,7 +746,7 @@
 				E37F253C2356436F0005F6D7 /* Sources */,
 				E37F257B2356436F0005F6D7 /* Frameworks */,
 				E37F257D2356436F0005F6D7 /* Resources */,
-				8C70BAA8792A91C66FAD40F2 /* [CP] Embed Pods Frameworks */,
+				5EECF0360A250E41BD89B579 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -765,7 +765,7 @@
 				E3FC2E5D214ACFF4000166BE /* Sources */,
 				E3FC2E5E214ACFF4000166BE /* Frameworks */,
 				E3FC2E5F214ACFF4000166BE /* Resources */,
-				B1B264D7E52261D5582EA53E /* [CP] Embed Pods Frameworks */,
+				FA00EADA8559AF0D80D8B009 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -928,7 +928,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8C70BAA8792A91C66FAD40F2 /* [CP] Embed Pods Frameworks */ = {
+		54B43EC56FB0232205646E90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EECF0360A250E41BD89B579 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -961,23 +978,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B1B264D7E52261D5582EA53E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE20BDC7B07A5C8926C6936F /* [CP] Check Pods Manifest.lock */ = {
@@ -1020,21 +1020,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E309DF452187E55100E20F34 /* [CP] Embed Pods Frameworks */ = {
+		FA00EADA8559AF0D80D8B009 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1416,7 +1416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1470,7 +1470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
