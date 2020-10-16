@@ -31,7 +31,6 @@ class DashboardViewController: UIViewController {
     var allIncidents = [Incident]()
     var allAdsDict = [Int: GADUnifiedNativeAd]()
     var allTableViewItems = [Any]()
-    var isLiked: Bool = false
     
     let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
     
@@ -193,10 +192,6 @@ class DashboardViewController: UIViewController {
     
     @IBAction func didTapIncidentHeaderLabel() {
         showBoroPicker()
-    }
-    
-    func toggleLike() {
-        isLiked = !isLiked
     }
     
     func setTableViewItems() {
