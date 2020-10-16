@@ -251,8 +251,9 @@ extension DashboardViewController: UITableViewDataSource {
             //Incident
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentCell", for: indexPath) as! IncidentTableViewCell
 //            let incident = allIncidents[indexPath.row]
-            cell.incident = incident
+            cell.isLiked = incident.isLiked
             cell.boroLabel.text = incident.boro
+            cell.dateLabel.text = incident.createdAt.smartStringFromDate()
             if let boxNumber = Int(incident.boxNumber) {
                 cell.boxLabel.text = "Box \(boxNumber)"
             } else {
@@ -616,8 +617,9 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
 }
 
 extension DashboardViewController: LikeButtonDelegate {
-    func incidentLiked() {
-        // make API call
+    func incidentLikedTapped(cell: IncidentTableViewCell) {
+        // API call
+        
         tableView.reloadData()
     }
 }

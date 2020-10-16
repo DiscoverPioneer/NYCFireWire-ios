@@ -9,7 +9,7 @@
 import UIKit
 
 protocol LikeButtonDelegate {
-    func incidentLiked()
+    func incidentLikedTapped(cell: IncidentTableViewCell)
 }
 
 class IncidentTableViewCell: UITableViewCell {
@@ -20,14 +20,14 @@ class IncidentTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     
     @IBOutlet weak var numberOfCommentsLabel: UILabel!
     
-    var incident: Incident?
-    var isLiked: Bool = false
+    var isLiked: Bool?
     var delegate: LikeButtonDelegate?
     
     override func awakeFromNib() {
@@ -42,10 +42,10 @@ class IncidentTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeTapped() {
-        guard let incident = incident else { return }
-        if incident.isLiked {
+        guard let isLiked = isLiked else { return }
+        if isLiked {
             likeButton.setImage(UIImage(systemName: AssetConstants.likeFilled), for: .normal)
-            delegate?.incidentLiked()
+            delegate?.incidentLikedTapped(cell: self)
         } else {
             likeButton.setImage(UIImage(systemName: AssetConstants.like), for: .normal)
         }
