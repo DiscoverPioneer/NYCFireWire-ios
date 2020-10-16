@@ -22,6 +22,10 @@
 	<string>Local</string>
 	<key>ConfigurationURI</key>
 	<string>http://pioneerapplications.com/AppResources/nycfirewire/Local_Config.plist</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7236390531604246~3719788746</string>
+	<key>GADIsAdManagerApp</key>
+	<string>true</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -56,7 +60,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>GADIsAdManagerApp</key>
-	<string>true</string>
 </dict>
 </plist>
