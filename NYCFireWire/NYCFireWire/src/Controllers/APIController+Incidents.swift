@@ -99,6 +99,30 @@ extension APIController {
         }
     }
     
+    func likeIncident(id: Int, completion:@escaping (_ success: Bool) -> Void) {
+        var url = APIConstants.construct(endpoint: .likeEndpoint)
+        url.append("\(id)/like")
+        makeRequest(type: .post, url: url, parameters: nil) { (success, error, data) in
+            if let _ = data {
+                completion(true)
+                return
+            }
+            completion(false)
+        }
+    }
+    
+    func unlikeIncident(id: Int, completion:@escaping (_ success: Bool) -> Void) {
+        var url = APIConstants.construct(endpoint: .likeEndpoint)
+        url.append("\(id)/unlike")
+        makeRequest(type: .post, url: url, parameters: nil) { (success, error, data) in
+            if let _ = data {
+                completion(true)
+                return
+            }
+            completion(false)
+        }
+    }
+    
     func updateViewsCountForLocation(location: Incident) {
         let url = APIConstants.construct(endpoint: .updateIncidentViewsCountEndpoint)
         let params = ["id":location.id]
