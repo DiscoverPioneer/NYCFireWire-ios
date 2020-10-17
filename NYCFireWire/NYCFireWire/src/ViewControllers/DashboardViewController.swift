@@ -31,7 +31,6 @@ class DashboardViewController: UIViewController {
     var allIncidents = [Incident]()
     var allAdsDict = [Int: GADUnifiedNativeAd]()
     var allTableViewItems = [Any]()
-    var isLiked: Bool = false
     
     let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
     
@@ -195,10 +194,6 @@ class DashboardViewController: UIViewController {
         showBoroPicker()
     }
     
-    func toggleLike() {
-        isLiked = !isLiked
-    }
-    
     func setTableViewItems() {
         
         var items = [Any]()
@@ -251,6 +246,8 @@ extension DashboardViewController: UITableViewDataSource {
             //Incident
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentCell", for: indexPath) as! IncidentTableViewCell
 //            let incident = allIncidents[indexPath.row]
+            cell.id = incident.id
+            cell.delegate = self
             cell.isLiked = incident.isLiked
             cell.boroLabel.text = incident.boro
             cell.dateLabel.text = incident.createdAt.smartStringFromDate()
@@ -261,7 +258,12 @@ extension DashboardViewController: UITableViewDataSource {
             }
             cell.titleLabel.text = "*\(incident.title)*"
             cell.subtitleLabel.text = incident.subtitle
-            cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
+            if incident.numberOfLikes == 0 {
+                cell.numberOfLikesLabel.isHidden = true
+            } else {
+                cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
+            }
+            
             cell.numberOfCommentsLabel.text = "\(incident.numberOfComments)"
             return cell
         } else {
@@ -311,6 +313,8 @@ extension DashboardViewController: UITableViewDataSource {
 
 //MARK: - TableView Delegate
 extension DashboardViewController: UITableViewDelegate {
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -617,9 +621,23 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
 }
 
 extension DashboardViewController: LikeButtonDelegate {
-    func incidentLikedTapped(cell: IncidentTableViewCell) {
+    func incidentLikedTapped(cell: IncidentTableViewCell, id: Int) {
         // API call
-        
+        APIController.defaults.likeIncident(id: id, completion: { success in
+            if success {
+                print("Incident liked")
+            }
+        })
+        tableView.reloadData()
+    }
+    
+    func incidentUnliked(cell: IncidentTableViewCell, id: Int) {
+        // API call
+        APIController.defaults.unlikeIncident(id: id, completion: { success in
+            if success {
+                print("Incident unliked")
+            }
+        })
         tableView.reloadData()
     }
 }

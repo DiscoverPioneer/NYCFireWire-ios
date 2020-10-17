@@ -9,7 +9,8 @@
 import UIKit
 
 protocol LikeButtonDelegate {
-    func incidentLikedTapped(cell: IncidentTableViewCell)
+    func incidentLikedTapped(cell: IncidentTableViewCell, id: Int)
+    func incidentUnliked(cell: IncidentTableViewCell, id: Int)
 }
 
 class IncidentTableViewCell: UITableViewCell {
@@ -27,6 +28,7 @@ class IncidentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var numberOfCommentsLabel: UILabel!
     
+    var id: Int?
     var isLiked: Bool?
     var delegate: LikeButtonDelegate?
     
@@ -45,9 +47,10 @@ class IncidentTableViewCell: UITableViewCell {
         guard let isLiked = isLiked else { return }
         if isLiked {
             likeButton.setImage(UIImage(systemName: AssetConstants.likeFilled), for: .normal)
-            delegate?.incidentLikedTapped(cell: self)
+            delegate?.incidentUnliked(cell: self, id: id!)
         } else {
             likeButton.setImage(UIImage(systemName: AssetConstants.like), for: .normal)
+            delegate?.incidentLikedTapped(cell: self, id: id!)
         }
     }
 }
