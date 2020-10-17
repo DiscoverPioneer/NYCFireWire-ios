@@ -100,7 +100,7 @@ extension APIController {
     }
     
     func likeIncident(id: Int, completion:@escaping (_ success: Bool) -> Void) {
-        var url = APIConstants.construct(endpoint: .likeEndpoint)
+        var url = APIConstants.construct(endpoint: .incidentDetailsEndpoint)
         url.append("\(id)/like")
         makeRequest(type: .post, url: url, parameters: nil) { (success, error, data) in
             if let _ = data {
@@ -112,7 +112,7 @@ extension APIController {
     }
     
     func unlikeIncident(id: Int, completion:@escaping (_ success: Bool) -> Void) {
-        var url = APIConstants.construct(endpoint: .likeEndpoint)
+        var url = APIConstants.construct(endpoint: .incidentDetailsEndpoint)
         url.append("\(id)/unlike")
         makeRequest(type: .post, url: url, parameters: nil) { (success, error, data) in
             if let _ = data {

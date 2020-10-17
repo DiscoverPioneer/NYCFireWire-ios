@@ -24,7 +24,6 @@ enum APIEndpoint: String {
     case createTipEndpoint = "/incident/send-tip"
 
     case fileSignEndpoint = "/file/sign"
-    case likeEndpoint = "/api/v1/incident/"
 }
 
 extension APIConstants {
