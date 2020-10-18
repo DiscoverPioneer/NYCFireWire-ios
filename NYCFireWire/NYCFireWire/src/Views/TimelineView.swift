@@ -37,12 +37,13 @@ public struct TimeFrame {
         An optional closure to call when an image is tapped.
     */
     let imageTapped: ((UIImageView) -> Void)?
-    
-    public init(date: String, text: String? = nil, imageURL: URL? = nil, imageTapped: ((UIImageView) -> Void)? = nil) {
+    let hideMore: Bool
+    public init(date: String, text: String? = nil, imageURL: URL? = nil, imageTapped: ((UIImageView) -> Void)? = nil, hideMore: Bool = false) {
         self.date = date
         self.text = text
         self.imageURL = imageURL
         self.imageTapped = imageTapped
+        self.hideMore = hideMore
     }
 }
 
@@ -81,6 +82,7 @@ public enum BulletType{
 */
 open class TimelineView: UIView {
     var delegate: TimelineViewDelegate?
+    
 	//MARK: Public Properties
 	
 	/**
@@ -414,8 +416,10 @@ open class TimelineView: UIView {
         button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         button.addTarget(self, action: #selector(buttonWasTapped), for: .allEvents)
         button.isSpringLoaded = true
+        if element.hideMore {
+            button.isHidden = true
+        }
         v.addSubview(button)
-
         v.addConstraints([
             NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 40),
             NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 40),
