@@ -60,6 +60,23 @@ class IncidentTableViewCell: UITableViewCell {
     @IBAction func likeTapped() {
         delegate?.incidentLikedTapped(cell: self)
         
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {        
+            self.likeButton.center.y -= 10
+            self.likeButton.transform = CGAffineTransform(scaleX: 0.25, y: 0.25)
+            self.likeButton.alpha = 0.2
+        }, completion: {_ in
+            UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+                self.likeButton.center.y -= 40
+                self.likeButton.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+                self.likeButton.alpha = 0.8
+            }, completion: {_ in
+                UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+                    self.likeButton.center.y += 50
+                    self.likeButton.transform = .identity
+                }, completion: nil)
+            })
+        })
+        
         //Changing way of liking incidents
 //        if isLiked {
 //            likeButton.setImage(alreadyLikedImage, for: .normal)
