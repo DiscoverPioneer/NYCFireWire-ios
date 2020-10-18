@@ -13,12 +13,10 @@
 		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
 		38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
-		38305B4B2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
 		38305B532537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
 		38305B542537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
 		38305B552537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
-		73920C59792A6B9F460BAD17 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
 		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */; };
 		E301A8A4225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
@@ -407,7 +405,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */,
-				73920C59792A6B9F460BAD17 /* Pods_NYCFireWire___Local.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,7 +788,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Pioneer Mobile Applications, LLC";
 				TargetAttributes = {
 					E309DF112187E55100E20F34 = {
@@ -877,7 +874,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38305B4B2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */,
 				E37F257E2356436F0005F6D7 /* Staging_Config.plist in Resources */,
 				E37F257F2356436F0005F6D7 /* LadderTicket.wav in Resources */,
 				E37F25802356436F0005F6D7 /* MDTRing.wav in Resources */,
@@ -1405,6 +1401,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1430,7 +1427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1465,6 +1462,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1484,7 +1482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
