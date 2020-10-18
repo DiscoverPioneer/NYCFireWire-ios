@@ -9,8 +9,8 @@
 import UIKit
 
 protocol LikeButtonDelegate {
-    func incidentLikedTapped(cell: IncidentTableViewCell, id: Int)
-    func incidentUnliked(cell: IncidentTableViewCell, id: Int)
+    func incidentLikedTapped(cell: IncidentTableViewCell)
+    func incidentUnliked(cell: IncidentTableViewCell)
 }
 
 class IncidentTableViewCell: UITableViewCell {
@@ -27,9 +27,23 @@ class IncidentTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     
     @IBOutlet weak var numberOfCommentsLabel: UILabel!
+    let alreadyLikedImage = UIImage(systemName: AssetConstants.likeFilled)
+    let likeImage = UIImage(systemName: AssetConstants.like)
     
-    var id: Int?
-    var isLiked: Bool?
+    
+//    var id: Int?
+    var isLiked: Bool = false {
+        didSet {
+            likeButton.setImage(nil, for: .normal)
+            if isLiked {
+                likeButton.setTitle("🔥", for: .normal)
+//                likeButton.setImage(alreadyLikedImage, for: .normal)
+            } else {
+                likeButton.setTitle("🔥", for: .normal)
+//                likeButton.setImage(likeImage, for: .normal)
+            }
+        }
+    }
     var delegate: LikeButtonDelegate?
     
     override func awakeFromNib() {
@@ -44,13 +58,15 @@ class IncidentTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeTapped() {
-        guard let isLiked = isLiked else { return }
-        if isLiked {
-            likeButton.setImage(UIImage(systemName: AssetConstants.likeFilled), for: .normal)
-            delegate?.incidentUnliked(cell: self, id: id!)
-        } else {
-            likeButton.setImage(UIImage(systemName: AssetConstants.like), for: .normal)
-            delegate?.incidentLikedTapped(cell: self, id: id!)
-        }
+        delegate?.incidentLikedTapped(cell: self)
+        
+        //Changing way of liking incidents
+//        if isLiked {
+//            likeButton.setImage(alreadyLikedImage, for: .normal)
+//            delegate?.incidentUnliked(cell: self)
+//        } else {
+//            likeButton.setImage(likeImage, for: .normal)
+//            delegate?.incidentLikedTapped(cell: self)
+//        }
     }
 }

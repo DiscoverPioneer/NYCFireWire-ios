@@ -11,10 +11,13 @@ import CoreLocation
 
 extension APIController {
     
+//    SELECT incident.id, (case when exists (SELECT id FROM incident_like WHERE incident = incident.id AND _user=1) then 1 else 0 end) AS LIKED, CAST((SELECT COALESCE(COUNT(*),0) FROM incident_like WHERE incident_like.incident = incident.id) AS INTEGER) AS number_of_likes, CAST((SELECT COALESCE(COUNT(*),0) FROM comment WHERE comment.incident = incident.id) AS INTEGER) AS number_of_comments, CAST((SELECT COALESCE(views.total,0) FROM views WHERE views.incident = incident.id) AS INTEGER) AS total_views FROM incident WHERE boro <> 'Long Island' AND boro <> 'Outside NYC' ORDER BY created_at DESC LIMIT 40
+    
     func getAllIncidents(feedType: String = "all", completion: @escaping (_ incidents: [Incident]) -> Void) {
         var allIncidents = [Incident]()
         let url = APIConstants.construct(endpoint: .allIncidentsEndpoint)
         makeRequest(type: .get, url: url, parameters: ["feed_type":feedType.lowercased()]) { (success, error, data) in
+            print("Incident data: \(data)")
             if let data = data,
                 let incidents = data["result"] as? [[String:Any?]] {
                 for rawIncident in incidents {
@@ -91,6 +94,18 @@ extension APIController {
     func createTipWithParams(params: [String:Any], completion:@escaping (_ success: Bool) -> Void) {
         let url = APIConstants.construct(endpoint: .createTipEndpoint)
         makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
+            if let _ = data {
+                completion(true)
+                return
+            }
+            completion(false)
+        }
+    }
+    
+    func acknowledgeIncident(id: Int, completion:@escaping (_ success: Bool) -> Void) {
+        var url = APIConstants.construct(endpoint: .incidentDetailsEndpoint)
+        url.append("\(id)/acknowledge")
+        makeRequest(type: .post, url: url, parameters: nil) { (success, error, data) in
             if let _ = data {
                 completion(true)
                 return

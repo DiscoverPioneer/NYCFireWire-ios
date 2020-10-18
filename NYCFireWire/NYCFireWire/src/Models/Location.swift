@@ -19,8 +19,8 @@ class Location {
     let numberOfComments: Int
     let numberOfViews: Int
     let boro: String
-    let numberOfLikes: Int
-    let isLiked: Bool
+    var numberOfLikes: Int
+    var isLiked: Bool
     var units = [String]()
     
     
@@ -36,5 +36,15 @@ class Location {
         self.boro = boro
         self.numberOfLikes = numberOfLikes
         self.isLiked = isLiked
+    }
+    
+    func like() {
+        isLiked = true
+        numberOfLikes += 1
+    }
+    
+    func unlike() {
+        isLiked = false
+        numberOfLikes -= 1
     }
 }

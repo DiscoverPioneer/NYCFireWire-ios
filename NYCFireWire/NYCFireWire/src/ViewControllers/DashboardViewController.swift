@@ -245,8 +245,7 @@ extension DashboardViewController: UITableViewDataSource {
         if let incident = allTableViewItems[indexPath.row] as? Incident {
             //Incident
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentCell", for: indexPath) as! IncidentTableViewCell
-//            let incident = allIncidents[indexPath.row]
-            cell.id = incident.id
+            cell.tag = indexPath.row
             cell.delegate = self
             cell.isLiked = incident.isLiked
             cell.boroLabel.text = incident.boro
@@ -258,11 +257,12 @@ extension DashboardViewController: UITableViewDataSource {
             }
             cell.titleLabel.text = "*\(incident.title)*"
             cell.subtitleLabel.text = incident.subtitle
-            if incident.numberOfLikes == 0 {
-                cell.numberOfLikesLabel.isHidden = true
-            } else {
-                cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
-            }
+            cell.numberOfLikesLabel.text = "\(incident.numberOfLikes)"
+//            if incident.numberOfLikes == 0 {
+//                cell.numberOfLikesLabel.isHidden = true
+//            } else {
+//                cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
+//            }
             
             cell.numberOfCommentsLabel.text = "\(incident.numberOfComments)"
             return cell
@@ -621,9 +621,14 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
 }
 
 extension DashboardViewController: LikeButtonDelegate {
-    func incidentLikedTapped(cell: IncidentTableViewCell, id: Int) {
+    func incidentLikedTapped(cell: IncidentTableViewCell) {
+        guard let incident = allTableViewItems[cell.tag] as? Incident else {
+            return
+        }
+        incident.like()
+        allTableViewItems[cell.tag] = incident
         // API call
-        APIController.defaults.likeIncident(id: id, completion: { success in
+        APIController.defaults.acknowledgeIncident(id: incident.id, completion: { success in
             if success {
                 print("Incident liked")
             }
@@ -631,9 +636,16 @@ extension DashboardViewController: LikeButtonDelegate {
         tableView.reloadData()
     }
     
-    func incidentUnliked(cell: IncidentTableViewCell, id: Int) {
+    
+    //Currently not going to be used
+    func incidentUnliked(cell: IncidentTableViewCell) {
+        guard let incident = allTableViewItems[cell.tag] as? Incident else {
+            return
+        }
+        incident.unlike()
+        allTableViewItems[cell.tag] = incident
         // API call
-        APIController.defaults.unlikeIncident(id: id, completion: { success in
+        APIController.defaults.unlikeIncident(id: incident.id, completion: { success in
             if success {
                 print("Incident unliked")
             }

@@ -26,7 +26,7 @@ class Incident: Location {
             let numberOfComments = (dict["number_of_comments"] as? Int) ?? 0
             let numberOfViews = (dict["total_views"] as? Int) ?? 0
             let numberOfLikes = (dict["number_of_likes"] as? Int) ?? 0
-            let isLiked: Bool = false
+            let isLiked: Bool = ((dict["number_of_likes"] as? Int) ?? 0).boolValue
             self.boxNumber = boxNumber
 
             super.init(id: id, createdAt: createdAt, location: CLLocation(latitude: lat, longitude: lng), title: title, subtitle: subtitle, address: address, numberOfComments:numberOfComments, numberOfViews: numberOfViews, boro: boro, numberOfLikes: numberOfLikes, isLiked: isLiked)
