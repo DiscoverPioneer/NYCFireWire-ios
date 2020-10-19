@@ -65,15 +65,15 @@ extension OfficialInformationViewController {
         if let adminComments = dataSource?.adminCommentsFor(vc: self) {
             var timeFrames = [TimeFrame]()
             if let data = dataSource?.dataForOfficialInformation(vc: self), data.units.count > 0 {
-                let unitsComment = TimeFrame(date: "Units", text: "\(data.units)", imageURL: nil, imageTapped: nil)
+                let unitsComment = TimeFrame(date: "Units", text: "\(data.units)", imageURL: nil, imageTapped: nil, hideMore: true)
                 timeFrames.append(unitsComment)
             }
             
             for comment in adminComments {
                 if let urlString = comment.imageURL {
-                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil))
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil,hideMore: true))
                 } else {
-                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, imageTapped: nil))
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, imageTapped: nil,hideMore: true))
                 }
             }
             let timeline = TimelineView(bulletType: .circle, timeFrames: timeFrames)
