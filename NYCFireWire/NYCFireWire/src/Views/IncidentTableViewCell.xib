@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -58,7 +59,7 @@ collapse in a  below grade excavation.
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-7y-Lax">
-                        <rect key="frame" x="10" y="121" width="300" height="20"/>
+                        <rect key="frame" x="10" y="123" width="306" height="20"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-Fj-3r8">
                                 <rect key="frame" x="0.0" y="0.0" width="139.5" height="20"/>
@@ -101,12 +102,12 @@ collapse in a  below grade excavation.
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="May 27" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-vW-cxI">
-                                <rect key="frame" x="235.5" y="0.0" width="64.5" height="20"/>
+                                <rect key="frame" x="235.5" y="0.0" width="70.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="C0v-1X-btO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -119,7 +120,7 @@ collapse in a  below grade excavation.
                 <constraints>
                     <constraint firstItem="Tc4-tz-eFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6ag-F6-Ofb"/>
                     <constraint firstItem="Tc4-tz-eFI" firstAttribute="top" secondItem="C5i-ih-V6P" secondAttribute="bottom" constant="7" id="7BI-J3-0R4"/>
-                    <constraint firstAttribute="trailing" secondItem="8lv-7y-Lax" secondAttribute="trailing" constant="10" id="A5P-Dx-Dql"/>
+                    <constraint firstAttribute="trailing" secondItem="8lv-7y-Lax" secondAttribute="trailing" constant="4" id="A5P-Dx-Dql"/>
                     <constraint firstItem="C5i-ih-V6P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="BKO-m4-wUb"/>
                     <constraint firstAttribute="trailing" secondItem="c4G-gN-rit" secondAttribute="trailing" constant="4" id="DTI-eI-fCT"/>
                     <constraint firstAttribute="trailing" secondItem="jOF-Jn-52N" secondAttribute="trailing" id="EX2-bk-SZ6"/>
@@ -131,7 +132,7 @@ collapse in a  below grade excavation.
                     <constraint firstItem="8lv-7y-Lax" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="awg-VS-cPQ"/>
                     <constraint firstAttribute="trailing" secondItem="Tc4-tz-eFI" secondAttribute="trailing" id="bQ4-GF-z9w"/>
                     <constraint firstAttribute="trailing" secondItem="58d-zv-ezr" secondAttribute="trailing" id="cCn-iR-lhh"/>
-                    <constraint firstItem="58d-zv-ezr" firstAttribute="top" secondItem="8lv-7y-Lax" secondAttribute="bottom" constant="6" id="d05-Ai-ukc"/>
+                    <constraint firstItem="58d-zv-ezr" firstAttribute="top" secondItem="8lv-7y-Lax" secondAttribute="bottom" constant="4" id="d05-Ai-ukc"/>
                     <constraint firstAttribute="bottom" secondItem="jOF-Jn-52N" secondAttribute="bottom" constant="31.5" id="ecc-kr-S4e"/>
                     <constraint firstItem="jOF-Jn-52N" firstAttribute="top" secondItem="Tc4-tz-eFI" secondAttribute="bottom" constant="8" id="l5Q-LG-EJo"/>
                 </constraints>
@@ -153,5 +154,8 @@ collapse in a  below grade excavation.
     </objects>
     <resources>
         <image name="bubble.right.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
