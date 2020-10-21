@@ -139,9 +139,11 @@ open class TimelineView: UIView {
         textView.font = UIFont(name: "ArialMT", size: 17)
         textView.textColor = UIColor(red: 110/255, green: 110/255, blue: 110/255, alpha: 1)
         textView.isEditable = false
-        textView.isUserInteractionEnabled = true
+        textView.isSelectable = true
         textView.tintColor = .white
+        textView.isScrollEnabled = false
         textView.dataDetectorTypes = .link
+        textView.translatesAutoresizingMaskIntoConstraints = false
     } {
         didSet {
             setupContent()
@@ -345,7 +347,6 @@ open class TimelineView: UIView {
         
         if let text = element.text {
             let textView = UITextView()
-            textView.translatesAutoresizingMaskIntoConstraints = false
             textView.backgroundColor = self.backgroundColor
             textView.text = text
             textView.delegate = self
@@ -478,7 +479,8 @@ extension TimelineView: UITextViewDelegate {
     
     public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         delegate?.linkWasTapped(timelineView: self, url: URL)
-        return true
+        print("delegate method hit")
+        return false
     }
     
 }
