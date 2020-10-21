@@ -362,23 +362,6 @@ open class TimelineView: UIView {
                 ])
             textView.textAlignment = .natural
             lastView = textView
-            
-            
-            let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.tag = index
-            button.tintColor = .lightGray
-            button.setTitle("", for: .normal)
-            button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-            button.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
-
-            v.addSubview(button)
-
-            v.addConstraints([
-                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: textView, attribute: .bottom, multiplier: 1.0, constant: 6),
-                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: textView, attribute: .leading, multiplier: 1.0, constant: 0)
-                ])
-            lastView = button
 
         } else {
            
