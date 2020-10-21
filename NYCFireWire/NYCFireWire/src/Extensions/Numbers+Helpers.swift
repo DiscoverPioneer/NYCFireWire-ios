@@ -15,3 +15,7 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+extension Int {
+    var boolValue: Bool { return self != 0 }
+}

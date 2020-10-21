@@ -245,8 +245,11 @@ extension DashboardViewController: UITableViewDataSource {
         if let incident = allTableViewItems[indexPath.row] as? Incident {
             //Incident
             let cell = tableView.dequeueReusableCell(withIdentifier: "IncidentCell", for: indexPath) as! IncidentTableViewCell
-//            let incident = allIncidents[indexPath.row]
+            cell.tag = indexPath.row
+            cell.delegate = self
+            cell.isLiked = incident.isLiked
             cell.boroLabel.text = incident.boro
+            cell.dateLabel.text = incident.createdAt.smartStringFromDate()
             if let boxNumber = Int(incident.boxNumber) {
                 cell.boxLabel.text = "Box \(boxNumber)"
             } else {
@@ -254,8 +257,14 @@ extension DashboardViewController: UITableViewDataSource {
             }
             cell.titleLabel.text = "*\(incident.title)*"
             cell.subtitleLabel.text = incident.subtitle
-            cell.addressLabel.text = incident.address
-            cell.timeLabel.text = incident.createdAt.smartStringFromDate()
+            cell.numberOfLikesLabel.text = "\(incident.numberOfLikes)"
+//            if incident.numberOfLikes == 0 {
+//                cell.numberOfLikesLabel.isHidden = true
+//            } else {
+//                cell.numberOfLikesLabel.text = "\(incident.numberOfLikes) likes"
+//            }
+            
+            cell.numberOfCommentsLabel.text = "\(incident.numberOfComments)"
             return cell
         } else {
             //Ad
@@ -304,6 +313,8 @@ extension DashboardViewController: UITableViewDataSource {
 
 //MARK: - TableView Delegate
 extension DashboardViewController: UITableViewDelegate {
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -607,4 +618,38 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
 //        pickerView(picker, didSelectRow: 0, inComponent: 0)
     }
     
+}
+
+extension DashboardViewController: LikeButtonDelegate {
+    func incidentLikedTapped(cell: IncidentTableViewCell) {
+        guard let incident = allTableViewItems[cell.tag] as? Incident else {
+            return
+        }
+        incident.like()
+        allTableViewItems[cell.tag] = incident
+        // API call
+        APIController.defaults.acknowledgeIncident(id: incident.id, completion: { success in
+            if success {
+                print("Incident liked")
+            }
+        })
+        tableView.reloadData()
+    }
+    
+    
+    //Currently not going to be used
+    func incidentUnliked(cell: IncidentTableViewCell) {
+        guard let incident = allTableViewItems[cell.tag] as? Incident else {
+            return
+        }
+        incident.unlike()
+        allTableViewItems[cell.tag] = incident
+        // API call
+        APIController.defaults.unlikeIncident(id: incident.id, completion: { success in
+            if success {
+                print("Incident unliked")
+            }
+        })
+        tableView.reloadData()
+    }
 }

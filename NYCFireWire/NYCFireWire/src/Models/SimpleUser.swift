@@ -23,6 +23,10 @@ struct SimpleUser {
     let role: UserRole
     let points: Int?
     
+    var isAdmin: Bool {
+        return role == .super || role == .subadmin ||  role == .admin
+    }
+    
     init(id: Int, firstName: String, lastName: String, role: String, points: Int?) {
         self.id = id
         self.firstName = firstName
@@ -30,4 +34,6 @@ struct SimpleUser {
         self.role = UserRole(rawValue: role) ?? .basic
         self.points = points
     }
+    
+    
 }
