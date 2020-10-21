@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import SafariServices
 
 protocol ChatViewControllerDataSource {
     func commentsFor(vc: ChatViewController) -> [Comment]
@@ -159,6 +160,11 @@ extension ChatViewController {
 
 //MARK: - Timeline
 extension ChatViewController: TimelineViewDelegate {
+    func linkWasTapped(timelineView: TimelineView, url: URL) {
+        let vc = SFSafariViewController(url: url)
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
     func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int) {
         if let comments = dataSource?.commentsFor(vc: self) {
             let comment = comments[index]

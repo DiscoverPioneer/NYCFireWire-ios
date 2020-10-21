@@ -14,6 +14,7 @@ import Kingfisher
 protocol TimelineViewDelegate {
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int)
     func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int)
+    func linkWasTapped(timelineView: TimelineView, url: URL)
 }
 
 /**
@@ -37,12 +38,13 @@ public struct TimeFrame {
         An optional closure to call when an image is tapped.
     */
     let imageTapped: ((UIImageView) -> Void)?
-    
-    public init(date: String, text: String? = nil, imageURL: URL? = nil, imageTapped: ((UIImageView) -> Void)? = nil) {
+    let hideMore: Bool
+    public init(date: String, text: String? = nil, imageURL: URL? = nil, imageTapped: ((UIImageView) -> Void)? = nil, hideMore: Bool = false) {
         self.date = date
         self.text = text
         self.imageURL = imageURL
         self.imageTapped = imageTapped
+        self.hideMore = hideMore
     }
 }
 
@@ -81,6 +83,7 @@ public enum BulletType{
 */
 open class TimelineView: UIView {
     var delegate: TimelineViewDelegate?
+    
 	//MARK: Public Properties
 	
 	/**
@@ -134,6 +137,20 @@ open class TimelineView: UIView {
         }
     }
 	
+    open var configureTextView: ((UITextView) -> Void) = { textView in
+        textView.font = UIFont(name: "ArialMT", size: 17)
+        textView.textColor = UIColor(red: 110/255, green: 110/255, blue: 110/255, alpha: 1)
+        textView.isEditable = false
+        textView.isSelectable = true
+        textView.tintColor = .white
+        textView.isScrollEnabled = false
+        textView.dataDetectorTypes = .link
+        textView.translatesAutoresizingMaskIntoConstraints = false
+    } {
+        didSet {
+            setupContent()
+        }
+    }
 	/**
 		The type of bullet shown next to each element.
 	*/
@@ -331,20 +348,38 @@ open class TimelineView: UIView {
         var lastView: UIView = dateLabel
         
         if let text = element.text {
-            let textLabel = UILabel()
-            textLabel.translatesAutoresizingMaskIntoConstraints = false
-            textLabel.text = text
-            textLabel.numberOfLines = 0
-            configureTextLabel(textLabel)
-            v.addSubview(textLabel)
+            let textView = UITextView()
+            textView.backgroundColor = self.backgroundColor
+            textView.text = text
+            textView.delegate = self
+            configureTextView(textView)
+            v.addSubview(textView)
             v.addConstraints([
-                NSLayoutConstraint(item: textLabel, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: textLabel, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 6),
-                NSLayoutConstraint(item: textLabel, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
-            ])
-            textLabel.textAlignment = .natural
-            lastView = textLabel
+                textView.heightAnchor.constraint(equalToConstant: 30),
+                NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 3),
+                NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+                ])
+            textView.textAlignment = .natural
+            lastView = textView
             
+            
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.tag = index
+            button.tintColor = .lightGray
+            button.setTitle("", for: .normal)
+            button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+            button.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+
+            v.addSubview(button)
+
+            v.addConstraints([
+                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: textView, attribute: .bottom, multiplier: 1.0, constant: 6),
+                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: textView, attribute: .leading, multiplier: 1.0, constant: 0)
+                ])
+            lastView = button
+
         } else {
            
         }
@@ -414,8 +449,10 @@ open class TimelineView: UIView {
         button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         button.addTarget(self, action: #selector(buttonWasTapped), for: .allEvents)
         button.isSpringLoaded = true
+        if element.hideMore {
+            button.isHidden = true
+        }
         v.addSubview(button)
-
         v.addConstraints([
             NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 40),
             NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 40),
@@ -446,6 +483,16 @@ open class TimelineView: UIView {
 		
 		return v
 	}
+}
+
+extension TimelineView: UITextViewDelegate {
+    
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        delegate?.linkWasTapped(timelineView: self, url: URL)
+        print("delegate method hit")
+        return false
+    }
+    
 }
 
 fileprivate extension CGFloat {

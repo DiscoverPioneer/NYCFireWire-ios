@@ -9,6 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 import GoogleMobileAds
+import SafariServices
 
 protocol OfficialInformationViewControllerDataSource {
     func dataForOfficialInformation(vc: OfficialInformationViewController) -> (title: String, subtitle: String?, address: String, units: [String])
@@ -65,18 +66,19 @@ extension OfficialInformationViewController {
         if let adminComments = dataSource?.adminCommentsFor(vc: self) {
             var timeFrames = [TimeFrame]()
             if let data = dataSource?.dataForOfficialInformation(vc: self), data.units.count > 0 {
-                let unitsComment = TimeFrame(date: "Units", text: "\(data.units)", imageURL: nil, imageTapped: nil)
+                let unitsComment = TimeFrame(date: "Units", text: "\(data.units)", imageURL: nil, imageTapped: nil, hideMore: true)
                 timeFrames.append(unitsComment)
             }
             
             for comment in adminComments {
                 if let urlString = comment.imageURL {
-                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil))
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil,hideMore: true))
                 } else {
-                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, imageTapped: nil))
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, imageTapped: nil,hideMore: true))
                 }
             }
             let timeline = TimelineView(bulletType: .circle, timeFrames: timeFrames)
+            timeline.delegate = self
             self.timeline?.removeFromSuperview()
             timeline.addToScrollView(scrollView: scrollView)
             self.timeline = timeline
@@ -88,3 +90,32 @@ extension OfficialInformationViewController {
 extension OfficialInformationViewController {
     
 }
+
+extension OfficialInformationViewController: TimelineViewDelegate {
+    func timelineView(timelineView: TimelineView, didTapElementAt index: Int) {
+        
+    }
+    
+    func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int) {
+        if let adminComments = dataSource?.adminCommentsFor(vc: self) {
+            let sheet = UIAlertController(title: "Flag User Comment?", message: nil, preferredStyle: .actionSheet)
+            sheet.addAction(UIAlertAction(title: "Report user", style: .destructive, handler: { (action) in
+                let message = "" //"I would like to report the comment with id: \(comment.id)\nPosted By: \(comment.createdBy.firstName) \(comment.createdBy.lastName)\nUser ID: \(comment.createdBy.id)\nContent: \(comment.text) \n\nPlease describe why below:\n\n"
+                self.sendEmail(to: "admin@nycfirewire.net", subject: "REPORT: NYC Fire Wire App", message: message)
+            }))
+//            sheet.addAction(UIAlertAction(title: "Block user", style: .destructive, handler: { (action) in
+//                APIController.defaults.blockUser(userID: comment.createdBy.id)
+//            }))
+            sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            present(sheet, animated: true, completion: nil)
+        }
+    }
+    
+    func linkWasTapped(timelineView: TimelineView, url: URL) {
+        let vc = SFSafariViewController(url: url)
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
+    
+}
+

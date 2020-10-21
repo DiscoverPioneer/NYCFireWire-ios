@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
-		38305BED2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305BEC2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
-		38305BEE2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305BEC2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
-		38305BF62538BFC80023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305BF52538BFC80023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
+		38305ABD2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
+		38305ABE2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
+		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
+		38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
+		38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
+		38305B532537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
+		38305B542537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
+		38305B552537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
 		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */; };
@@ -214,7 +219,6 @@
 		E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E78214AD069000166BE /* LaunchScreen.storyboard */; };
 		E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B142223147600B24846 /* EngineLadderTicket.wav */; };
 		E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E7F214AD069000166BE /* Local_Config.plist */; };
-		E37F258D2356436F0005F6D7 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E3C9B89021AC6356004160C1 /* homescreen.mp4 */; };
 		E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B052221EC6100B24846 /* EngineLadderBatalionTicket.wav */; };
 		E37F258F2356436F0005F6D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E6B214ACFF5000166BE /* Assets.xcassets */; };
 		E37F25902356436F0005F6D7 /* EngineTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B152223147600B24846 /* EngineTicket.wav */; };
@@ -231,8 +235,6 @@
 		E3C9B88C21A888D4004160C1 /* UIButton+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88A21A888D4004160C1 /* UIButton+Helpers.swift */; };
 		E3C9B88E21A88953004160C1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88D21A88953004160C1 /* LocationManager.swift */; };
 		E3C9B88F21A88953004160C1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88D21A88953004160C1 /* LocationManager.swift */; };
-		E3C9B89121AC6356004160C1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E3C9B89021AC6356004160C1 /* homescreen.mp4 */; };
-		E3C9B89221AC6356004160C1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E3C9B89021AC6356004160C1 /* homescreen.mp4 */; };
 		E3D8C6D02281CBCA004404AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D8C6CF2281CBCA004404AE /* GoogleService-Info.plist */; };
 		E3D8C6D12281CBCA004404AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D8C6CF2281CBCA004404AE /* GoogleService-Info.plist */; };
 		E3E1BB5C2246D63800A3FE2A /* servicebell.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3E1BB5B2246D63800A3FE2A /* servicebell.wav */; };
@@ -288,8 +290,10 @@
 /* Begin PBXFileReference section */
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
-		38305BEC2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Local copy-Info.plist"; sourceTree = "<group>"; };
-		38305BF52538BFC80023DDA2 /* NYCFireWire - Prod copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Prod copy-Info.plist"; sourceTree = "<group>"; };
+		38305ABC2537A7920023DDA2 /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
+		38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Prod copy-Info.plist"; sourceTree = "<group>"; };
+		38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Local copy-Info.plist"; sourceTree = "<group>"; };
+		38305B522537AF250023DDA2 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.release.xcconfig"; sourceTree = "<group>"; };
 		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A49B6C065E0425FECD3C51 /* Pods-NYCFireWire - Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.debug.xcconfig"; sourceTree = "<group>"; };
@@ -347,7 +351,6 @@
 		E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Helpers.swift"; sourceTree = "<group>"; };
 		E3C9B88A21A888D4004160C1 /* UIButton+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Helpers.swift"; sourceTree = "<group>"; };
 		E3C9B88D21A88953004160C1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		E3C9B89021AC6356004160C1 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		E3D8C6CF2281CBCA004404AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E3E1BB5B2246D63800A3FE2A /* servicebell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = servicebell.wav; sourceTree = "<group>"; };
 		E3E438D823FA2D65007CCBA6 /* FormerFirehouseLocations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FormerFirehouseLocations.plist; sourceTree = "<group>"; };
@@ -518,8 +521,8 @@
 				E3FC2E62214ACFF4000166BE /* Products */,
 				702621922B7D82D13FE22B7F /* Pods */,
 				71A06F37851C544BCD022491 /* Frameworks */,
-				38305BF52538BFC80023DDA2 /* NYCFireWire - Prod copy-Info.plist */,
-				38305BEC2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist */,
+				38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */,
+				38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -593,6 +596,7 @@
 				E3FC2E83214AD069000166BE /* UserDefaultsConstants.swift */,
 				E3FC2F00214AF7A8000166BE /* UIColorConstants.swift */,
 				E3FC2F0D214B0018000166BE /* APIConstants+Endpoints.swift */,
+				38305ABC2537A7920023DDA2 /* AssetConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -600,7 +604,7 @@
 		E3FC2E84214AD069000166BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E3C9B89021AC6356004160C1 /* homescreen.mp4 */,
+				38305B522537AF250023DDA2 /* homescreen.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -724,11 +728,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E309DF462187E55100E20F34 /* Build configuration list for PBXNativeTarget "NYCFireWire - Local" */;
 			buildPhases = (
-				117420365F8B571B4AACDFA6 /* [CP] Check Pods Manifest.lock */,
+				E309DF122187E55100E20F34 /* [CP] Check Pods Manifest.lock */,
 				E309DF132187E55100E20F34 /* Sources */,
 				E309DF3B2187E55100E20F34 /* Frameworks */,
 				E309DF3D2187E55100E20F34 /* Resources */,
-				0DF47E129A2C48A95FF15710 /* [CP] Embed Pods Frameworks */,
+				17F265124E6EF77FEA442CE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -747,8 +751,7 @@
 				E37F253C2356436F0005F6D7 /* Sources */,
 				E37F257B2356436F0005F6D7 /* Frameworks */,
 				E37F257D2356436F0005F6D7 /* Resources */,
-				5EECF0360A250E41BD89B579 /* [CP] Check Pods Manifest.lock */,
-				1EE6D0E5B7DCD187F192643F /* [CP] Embed Pods Frameworks */,
+				A00FBCBC664CFE6C9624598A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -763,11 +766,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3FC2E73214ACFF5000166BE /* Build configuration list for PBXNativeTarget "NYCFireWire - Prod" */;
 			buildPhases = (
-				DA5BEFFB04422D472CC9850F /* [CP] Check Pods Manifest.lock */,
+				AE2D366E25628D274CF78AAF /* [CP] Check Pods Manifest.lock */,
 				E3FC2E5D214ACFF4000166BE /* Sources */,
 				E3FC2E5E214ACFF4000166BE /* Frameworks */,
 				E3FC2E5F214ACFF4000166BE /* Resources */,
-				F387432BCE5716570A457468 /* [CP] Embed Pods Frameworks */,
+				08E311816F10E6E047A7C0A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -840,7 +843,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38305BED2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */,
+				38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */,
 				E309DF3E2187E55100E20F34 /* Staging_Config.plist in Resources */,
 				E3075B1F2223147700B24846 /* LadderTicket.wav in Resources */,
 				E3075B192223147700B24846 /* MDTRing.wav in Resources */,
@@ -850,6 +853,7 @@
 				E3075B0C2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0E2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
 				E328A97523BD9AB200914370 /* UnifiedNativeAdCell.xib in Resources */,
+				38305B542537AF250023DDA2 /* homescreen.mp4 in Resources */,
 				E309DF412187E55100E20F34 /* IncidentTableViewCell.xib in Resources */,
 				E3075B082221EC6100B24846 /* DivisionTicket.wav in Resources */,
 				E3075B212223147700B24846 /* SpecialUnit.wav in Resources */,
@@ -857,7 +861,6 @@
 				E309DF422187E55100E20F34 /* LaunchScreen.storyboard in Resources */,
 				E3075B1B2223147700B24846 /* EngineLadderTicket.wav in Resources */,
 				E309DF432187E55100E20F34 /* Local_Config.plist in Resources */,
-				E3C9B89221AC6356004160C1 /* homescreen.mp4 in Resources */,
 				E3075B102221EC6100B24846 /* EngineLadderBatalionTicket.wav in Resources */,
 				E3E438DA23FA2D65007CCBA6 /* FormerFirehouseLocations.plist in Resources */,
 				E309DF442187E55100E20F34 /* Assets.xcassets in Resources */,
@@ -871,7 +874,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38305BEE2538BFB80023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */,
 				E37F257E2356436F0005F6D7 /* Staging_Config.plist in Resources */,
 				E37F257F2356436F0005F6D7 /* LadderTicket.wav in Resources */,
 				E37F25802356436F0005F6D7 /* MDTRing.wav in Resources */,
@@ -881,6 +883,7 @@
 				E37F25842356436F0005F6D7 /* ActingEngineTicket.wav in Resources */,
 				E37F25852356436F0005F6D7 /* StandbyForMessage.wav in Resources */,
 				E328A97623BD9AB200914370 /* UnifiedNativeAdCell.xib in Resources */,
+				38305B552537AF250023DDA2 /* homescreen.mp4 in Resources */,
 				E37F25862356436F0005F6D7 /* IncidentTableViewCell.xib in Resources */,
 				E37F25872356436F0005F6D7 /* DivisionTicket.wav in Resources */,
 				E37F25882356436F0005F6D7 /* SpecialUnit.wav in Resources */,
@@ -888,7 +891,6 @@
 				E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */,
 				E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */,
 				E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */,
-				E37F258D2356436F0005F6D7 /* homescreen.mp4 in Resources */,
 				E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */,
 				E3E438DB23FA2D65007CCBA6 /* FormerFirehouseLocations.plist in Resources */,
 				E37F258F2356436F0005F6D7 /* Assets.xcassets in Resources */,
@@ -902,12 +904,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38305BF62538BFC80023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */,
+				38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */,
 				E3FC2EA0214AD069000166BE /* Staging_Config.plist in Resources */,
 				E3E438D923FA2D65007CCBA6 /* FormerFirehouseLocations.plist in Resources */,
 				E3075B1E2223147700B24846 /* LadderTicket.wav in Resources */,
 				E3075B182223147700B24846 /* MDTRing.wav in Resources */,
 				E3075B112221EC6100B24846 /* TonesOnly.wav in Resources */,
+				38305B532537AF250023DDA2 /* homescreen.mp4 in Resources */,
 				E3FC2E9E214AD069000166BE /* Production_Config.plist in Resources */,
 				E3FC2E9C214AD069000166BE /* Main.storyboard in Resources */,
 				E3075B0B2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
@@ -920,7 +923,6 @@
 				E3075B1A2223147700B24846 /* EngineLadderTicket.wav in Resources */,
 				E328A97423BD9AB200914370 /* UnifiedNativeAdCell.xib in Resources */,
 				E3FC2E9F214AD069000166BE /* Local_Config.plist in Resources */,
-				E3C9B89121AC6356004160C1 /* homescreen.mp4 in Resources */,
 				E3075B0F2221EC6100B24846 /* EngineLadderBatalionTicket.wav in Resources */,
 				E3FC2E6C214ACFF5000166BE /* Assets.xcassets in Resources */,
 				E3075B1C2223147700B24846 /* EngineTicket.wav in Resources */,
@@ -933,7 +935,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DF47E129A2C48A95FF15710 /* [CP] Embed Pods Frameworks */ = {
+		08E311816F10E6E047A7C0A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17F265124E6EF77FEA442CE4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -950,29 +969,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		117420365F8B571B4AACDFA6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NYCFireWire - Local-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1EE6D0E5B7DCD187F192643F /* [CP] Embed Pods Frameworks */ = {
+		A00FBCBC664CFE6C9624598A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -989,7 +986,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5EECF0360A250E41BD89B579 /* [CP] Check Pods Manifest.lock */ = {
+		AE2D366E25628D274CF78AAF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1012,11 +1009,15 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-NYCFireWire - Staging-checkManifestLockResult.txt",
 			);
@@ -1025,43 +1026,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA5BEFFB04422D472CC9850F /* [CP] Check Pods Manifest.lock */ = {
+		E309DF122187E55100E20F34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NYCFireWire - Prod-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NYCFireWire - Local-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F387432BCE5716570A457468 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1076,6 +1056,7 @@
 				E3C9B88C21A888D4004160C1 /* UIButton+Helpers.swift in Sources */,
 				E309DF142187E55100E20F34 /* SlideOutMenuViewController.swift in Sources */,
 				E309DF152187E55100E20F34 /* UIColorConstants.swift in Sources */,
+				38305ABE2537A7920023DDA2 /* AssetConstants.swift in Sources */,
 				E33582862194B06E00F6916F /* SupportViewController.swift in Sources */,
 				E309DF8E218CC4E800E20F34 /* GrowingTextView.swift in Sources */,
 				E3C9B88921A88889004160C1 /* Numbers+Helpers.swift in Sources */,
@@ -1149,6 +1130,7 @@
 				E37F253E2356436F0005F6D7 /* UIButton+Helpers.swift in Sources */,
 				E37F253F2356436F0005F6D7 /* SlideOutMenuViewController.swift in Sources */,
 				E37F25402356436F0005F6D7 /* UIColorConstants.swift in Sources */,
+				38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */,
 				E37F25412356436F0005F6D7 /* SupportViewController.swift in Sources */,
 				E37F25422356436F0005F6D7 /* GrowingTextView.swift in Sources */,
 				E37F25432356436F0005F6D7 /* Numbers+Helpers.swift in Sources */,
@@ -1222,6 +1204,7 @@
 				E3C9B88B21A888D4004160C1 /* UIButton+Helpers.swift in Sources */,
 				E3FC2F07214AFFE7000166BE /* SlideOutMenuViewController.swift in Sources */,
 				E3FC2F01214AF7A8000166BE /* UIColorConstants.swift in Sources */,
+				38305ABD2537A7920023DDA2 /* AssetConstants.swift in Sources */,
 				E33582852194B06E00F6916F /* SupportViewController.swift in Sources */,
 				E309DF8D218CC4E800E20F34 /* GrowingTextView.swift in Sources */,
 				E3C9B88821A88889004160C1 /* Numbers+Helpers.swift in Sources */,
@@ -1444,7 +1427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1499,7 +1482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
