@@ -18,6 +18,14 @@
 		380973022540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
 		380973032540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
 		380973062540E545003E132D /* NYCFireWireWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		380973352540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		380973362540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		380973372540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		380973382540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		3809733E2540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
+		3809733F2540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
+		380973402540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
+		380973412540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
 		38305ABD2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305ABE2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
@@ -329,6 +337,8 @@
 		380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NYCFireWireWidget.intentdefinition; sourceTree = "<group>"; };
 		380972FF2540E545003E132D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380973012540E545003E132D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380973342540E611003E132D /* WidgetContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetContent.swift; sourceTree = "<group>"; };
+		3809733D2540E61F003E132D /* FWWidgetMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetMedium.swift; sourceTree = "<group>"; };
 		38305ABC2537A7920023DDA2 /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
 		38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Prod copy-Info.plist"; sourceTree = "<group>"; };
 		38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Local copy-Info.plist"; sourceTree = "<group>"; };
@@ -480,6 +490,8 @@
 			isa = PBXGroup;
 			children = (
 				380972FC2540E545003E132D /* NYCFireWireWidget.swift */,
+				380973342540E611003E132D /* WidgetContent.swift */,
+				3809733D2540E61F003E132D /* FWWidgetMedium.swift */,
 				380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */,
 				380972FF2540E545003E132D /* Assets.xcassets */,
 				380973012540E545003E132D /* Info.plist */,
@@ -1144,6 +1156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380973382540E611003E132D /* WidgetContent.swift in Sources */,
+				380973412540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				380973022540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */,
 				380972FD2540E545003E132D /* NYCFireWireWidget.swift in Sources */,
 			);
@@ -1162,6 +1176,7 @@
 				E33582862194B06E00F6916F /* SupportViewController.swift in Sources */,
 				E309DF8E218CC4E800E20F34 /* GrowingTextView.swift in Sources */,
 				E3C9B88921A88889004160C1 /* Numbers+Helpers.swift in Sources */,
+				3809733F2540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				E309DF162187E55100E20F34 /* SimpleUser.swift in Sources */,
 				E309DF88218CBF7800E20F34 /* SegmentedViewController.swift in Sources */,
 				E309DF172187E55100E20F34 /* MountainClimberController.swift in Sources */,
@@ -1174,6 +1189,7 @@
 				E309DF1D2187E55100E20F34 /* RootViewController.swift in Sources */,
 				E309DF8A218CBF7800E20F34 /* DetailsViewController.swift in Sources */,
 				E309DF1E2187E55100E20F34 /* SlideOutMenuHeader.swift in Sources */,
+				380973362540E611003E132D /* WidgetContent.swift in Sources */,
 				E309DF1F2187E55100E20F34 /* MenuConfiguration.swift in Sources */,
 				E309DF202187E55100E20F34 /* APIConstants.swift in Sources */,
 				E309DF212187E55100E20F34 /* APIController.swift in Sources */,
@@ -1258,6 +1274,7 @@
 				E37F25562356436F0005F6D7 /* Location.swift in Sources */,
 				E37F25572356436F0005F6D7 /* String+Helpers.swift in Sources */,
 				E37F25582356436F0005F6D7 /* UIViewController+Inherited.swift in Sources */,
+				380973402540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				E37F25592356436F0005F6D7 /* NotificationSettingsViewController.swift in Sources */,
 				E37F255A2356436F0005F6D7 /* NotificationToggleCell.swift in Sources */,
 				E37F255B2356436F0005F6D7 /* UITextField+Helpers.swift in Sources */,
@@ -1266,6 +1283,7 @@
 				E37F255E2356436F0005F6D7 /* SettingsViewController.swift in Sources */,
 				E37F259C235F9D780005F6D7 /* Toast.swift in Sources */,
 				E37F255F2356436F0005F6D7 /* UIViewController+Navigation.swift in Sources */,
+				380973372540E611003E132D /* WidgetContent.swift in Sources */,
 				E37F25602356436F0005F6D7 /* ChatViewController.swift in Sources */,
 				E37F25612356436F0005F6D7 /* IAPHandler.swift in Sources */,
 				E37F25622356436F0005F6D7 /* TimelineView.swift in Sources */,
@@ -1311,6 +1329,7 @@
 				E33582852194B06E00F6916F /* SupportViewController.swift in Sources */,
 				E309DF8D218CC4E800E20F34 /* GrowingTextView.swift in Sources */,
 				E3C9B88821A88889004160C1 /* Numbers+Helpers.swift in Sources */,
+				3809733E2540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				E309DF072187991C00E20F34 /* SimpleUser.swift in Sources */,
 				E309DF87218CBF7800E20F34 /* SegmentedViewController.swift in Sources */,
 				E3FC2EFD214AE4F8000166BE /* MountainClimberController.swift in Sources */,
@@ -1323,6 +1342,7 @@
 				E3FC2EAF214AD069000166BE /* RootViewController.swift in Sources */,
 				E309DF89218CBF7800E20F34 /* DetailsViewController.swift in Sources */,
 				E3FC2F16214B0075000166BE /* SlideOutMenuHeader.swift in Sources */,
+				380973352540E611003E132D /* WidgetContent.swift in Sources */,
 				E3FC2F1A214B05DE000166BE /* MenuConfiguration.swift in Sources */,
 				E3FC2EA1214AD069000166BE /* APIConstants.swift in Sources */,
 				E3FC2EB1214AD069000166BE /* APIController.swift in Sources */,

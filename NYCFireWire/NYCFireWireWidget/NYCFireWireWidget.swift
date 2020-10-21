@@ -10,61 +10,68 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
-    }
+var widgetContent: WidgetContent?
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
-        completion(entry)
-    }
-
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+struct Provider: TimelineProvider {
+    func getSnapshot(in context: Context, completion: @escaping (WidgetContent) -> Void) {
+        if let entry = widgetContent {
+            completion(entry)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
+    
+    func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetContent>) -> Void) {
+        var entries: [WidgetContent] = []
+        let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
+        if let email = UserDefaults.standard.string(forKey: UserDefaultKeys.userEmailKey.rawValue),
+           let token =  UserDefaults.standard.string(forKey: UserDefaultKeys.userTokenKey.rawValue) {
+            let controller = APIController(email: email, token: token)
+            controller.getAllIncidents(feedType: feedType) { (incidents) in
+                widgetContent = WidgetContent(date: Date(), incident1: incidents[0], incident2: incidents[1], incident3: incidents[2])
+                
+                let currentDate = Date()
+                let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
+                if let entry = widgetContent {
+                    let widget = WidgetContent(date: entryDate, incident1: entry.incident1, incident2: entry.incident2, incident3: entry.incident3)
+                    entries.append(widget)
+                }
+                
+                
+                let timeline = Timeline(entries: entries, policy: .atEnd)
+                completion(timeline)
+            }
+        }
+    }
+    
+    func placeholder(in context: Context) -> WidgetContent {
+        Incident.placeholder
+    }
 }
 
 struct NYCFireWireWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        Text(entry.date, style: .time)
+        Text("\(entry.date)")
     }
 }
 
 @main
 struct NYCFireWireWidget: Widget {
     let kind: String = "NYCFireWireWidget"
-
+    
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             NYCFireWireWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
+        .configurationDisplayName(kind)
         .description("This is an example widget.")
     }
 }
 
 struct NYCFireWireWidget_Previews: PreviewProvider {
     static var previews: some View {
-        NYCFireWireWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        FWWidgetMedium(content: Incident.placeholder).previewContext(WidgetPreviewContext(family: .systemMedium))
+//        NYCFireWireWidgetEntryView(entry: Incident.placeholder)
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
