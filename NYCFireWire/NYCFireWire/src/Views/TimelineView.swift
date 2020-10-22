@@ -432,7 +432,9 @@ open class TimelineView: UIView {
         button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         button.addTarget(self, action: #selector(buttonWasTapped), for: .allEvents)
         button.isSpringLoaded = true
-
+        if element.hideMore {
+                    button.isHidden = true
+                }
         v.addSubview(button)
         v.addConstraints([
             NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 40),
