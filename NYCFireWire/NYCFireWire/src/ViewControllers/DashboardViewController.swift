@@ -60,6 +60,15 @@ class DashboardViewController: UIViewController {
             if let user = fullUser {
                 AppManager.shared.currentUser = user
                 
+                // widget info
+                if let email = AppManager.shared.currentUser?.email,
+                   let token = AppManager.shared.userToken {
+                    UserDefaultsSuite().setString(value: email, key: UserDefaultSuiteKeys.userEmailKey.rawValue)
+                    UserDefaultsSuite().setString(value: token, key: UserDefaultSuiteKeys.userTokenKey.rawValue)
+
+                }
+                WidgetCenter.shared.reloadAllTimelines()
+                
                 //Show Ads
                 if !IAPHandler.shared.isMonthlySubscriptionPurchased() {
                     if AdController.shared.shouldShowAdditionalAds() {

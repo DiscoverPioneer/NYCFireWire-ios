@@ -21,9 +21,11 @@ struct Provider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetContent>) -> Void) {
         var entries: [WidgetContent] = []
-        let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
-        if UserDefaults.standard.string(forKey: UserDefaultKeys.userEmailKey.rawValue) != nil && UserDefaults.standard.string(forKey: UserDefaultKeys.userTokenKey.rawValue) != nil {
-            APIController.defaults.getAllIncidents(feedType: feedType) { (incidents) in
+        let feedType = "NYC"
+        if let email = UserDefaultsSuite().userEmail,
+           let token = UserDefaultsSuite().token {
+            let controller = APIController(email: email, token: token)
+            controller.getAllIncidents(feedType: feedType) { (incidents) in
                 widgetContent = WidgetContent(date: Date(), incident1: incidents[0], incident2: incidents[1], incident3: incidents[2])
                 
                 let currentDate = Date()
@@ -42,9 +44,11 @@ struct Provider: TimelineProvider {
             let entryDate = Calendar.current.date(byAdding: .second, value: 1, to: currentDate)!
             
             let entry = WidgetContent(date: Date(), incident1: Incident.placeholder.incident1, incident2: Incident.placeholder.incident2, incident3: Incident.placeholder.incident3)
+            
+            for _ in 0...100 {
                 let widget = WidgetContent(date: entryDate, incident1: entry.incident1, incident2: entry.incident2, incident3: entry.incident3)
                 entries.append(widget)
-            
+            }
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
         }
@@ -80,7 +84,7 @@ struct NYCFireWireWidget: Widget {
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            NYCFireWireWidgetEntryView(entry: Incident.placeholder)
+            NYCFireWireWidgetEntryView(entry: entry)
         }
         .configurationDisplayName(kind)
         .description("This is an example widget.")

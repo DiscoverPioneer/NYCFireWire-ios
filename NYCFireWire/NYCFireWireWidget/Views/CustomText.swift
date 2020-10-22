@@ -8,33 +8,19 @@
 
 import SwiftUI
 
-struct CustomText: View {
+struct TextModifier: ViewModifier {
     let content: String
     let color: Color
     let font: Font
-    let scale: Bool?
     let width: CGFloat?
+    let lineLimit: Int?
     
-    var body: some View {
-        if scale == true {
-            Text(content)
-                .font(font)
-                .foregroundColor(color)
-                .scaledToFill()
-                .frame(width: width ?? .none)
-                
-        } else {
-            Text(content)
+    func body(content: Content) -> some View {
+            content
                 .font(font)
                 .foregroundColor(color)
                 .frame(width: width ?? .none)
+                .lineLimit(lineLimit ?? .none)
         }
-        
-    }
 }
 
-struct CustomText_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomText(content: "HELLOO", color: .black, font: Font.custom("Ariel-Book", size: 12), scale: true, width: nil)
-    }
-}

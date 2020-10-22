@@ -27,6 +27,10 @@
 		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
 		38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
+		38537D4C2542036700D46102 /* Widget - Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D4B2542036600D46102 /* Widget - Info.plist */; };
+		38537D56254203C800D46102 /* Widget_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D55254203C800D46102 /* Widget_Config.plist */; };
+		38633C27254235A600A04F32 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38633C26254235A600A04F32 /* IncidentView.swift */; };
+		38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
 		38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BE2541EE19009593EC /* FWWidgetMedium.swift */; };
 		38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BF2541EE19009593EC /* FWWidgetSmall.swift */; };
 		38D505C72541EE47009593EC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
@@ -42,6 +46,14 @@
 		38D506232541F0E2009593EC /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8D214AD069000166BE /* String+DateFormat.swift */; };
 		38D506282541F0F9009593EC /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF022187991C00E20F34 /* SimpleUser.swift */; };
 		38D506572541F3F2009593EC /* FWWidgetLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506562541F3F2009593EC /* FWWidgetLarge.swift */; };
+		38D5066F2541FB83009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		38D506872541FE23009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D5068C2541FE26009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D506912541FE26009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D506922541FE27009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D506972541FE2A009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		38D5069C2541FE2B009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		38D5069D2541FE2B009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
 		708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */; };
 		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
@@ -348,14 +360,18 @@
 		380972FC2540E545003E132D /* NYCFireWireWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCFireWireWidget.swift; sourceTree = "<group>"; };
 		380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NYCFireWireWidget.intentdefinition; sourceTree = "<group>"; };
 		380972FF2540E545003E132D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		380973012540E545003E132D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		380973342540E611003E132D /* WidgetContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetContent.swift; sourceTree = "<group>"; };
 		38305ABC2537A7920023DDA2 /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
 		38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Prod copy-Info.plist"; sourceTree = "<group>"; };
 		38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Local copy-Info.plist"; sourceTree = "<group>"; };
+		38537D4B2542036600D46102 /* Widget - Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Widget - Info.plist"; sourceTree = "<group>"; };
+		38537D55254203C800D46102 /* Widget_Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Widget_Config.plist; sourceTree = "<group>"; };
+		38633C26254235A600A04F32 /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
 		38D505BE2541EE19009593EC /* FWWidgetMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetMedium.swift; sourceTree = "<group>"; };
 		38D505BF2541EE19009593EC /* FWWidgetSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetSmall.swift; sourceTree = "<group>"; };
 		38D506562541F3F2009593EC /* FWWidgetLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FWWidgetLarge.swift; sourceTree = "<group>"; };
+		38D5066E2541FB83009593EC /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		38D506862541FE23009593EC /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWireWidgetExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWireWidgetExtension/Pods-NYCFireWireWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.release.xcconfig"; sourceTree = "<group>"; };
 		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -507,24 +523,52 @@
 		380972FB2540E545003E132D /* NYCFireWireWidget */ = {
 			isa = PBXGroup;
 			children = (
-				38D505BC2541EE19009593EC /* Widgets */,
-				380972FC2540E545003E132D /* NYCFireWireWidget.swift */,
-				380973342540E611003E132D /* WidgetContent.swift */,
-				380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */,
-				380972FF2540E545003E132D /* Assets.xcassets */,
-				380973012540E545003E132D /* Info.plist */,
+				38D506792541FBD7009593EC /* Control */,
+				38D506742541FBBF009593EC /* Views */,
+				38537D55254203C800D46102 /* Widget_Config.plist */,
+				38537D4B2542036600D46102 /* Widget - Info.plist */,
+				38633C352542408200A04F32 /* Resources */,
 			);
 			path = NYCFireWireWidget;
 			sourceTree = "<group>";
 		};
-		38D505BC2541EE19009593EC /* Widgets */ = {
+		38633C352542408200A04F32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */,
+				380972FF2540E545003E132D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		38D505BC2541EE19009593EC /* Widget */ = {
 			isa = PBXGroup;
 			children = (
 				38D505BE2541EE19009593EC /* FWWidgetMedium.swift */,
 				38D505BF2541EE19009593EC /* FWWidgetSmall.swift */,
 				38D506562541F3F2009593EC /* FWWidgetLarge.swift */,
 			);
-			path = Widgets;
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		38D506742541FBBF009593EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38633C26254235A600A04F32 /* IncidentView.swift */,
+				380973342540E611003E132D /* WidgetContent.swift */,
+				38D505BC2541EE19009593EC /* Widget */,
+				38D5066E2541FB83009593EC /* EventView.swift */,
+				38D506862541FE23009593EC /* CustomText.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38D506792541FBD7009593EC /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				380972FC2540E545003E132D /* NYCFireWireWidget.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 		702621922B7D82D13FE22B7F /* Pods */ = {
@@ -855,7 +899,7 @@
 				E309DF132187E55100E20F34 /* Sources */,
 				E309DF3B2187E55100E20F34 /* Frameworks */,
 				E309DF3D2187E55100E20F34 /* Resources */,
-				17CDEAE54235C5E1C411285A /* [CP] Embed Pods Frameworks */,
+				C7FA99123B2720A93594174F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -875,7 +919,7 @@
 				E37F257B2356436F0005F6D7 /* Frameworks */,
 				E37F257D2356436F0005F6D7 /* Resources */,
 				3809730A2540E546003E132D /* Embed App Extensions */,
-				2BA6E8661C2CCEE2DED79292 /* [CP] Embed Pods Frameworks */,
+				53E7A064A21CC6F8549A0DF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -895,7 +939,7 @@
 				E3FC2E5D214ACFF4000166BE /* Sources */,
 				E3FC2E5E214ACFF4000166BE /* Frameworks */,
 				E3FC2E5F214ACFF4000166BE /* Resources */,
-				CCBDD2697F4D5C84FDFF1538 /* [CP] Embed Pods Frameworks */,
+				74CE9B26A73EB4E98952434A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -972,6 +1016,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38537D56254203C800D46102 /* Widget_Config.plist in Resources */,
+				38537D4C2542036700D46102 /* Widget - Info.plist in Resources */,
 				380973002540E545003E132D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1072,24 +1118,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17CDEAE54235C5E1C411285A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BA6E8661C2CCEE2DED79292 /* [CP] Embed Pods Frameworks */ = {
+		53E7A064A21CC6F8549A0DF3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1104,6 +1133,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74CE9B26A73EB4E98952434A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE2D366E25628D274CF78AAF /* [CP] Check Pods Manifest.lock */ = {
@@ -1124,21 +1170,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CCBDD2697F4D5C84FDFF1538 /* [CP] Embed Pods Frameworks */ = {
+		C7FA99123B2720A93594174F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE20BDC7B07A5C8926C6936F /* [CP] Check Pods Manifest.lock */ = {
@@ -1214,7 +1260,9 @@
 				38D505E12541EF13009593EC /* Location.swift in Sources */,
 				38D506572541F3F2009593EC /* FWWidgetLarge.swift in Sources */,
 				38D505D62541EECF009593EC /* APIController.swift in Sources */,
+				38D5066F2541FB83009593EC /* EventView.swift in Sources */,
 				38D5060F2541F076009593EC /* APIConstants.swift in Sources */,
+				38633C27254235A600A04F32 /* IncidentView.swift in Sources */,
 				38D506282541F0F9009593EC /* SimpleUser.swift in Sources */,
 				38D505D82541EECF009593EC /* APIController+Incidents.swift in Sources */,
 				38D505D12541EEC3009593EC /* UserDefaultsConstants.swift in Sources */,
@@ -1226,8 +1274,10 @@
 				38D506232541F0E2009593EC /* String+DateFormat.swift in Sources */,
 				38D506142541F086009593EC /* Constants.swift in Sources */,
 				38D5061E2541F0CC009593EC /* APIConstants+Endpoints.swift in Sources */,
+				38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */,
 				38D505C72541EE47009593EC /* Incident.swift in Sources */,
 				380972FD2540E545003E132D /* NYCFireWireWidget.swift in Sources */,
+				38D506872541FE23009593EC /* CustomText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,6 +1305,7 @@
 				E309DF1C2187E55100E20F34 /* FullUser.swift in Sources */,
 				E309DF1D2187E55100E20F34 /* RootViewController.swift in Sources */,
 				E309DF8A218CBF7800E20F34 /* DetailsViewController.swift in Sources */,
+				38D506912541FE26009593EC /* CustomText.swift in Sources */,
 				E309DF1E2187E55100E20F34 /* SlideOutMenuHeader.swift in Sources */,
 				380973362540E611003E132D /* WidgetContent.swift in Sources */,
 				E309DF1F2187E55100E20F34 /* MenuConfiguration.swift in Sources */,
@@ -1263,6 +1314,7 @@
 				E338E3DB224FB6990043F777 /* AudioManager.swift in Sources */,
 				E309DF222187E55100E20F34 /* APIConstants+Endpoints.swift in Sources */,
 				E309DF232187E55100E20F34 /* UIImage+Helpers.swift in Sources */,
+				38D5069C2541FE2B009593EC /* EventView.swift in Sources */,
 				E309DF242187E55100E20F34 /* Location.swift in Sources */,
 				E309DF252187E55100E20F34 /* String+Helpers.swift in Sources */,
 				E309DF262187E55100E20F34 /* UIViewController+Inherited.swift in Sources */,
@@ -1359,6 +1411,8 @@
 				E37F25652356436F0005F6D7 /* SettingsCell.swift in Sources */,
 				E37F25662356436F0005F6D7 /* IncidentAnnotation.swift in Sources */,
 				E37F25672356436F0005F6D7 /* MapKit+Helpers.swift in Sources */,
+				38D5068C2541FE26009593EC /* CustomText.swift in Sources */,
+				38D506972541FE2A009593EC /* EventView.swift in Sources */,
 				E37F25682356436F0005F6D7 /* Incident.swift in Sources */,
 				E37F25692356436F0005F6D7 /* UserDefaultsConstants.swift in Sources */,
 				E37F256A2356436F0005F6D7 /* UIColor+Helpers.swift in Sources */,
@@ -1406,6 +1460,7 @@
 				E309DEFE218798C700E20F34 /* FullUser.swift in Sources */,
 				E3FC2EAF214AD069000166BE /* RootViewController.swift in Sources */,
 				E309DF89218CBF7800E20F34 /* DetailsViewController.swift in Sources */,
+				38D506922541FE27009593EC /* CustomText.swift in Sources */,
 				E3FC2F16214B0075000166BE /* SlideOutMenuHeader.swift in Sources */,
 				380973352540E611003E132D /* WidgetContent.swift in Sources */,
 				E3FC2F1A214B05DE000166BE /* MenuConfiguration.swift in Sources */,
@@ -1414,6 +1469,7 @@
 				E338E3DA224FB6990043F777 /* AudioManager.swift in Sources */,
 				E3FC2F0E214B0018000166BE /* APIConstants+Endpoints.swift in Sources */,
 				E3FC2EAA214AD069000166BE /* UIImage+Helpers.swift in Sources */,
+				38D5069D2541FE2B009593EC /* EventView.swift in Sources */,
 				E309DF042187991C00E20F34 /* Location.swift in Sources */,
 				E3FC2EAD214AD069000166BE /* String+Helpers.swift in Sources */,
 				E3FC2EAC214AD069000166BE /* UIViewController+Inherited.swift in Sources */,
@@ -1496,7 +1552,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
-				INFOPLIST_FILE = NYCFireWireWidget/Info.plist;
+				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1522,7 +1578,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
-				INFOPLIST_FILE = NYCFireWireWidget/Info.plist;
+				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
