@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import GoogleMobileAds
 import OneSignal
+import WidgetKit
 
 class DashboardViewController: UIViewController {
     
@@ -36,6 +37,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        WidgetCenter.shared.reloadAllTimelines()
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         title = "NYC Fire Wire"

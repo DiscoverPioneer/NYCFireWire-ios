@@ -39,6 +39,16 @@ struct Provider: TimelineProvider {
                 let timeline = Timeline(entries: entries, policy: .atEnd)
                 completion(timeline)
             }
+        } else {
+            let currentDate = Date()
+            let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
+            
+            let entry = WidgetContent(date: Date(), incident1: Incident.placeholder.incident1, incident2: Incident.placeholder.incident2, incident3: Incident.placeholder.incident3)
+                let widget = WidgetContent(date: entryDate, incident1: entry.incident1, incident2: entry.incident2, incident3: entry.incident3)
+                entries.append(widget)
+            
+            let timeline = Timeline(entries: entries, policy: .atEnd)
+            completion(timeline)
         }
     }
     
@@ -49,9 +59,20 @@ struct Provider: TimelineProvider {
 
 struct NYCFireWireWidgetEntryView : View {
     var entry: Provider.Entry
+    @Environment(\.widgetFamily) var family: WidgetFamily
     
+    @ViewBuilder
     var body: some View {
-        Text("\(entry.date)")
+        switch family {
+        case .systemSmall:
+            FWWidgetSmall(content: entry).previewContext(WidgetPreviewContext(family: .systemSmall))
+        case .systemMedium:
+            FWWidgetMedium(content: entry).previewContext(WidgetPreviewContext(family: .systemMedium))
+        case .systemLarge:
+            FWWidgetLarge(content: entry).previewContext(WidgetPreviewContext(family: .systemLarge))
+        @unknown default:
+            EmptyView()
+        }
     }
 }
 
@@ -61,17 +82,18 @@ struct NYCFireWireWidget: Widget {
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            NYCFireWireWidgetEntryView(entry: entry)
+            NYCFireWireWidgetEntryView(entry: Incident.placeholder)
         }
         .configurationDisplayName(kind)
         .description("This is an example widget.")
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
 struct NYCFireWireWidget_Previews: PreviewProvider {
     static var previews: some View {
+        FWWidgetSmall(content: Incident.placeholder).previewContext(WidgetPreviewContext(family: .systemSmall))
         FWWidgetMedium(content: Incident.placeholder).previewContext(WidgetPreviewContext(family: .systemMedium))
-//        NYCFireWireWidgetEntryView(entry: Incident.placeholder)
-//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        FWWidgetLarge(content: Incident.placeholder).previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }

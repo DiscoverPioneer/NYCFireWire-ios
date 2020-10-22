@@ -22,16 +22,28 @@
 		380973362540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
 		380973372540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
 		380973382540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
-		3809733E2540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
-		3809733F2540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
-		380973402540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
-		380973412540E61F003E132D /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809733D2540E61F003E132D /* FWWidgetMedium.swift */; };
 		38305ABD2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305ABE2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
 		38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
+		38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BE2541EE19009593EC /* FWWidgetMedium.swift */; };
+		38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BF2541EE19009593EC /* FWWidgetSmall.swift */; };
+		38D505C72541EE47009593EC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
+		38D505CC2541EE5E009593EC /* Numbers+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */; };
+		38D505D12541EEC3009593EC /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E83214AD069000166BE /* UserDefaultsConstants.swift */; };
+		38D505D62541EECF009593EC /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E99214AD069000166BE /* APIController.swift */; };
+		38D505D82541EECF009593EC /* APIController+Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2D21504144000166BE /* APIController+Incidents.swift */; };
+		38D505E12541EF13009593EC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF012187991C00E20F34 /* Location.swift */; };
+		38D5060F2541F076009593EC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E82214AD069000166BE /* APIConstants.swift */; };
+		38D506142541F086009593EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E7D214AD069000166BE /* Constants.swift */; };
+		38D506192541F0A5009593EC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF032187991C00E20F34 /* Comment.swift */; };
+		38D5061E2541F0CC009593EC /* APIConstants+Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F0D214B0018000166BE /* APIConstants+Endpoints.swift */; };
+		38D506232541F0E2009593EC /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8D214AD069000166BE /* String+DateFormat.swift */; };
+		38D506282541F0F9009593EC /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF022187991C00E20F34 /* SimpleUser.swift */; };
+		38D506572541F3F2009593EC /* FWWidgetLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506562541F3F2009593EC /* FWWidgetLarge.swift */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
+		708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */; };
 		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */; };
 		E301A8A4225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
@@ -338,15 +350,20 @@
 		380972FF2540E545003E132D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380973012540E545003E132D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		380973342540E611003E132D /* WidgetContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetContent.swift; sourceTree = "<group>"; };
-		3809733D2540E61F003E132D /* FWWidgetMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetMedium.swift; sourceTree = "<group>"; };
 		38305ABC2537A7920023DDA2 /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
 		38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Prod copy-Info.plist"; sourceTree = "<group>"; };
 		38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Local copy-Info.plist"; sourceTree = "<group>"; };
+		38D505BE2541EE19009593EC /* FWWidgetMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetMedium.swift; sourceTree = "<group>"; };
+		38D505BF2541EE19009593EC /* FWWidgetSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetSmall.swift; sourceTree = "<group>"; };
+		38D506562541F3F2009593EC /* FWWidgetLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FWWidgetLarge.swift; sourceTree = "<group>"; };
+		3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWireWidgetExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWireWidgetExtension/Pods-NYCFireWireWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.release.xcconfig"; sourceTree = "<group>"; };
 		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A49B6C065E0425FECD3C51 /* Pods-NYCFireWire - Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Prod.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWireWidgetExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWireWidgetExtension/Pods-NYCFireWireWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.release.xcconfig"; sourceTree = "<group>"; };
+		791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWireWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Local.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98694E2FB3C3E9740D4F058 /* Pods-NYCFireWire - Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.release.xcconfig"; sourceTree = "<group>"; };
 		E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
@@ -454,6 +471,7 @@
 			files = (
 				380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */,
 				380972F82540E545003E132D /* WidgetKit.framework in Frameworks */,
+				708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,14 +507,24 @@
 		380972FB2540E545003E132D /* NYCFireWireWidget */ = {
 			isa = PBXGroup;
 			children = (
+				38D505BC2541EE19009593EC /* Widgets */,
 				380972FC2540E545003E132D /* NYCFireWireWidget.swift */,
 				380973342540E611003E132D /* WidgetContent.swift */,
-				3809733D2540E61F003E132D /* FWWidgetMedium.swift */,
 				380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */,
 				380972FF2540E545003E132D /* Assets.xcassets */,
 				380973012540E545003E132D /* Info.plist */,
 			);
 			path = NYCFireWireWidget;
+			sourceTree = "<group>";
+		};
+		38D505BC2541EE19009593EC /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				38D505BE2541EE19009593EC /* FWWidgetMedium.swift */,
+				38D505BF2541EE19009593EC /* FWWidgetSmall.swift */,
+				38D506562541F3F2009593EC /* FWWidgetLarge.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 		702621922B7D82D13FE22B7F /* Pods */ = {
@@ -508,6 +536,8 @@
 				7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */,
 				1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */,
 				45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */,
+				3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */,
+				655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -521,6 +551,7 @@
 				5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */,
 				380972F72540E545003E132D /* WidgetKit.framework */,
 				380972F92540E545003E132D /* SwiftUI.framework */,
+				791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -802,6 +833,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 380973072540E546003E132D /* Build configuration list for PBXNativeTarget "NYCFireWireWidgetExtension" */;
 			buildPhases = (
+				F581914A473D371B93202F03 /* [CP] Check Pods Manifest.lock */,
 				380972F22540E545003E132D /* Sources */,
 				380972F32540E545003E132D /* Frameworks */,
 				380972F42540E545003E132D /* Resources */,
@@ -823,7 +855,7 @@
 				E309DF132187E55100E20F34 /* Sources */,
 				E309DF3B2187E55100E20F34 /* Frameworks */,
 				E309DF3D2187E55100E20F34 /* Resources */,
-				5B319F2F75EC5086A4080D84 /* [CP] Embed Pods Frameworks */,
+				17CDEAE54235C5E1C411285A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -842,8 +874,8 @@
 				E37F253C2356436F0005F6D7 /* Sources */,
 				E37F257B2356436F0005F6D7 /* Frameworks */,
 				E37F257D2356436F0005F6D7 /* Resources */,
-				1804BBF758B9EBA515B86D78 /* [CP] Embed Pods Frameworks */,
 				3809730A2540E546003E132D /* Embed App Extensions */,
+				2BA6E8661C2CCEE2DED79292 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -863,7 +895,7 @@
 				E3FC2E5D214ACFF4000166BE /* Sources */,
 				E3FC2E5E214ACFF4000166BE /* Frameworks */,
 				E3FC2E5F214ACFF4000166BE /* Resources */,
-				2BEEF5EF678E29E038735E76 /* [CP] Embed Pods Frameworks */,
+				CCBDD2697F4D5C84FDFF1538 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1040,41 +1072,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1804BBF758B9EBA515B86D78 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BEEF5EF678E29E038735E76 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B319F2F75EC5086A4080D84 /* [CP] Embed Pods Frameworks */ = {
+		17CDEAE54235C5E1C411285A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1089,6 +1087,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BA6E8661C2CCEE2DED79292 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE2D366E25628D274CF78AAF /* [CP] Check Pods Manifest.lock */ = {
@@ -1107,6 +1122,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCBDD2697F4D5C84FDFF1538 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE20BDC7B07A5C8926C6936F /* [CP] Check Pods Manifest.lock */ = {
@@ -1149,6 +1181,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F581914A473D371B93202F03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYCFireWireWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1156,9 +1210,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D506192541F0A5009593EC /* Comment.swift in Sources */,
+				38D505E12541EF13009593EC /* Location.swift in Sources */,
+				38D506572541F3F2009593EC /* FWWidgetLarge.swift in Sources */,
+				38D505D62541EECF009593EC /* APIController.swift in Sources */,
+				38D5060F2541F076009593EC /* APIConstants.swift in Sources */,
+				38D506282541F0F9009593EC /* SimpleUser.swift in Sources */,
+				38D505D82541EECF009593EC /* APIController+Incidents.swift in Sources */,
+				38D505D12541EEC3009593EC /* UserDefaultsConstants.swift in Sources */,
+				38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */,
 				380973382540E611003E132D /* WidgetContent.swift in Sources */,
-				380973412540E61F003E132D /* FWWidgetMedium.swift in Sources */,
+				38D505CC2541EE5E009593EC /* Numbers+Helpers.swift in Sources */,
+				38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */,
 				380973022540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */,
+				38D506232541F0E2009593EC /* String+DateFormat.swift in Sources */,
+				38D506142541F086009593EC /* Constants.swift in Sources */,
+				38D5061E2541F0CC009593EC /* APIConstants+Endpoints.swift in Sources */,
+				38D505C72541EE47009593EC /* Incident.swift in Sources */,
 				380972FD2540E545003E132D /* NYCFireWireWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1176,7 +1244,6 @@
 				E33582862194B06E00F6916F /* SupportViewController.swift in Sources */,
 				E309DF8E218CC4E800E20F34 /* GrowingTextView.swift in Sources */,
 				E3C9B88921A88889004160C1 /* Numbers+Helpers.swift in Sources */,
-				3809733F2540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				E309DF162187E55100E20F34 /* SimpleUser.swift in Sources */,
 				E309DF88218CBF7800E20F34 /* SegmentedViewController.swift in Sources */,
 				E309DF172187E55100E20F34 /* MountainClimberController.swift in Sources */,
@@ -1274,7 +1341,6 @@
 				E37F25562356436F0005F6D7 /* Location.swift in Sources */,
 				E37F25572356436F0005F6D7 /* String+Helpers.swift in Sources */,
 				E37F25582356436F0005F6D7 /* UIViewController+Inherited.swift in Sources */,
-				380973402540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				E37F25592356436F0005F6D7 /* NotificationSettingsViewController.swift in Sources */,
 				E37F255A2356436F0005F6D7 /* NotificationToggleCell.swift in Sources */,
 				E37F255B2356436F0005F6D7 /* UITextField+Helpers.swift in Sources */,
@@ -1329,7 +1395,6 @@
 				E33582852194B06E00F6916F /* SupportViewController.swift in Sources */,
 				E309DF8D218CC4E800E20F34 /* GrowingTextView.swift in Sources */,
 				E3C9B88821A88889004160C1 /* Numbers+Helpers.swift in Sources */,
-				3809733E2540E61F003E132D /* FWWidgetMedium.swift in Sources */,
 				E309DF072187991C00E20F34 /* SimpleUser.swift in Sources */,
 				E309DF87218CBF7800E20F34 /* SegmentedViewController.swift in Sources */,
 				E3FC2EFD214AE4F8000166BE /* MountainClimberController.swift in Sources */,
@@ -1424,9 +1489,11 @@
 /* Begin XCBuildConfiguration section */
 		380973082540E546003E132D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWireWidget/Info.plist;
@@ -1448,9 +1515,11 @@
 		};
 		380973092540E546003E132D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWireWidget/Info.plist;
@@ -1478,7 +1547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Prod copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1499,7 +1568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Prod copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1521,7 +1590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1543,7 +1612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1681,7 +1750,7 @@
 				CURRENT_PROJECT_VERSION = 90108;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1704,7 +1773,7 @@
 				CURRENT_PROJECT_VERSION = 90108;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
