@@ -22,10 +22,8 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetContent>) -> Void) {
         var entries: [WidgetContent] = []
         let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
-        if let email = UserDefaults.standard.string(forKey: UserDefaultKeys.userEmailKey.rawValue),
-           let token =  UserDefaults.standard.string(forKey: UserDefaultKeys.userTokenKey.rawValue) {
-            let controller = APIController(email: email, token: token)
-            controller.getAllIncidents(feedType: feedType) { (incidents) in
+        if UserDefaults.standard.string(forKey: UserDefaultKeys.userEmailKey.rawValue) != nil && UserDefaults.standard.string(forKey: UserDefaultKeys.userTokenKey.rawValue) != nil {
+            APIController.defaults.getAllIncidents(feedType: feedType) { (incidents) in
                 widgetContent = WidgetContent(date: Date(), incident1: incidents[0], incident2: incidents[1], incident3: incidents[2])
                 
                 let currentDate = Date()
@@ -41,7 +39,7 @@ struct Provider: TimelineProvider {
             }
         } else {
             let currentDate = Date()
-            let entryDate = Calendar.current.date(byAdding: .minute, value: 10, to: currentDate)!
+            let entryDate = Calendar.current.date(byAdding: .second, value: 1, to: currentDate)!
             
             let entry = WidgetContent(date: Date(), incident1: Incident.placeholder.incident1, incident2: Incident.placeholder.incident2, incident3: Incident.placeholder.incident3)
                 let widget = WidgetContent(date: entryDate, incident1: entry.incident1, incident2: entry.incident2, incident3: entry.incident3)

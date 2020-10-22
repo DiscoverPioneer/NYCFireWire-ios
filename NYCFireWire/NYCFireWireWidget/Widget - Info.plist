@@ -25,5 +25,9 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.widgetkit-extension</string>
 	</dict>
+	<key>Configuration</key>
+	<string>Widget</string>
+	<key>ConfigurationURI</key>
+	<string>http://pioneerapplications.com/AppResources/nycfirewire/Staging_Config.plist</string>
 </dict>
 </plist>

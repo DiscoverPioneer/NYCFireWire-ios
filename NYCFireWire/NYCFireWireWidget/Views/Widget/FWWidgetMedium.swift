@@ -73,30 +73,6 @@ struct FWWidgetMedium: View {
     
 }
 
-struct CustomText: View {
-    let content: String
-    let color: Color
-    let font: Font
-    let scale: Bool?
-    let width: CGFloat?
-    
-    var body: some View {
-        if scale == true {
-            Text(content)
-                .font(font)
-                .foregroundColor(color)
-                .scaledToFill()
-                .frame(width: width)
-                
-        } else {
-            Text(content)
-                .font(font)
-                .foregroundColor(color)
-        }
-        
-    }
-}
-
 
 
 struct FWWidgetMedium_Previews: PreviewProvider {
