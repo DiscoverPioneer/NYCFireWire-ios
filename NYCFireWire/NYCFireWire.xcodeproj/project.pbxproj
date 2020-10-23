@@ -17,7 +17,6 @@
 		380973002540E545003E132D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380972FF2540E545003E132D /* Assets.xcassets */; };
 		380973022540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
 		380973032540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
-		380973062540E545003E132D /* NYCFireWireWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		380973352540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
 		380973362540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
 		380973372540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
@@ -32,7 +31,6 @@
 		38633C27254235A600A04F32 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38633C26254235A600A04F32 /* IncidentView.swift */; };
 		38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
 		38633CB725427EC100A04F32 /* NYCFireWireWidgetExtension.appex in Embed App Extension */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		38633CBC25427EF700A04F32 /* NYCFireWireWidgetExtension.appex in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BE2541EE19009593EC /* FWWidgetMedium.swift */; };
 		38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BF2541EE19009593EC /* FWWidgetSmall.swift */; };
 		38D505C72541EE47009593EC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
@@ -345,7 +343,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				380973062540E545003E132D /* NYCFireWireWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +353,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				38633CBC25427EF700A04F32 /* NYCFireWireWidgetExtension.appex in Copy Files (1 item) */,
 			);
 			name = "Copy Files (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
