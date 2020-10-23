@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>webBaseURI</key>
-	<string>https://nycfirewire-staging.herokuapp.com</string>
+	<string>https://nycfirewire.herokuapp.com</string>
 	<key>apiBaseURI</key>
-	<string>https://nycfirewire-staging.herokuapp.com/api/v1</string>
+	<string>https://nycfirewire.herokuapp.com/api/v1</string>
 	<key>onesignalAppID</key>
 	<string>0366eec4-c67f-472e-9a4f-8f73461f1353</string>
 </dict>
