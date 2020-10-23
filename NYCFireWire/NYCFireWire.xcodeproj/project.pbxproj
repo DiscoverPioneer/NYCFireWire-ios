@@ -31,6 +31,8 @@
 		38537D56254203C800D46102 /* Widget_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D55254203C800D46102 /* Widget_Config.plist */; };
 		38633C27254235A600A04F32 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38633C26254235A600A04F32 /* IncidentView.swift */; };
 		38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
+		38633CB725427EC100A04F32 /* NYCFireWireWidgetExtension.appex in Embed App Extension */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38633CBC25427EF700A04F32 /* NYCFireWireWidgetExtension.appex in Copy Files */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BE2541EE19009593EC /* FWWidgetMedium.swift */; };
 		38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BF2541EE19009593EC /* FWWidgetSmall.swift */; };
 		38D505C72541EE47009593EC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
@@ -346,6 +348,28 @@
 				380973062540E545003E132D /* NYCFireWireWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38633CB525427E8400A04F32 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38633CBC25427EF700A04F32 /* NYCFireWireWidgetExtension.appex in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38633CB625427EB300A04F32 /* Embed App Extension */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38633CB725427EC100A04F32 /* NYCFireWireWidgetExtension.appex in Embed App Extension */,
+			);
+			name = "Embed App Extension";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -900,6 +924,7 @@
 				E309DF3B2187E55100E20F34 /* Frameworks */,
 				E309DF3D2187E55100E20F34 /* Resources */,
 				C7FA99123B2720A93594174F /* [CP] Embed Pods Frameworks */,
+				38633CB525427E8400A04F32 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -940,6 +965,7 @@
 				E3FC2E5E214ACFF4000166BE /* Frameworks */,
 				E3FC2E5F214ACFF4000166BE /* Resources */,
 				74CE9B26A73EB4E98952434A /* [CP] Embed Pods Frameworks */,
+				38633CB625427EB300A04F32 /* Embed App Extension */,
 			);
 			buildRules = (
 			);
