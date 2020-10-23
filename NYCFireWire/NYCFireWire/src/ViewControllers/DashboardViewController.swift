@@ -593,6 +593,7 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let title = feedTypes[row]
         UserDefaults.standard.set(title, forKey: "selectedFeedType")
+        UserDefaultsSuite().setString(value: title, key: "selectedFeedType")
         if title == "Long Island" || title == "All" {
             OneSignal.sendTag("Long Island", value: "true", onSuccess: { (sucess) in
                 print("Updated tag1")
