@@ -569,7 +569,7 @@ fileprivate extension UIButton {
         }
     }
     
-    fileprivate func addTargetClosure(closure: @escaping UIButtonTargetClosure) {
+    func addTargetClosure(closure: @escaping UIButtonTargetClosure) {
         targetClosure = closure
         addTarget(self, action: #selector(UIButton.closureAction), for: .touchUpInside)
     }

@@ -13,18 +13,18 @@ import UIKit
 
 public extension UIViewController {
     
-    public func popPage(animated: Bool) -> UIViewController? {
+    func popPage(animated: Bool) -> UIViewController? {
         return navigationController?.popViewController(animated: animated)
     }
     
-    public func addChild(page: UIViewController, toView: UIView) {
+    func addChild(page: UIViewController, toView: UIView) {
         addChild(page)
         page.view.frame = CGRect(origin: CGPoint.zero, size: toView.frame.size)
         toView.addSubview(page.view)
         page.didMove(toParent: self)
     }
     
-    public func removeAsChild() {
+    func removeAsChild() {
         willMove(toParent: nil)
         view.removeFromSuperview()
         removeFromParent()

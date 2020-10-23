@@ -28,7 +28,7 @@ class NotificationSettingsViewController: UIViewController {
         super.viewWillAppear(animated)
         let spinner = view.showActivity()
         OneSignal.getTags { (tags) in
-            print("My Tags Are: \(tags)")
+//            print("My Tags Are: \(tags)")
             guard let tags = tags, let tagArray = Array(tags.keys) as? [String] else {
                 return
             }

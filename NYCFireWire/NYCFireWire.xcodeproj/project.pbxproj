@@ -8,15 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
+		380972EF2540E50C003E132D /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 380972EE2540E50C003E132D /* homescreen.mp4 */; };
+		380972F02540E50C003E132D /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 380972EE2540E50C003E132D /* homescreen.mp4 */; };
+		380972F12540E50C003E132D /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 380972EE2540E50C003E132D /* homescreen.mp4 */; };
+		380972F82540E545003E132D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F72540E545003E132D /* WidgetKit.framework */; };
+		380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F92540E545003E132D /* SwiftUI.framework */; };
+		380972FD2540E545003E132D /* NYCFireWireWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380972FC2540E545003E132D /* NYCFireWireWidget.swift */; };
+		380973002540E545003E132D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380972FF2540E545003E132D /* Assets.xcassets */; };
+		380973022540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
+		380973032540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
+		380973062540E545003E132D /* NYCFireWireWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		380973352540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		380973362540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		380973372540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		380973382540E611003E132D /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
 		38305ABD2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305ABE2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
 		38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
-		38305B532537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
-		38305B542537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
-		38305B552537AF250023DDA2 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 38305B522537AF250023DDA2 /* homescreen.mp4 */; };
+		38537D56254203C800D46102 /* Widget_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D55254203C800D46102 /* Widget_Config.plist */; };
+		38633C27254235A600A04F32 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38633C26254235A600A04F32 /* IncidentView.swift */; };
+		38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
+		38633CB725427EC100A04F32 /* NYCFireWireWidgetExtension.appex in Embed App Extension */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38633CBC25427EF700A04F32 /* NYCFireWireWidgetExtension.appex in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BE2541EE19009593EC /* FWWidgetMedium.swift */; };
+		38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BF2541EE19009593EC /* FWWidgetSmall.swift */; };
+		38D505C72541EE47009593EC /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
+		38D505CC2541EE5E009593EC /* Numbers+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */; };
+		38D505D12541EEC3009593EC /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E83214AD069000166BE /* UserDefaultsConstants.swift */; };
+		38D505D62541EECF009593EC /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E99214AD069000166BE /* APIController.swift */; };
+		38D505D82541EECF009593EC /* APIController+Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2D21504144000166BE /* APIController+Incidents.swift */; };
+		38D505E12541EF13009593EC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF012187991C00E20F34 /* Location.swift */; };
+		38D5060F2541F076009593EC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E82214AD069000166BE /* APIConstants.swift */; };
+		38D506142541F086009593EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E7D214AD069000166BE /* Constants.swift */; };
+		38D506192541F0A5009593EC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF032187991C00E20F34 /* Comment.swift */; };
+		38D5061E2541F0CC009593EC /* APIConstants+Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F0D214B0018000166BE /* APIConstants+Endpoints.swift */; };
+		38D506232541F0E2009593EC /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8D214AD069000166BE /* String+DateFormat.swift */; };
+		38D506282541F0F9009593EC /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF022187991C00E20F34 /* SimpleUser.swift */; };
+		38D506572541F3F2009593EC /* FWWidgetLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506562541F3F2009593EC /* FWWidgetLarge.swift */; };
+		38D5066F2541FB83009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		38D506872541FE23009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D5068C2541FE26009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D506912541FE26009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D506922541FE27009593EC /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		38D506972541FE2A009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		38D5069C2541FE2B009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		38D5069D2541FE2B009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
+		708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */; };
 		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */; };
 		E301A8A4225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
@@ -287,18 +327,82 @@
 		E3FC2F322150450F000166BE /* IncidentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F312150450F000166BE /* IncidentAnnotation.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		380973042540E545003E132D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3FC2E59214ACFF3000166BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 380972F52540E545003E132D;
+			remoteInfo = NYCFireWireWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3809730A2540E546003E132D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				380973062540E545003E132D /* NYCFireWireWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38633CB525427E8400A04F32 /* Copy Files (1 item) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38633CBC25427EF700A04F32 /* NYCFireWireWidgetExtension.appex in Copy Files (1 item) */,
+			);
+			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38633CB625427EB300A04F32 /* Embed App Extension */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38633CB725427EC100A04F32 /* NYCFireWireWidgetExtension.appex in Embed App Extension */,
+			);
+			name = "Embed App Extension";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
+		380972EE2540E50C003E132D /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
+		380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NYCFireWireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		380972F72540E545003E132D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		380972F92540E545003E132D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		380972FC2540E545003E132D /* NYCFireWireWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCFireWireWidget.swift; sourceTree = "<group>"; };
+		380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NYCFireWireWidget.intentdefinition; sourceTree = "<group>"; };
+		380972FF2540E545003E132D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		380973342540E611003E132D /* WidgetContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetContent.swift; sourceTree = "<group>"; };
 		38305ABC2537A7920023DDA2 /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
 		38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Prod copy-Info.plist"; sourceTree = "<group>"; };
 		38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NYCFireWire - Local copy-Info.plist"; sourceTree = "<group>"; };
-		38305B522537AF250023DDA2 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
+		38537D4B2542036600D46102 /* Widget - Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Widget - Info.plist"; sourceTree = "<group>"; };
+		38537D55254203C800D46102 /* Widget_Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Widget_Config.plist; sourceTree = "<group>"; };
+		38633C26254235A600A04F32 /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
+		38D505BE2541EE19009593EC /* FWWidgetMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetMedium.swift; sourceTree = "<group>"; };
+		38D505BF2541EE19009593EC /* FWWidgetSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWWidgetSmall.swift; sourceTree = "<group>"; };
+		38D506562541F3F2009593EC /* FWWidgetLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FWWidgetLarge.swift; sourceTree = "<group>"; };
+		38D5066E2541FB83009593EC /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		38D506862541FE23009593EC /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
+		3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWireWidgetExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWireWidgetExtension/Pods-NYCFireWireWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.release.xcconfig"; sourceTree = "<group>"; };
 		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A49B6C065E0425FECD3C51 /* Pods-NYCFireWire - Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Prod.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWireWidgetExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWireWidgetExtension/Pods-NYCFireWireWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.release.xcconfig"; sourceTree = "<group>"; };
+		791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWireWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Local.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98694E2FB3C3E9740D4F058 /* Pods-NYCFireWire - Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.release.xcconfig"; sourceTree = "<group>"; };
 		E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
@@ -400,6 +504,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		380972F32540E545003E132D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */,
+				380972F82540E545003E132D /* WidgetKit.framework in Frameworks */,
+				708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E309DF3B2187E55100E20F34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +543,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		380972FB2540E545003E132D /* NYCFireWireWidget */ = {
+			isa = PBXGroup;
+			children = (
+				38D506792541FBD7009593EC /* Control */,
+				38D506742541FBBF009593EC /* Views */,
+				38537D55254203C800D46102 /* Widget_Config.plist */,
+				38537D4B2542036600D46102 /* Widget - Info.plist */,
+				38633C352542408200A04F32 /* Resources */,
+			);
+			path = NYCFireWireWidget;
+			sourceTree = "<group>";
+		};
+		38633C352542408200A04F32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */,
+				380972FF2540E545003E132D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		38D505BC2541EE19009593EC /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				38D505BE2541EE19009593EC /* FWWidgetMedium.swift */,
+				38D505BF2541EE19009593EC /* FWWidgetSmall.swift */,
+				38D506562541F3F2009593EC /* FWWidgetLarge.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		38D506742541FBBF009593EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38633C26254235A600A04F32 /* IncidentView.swift */,
+				380973342540E611003E132D /* WidgetContent.swift */,
+				38D505BC2541EE19009593EC /* Widget */,
+				38D5066E2541FB83009593EC /* EventView.swift */,
+				38D506862541FE23009593EC /* CustomText.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38D506792541FBD7009593EC /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				380972FC2540E545003E132D /* NYCFireWireWidget.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		702621922B7D82D13FE22B7F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +603,8 @@
 				7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */,
 				1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */,
 				45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */,
+				3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */,
+				655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -449,6 +616,9 @@
 				984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */,
 				50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */,
 				5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */,
+				380972F72540E545003E132D /* WidgetKit.framework */,
+				380972F92540E545003E132D /* SwiftUI.framework */,
+				791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -518,6 +688,7 @@
 				E3075AFE2221C1B900B24846 /* NYCFireWire - Local.entitlements */,
 				E34A799521D82B3200F37FB7 /* NYCFireWire - Prod.entitlements */,
 				E3FC2E63214ACFF4000166BE /* NYCFireWire */,
+				380972FB2540E545003E132D /* NYCFireWireWidget */,
 				E3FC2E62214ACFF4000166BE /* Products */,
 				702621922B7D82D13FE22B7F /* Pods */,
 				71A06F37851C544BCD022491 /* Frameworks */,
@@ -532,6 +703,7 @@
 				E3FC2E61214ACFF4000166BE /* NYCFireWire - Prod.app */,
 				E309DF492187E55100E20F34 /* NYCFireWire - Local.app */,
 				E37F25972356436F0005F6D7 /* NYCFireWire - Staging.app */,
+				380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -604,7 +776,7 @@
 		E3FC2E84214AD069000166BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				38305B522537AF250023DDA2 /* homescreen.mp4 */,
+				380972EE2540E50C003E132D /* homescreen.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -724,6 +896,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		380972F52540E545003E132D /* NYCFireWireWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 380973072540E546003E132D /* Build configuration list for PBXNativeTarget "NYCFireWireWidgetExtension" */;
+			buildPhases = (
+				F581914A473D371B93202F03 /* [CP] Check Pods Manifest.lock */,
+				380972F22540E545003E132D /* Sources */,
+				380972F32540E545003E132D /* Frameworks */,
+				380972F42540E545003E132D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NYCFireWireWidgetExtension;
+			productName = NYCFireWireWidgetExtension;
+			productReference = 380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E309DF112187E55100E20F34 /* NYCFireWire - Local */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E309DF462187E55100E20F34 /* Build configuration list for PBXNativeTarget "NYCFireWire - Local" */;
@@ -732,7 +922,8 @@
 				E309DF132187E55100E20F34 /* Sources */,
 				E309DF3B2187E55100E20F34 /* Frameworks */,
 				E309DF3D2187E55100E20F34 /* Resources */,
-				17F265124E6EF77FEA442CE4 /* [CP] Embed Pods Frameworks */,
+				C7FA99123B2720A93594174F /* [CP] Embed Pods Frameworks */,
+				38633CB525427E8400A04F32 /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
@@ -751,11 +942,13 @@
 				E37F253C2356436F0005F6D7 /* Sources */,
 				E37F257B2356436F0005F6D7 /* Frameworks */,
 				E37F257D2356436F0005F6D7 /* Resources */,
-				A00FBCBC664CFE6C9624598A /* [CP] Embed Pods Frameworks */,
+				3809730A2540E546003E132D /* Embed App Extensions */,
+				53E7A064A21CC6F8549A0DF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				380973052540E545003E132D /* PBXTargetDependency */,
 			);
 			name = "NYCFireWire - Staging";
 			productName = NYCFireWire;
@@ -770,7 +963,8 @@
 				E3FC2E5D214ACFF4000166BE /* Sources */,
 				E3FC2E5E214ACFF4000166BE /* Frameworks */,
 				E3FC2E5F214ACFF4000166BE /* Resources */,
-				08E311816F10E6E047A7C0A1 /* [CP] Embed Pods Frameworks */,
+				74CE9B26A73EB4E98952434A /* [CP] Embed Pods Frameworks */,
+				38633CB625427EB300A04F32 /* Embed App Extension */,
 			);
 			buildRules = (
 			);
@@ -787,10 +981,13 @@
 		E3FC2E59214ACFF3000166BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 1200;
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Pioneer Mobile Applications, LLC";
 				TargetAttributes = {
+					380972F52540E545003E132D = {
+						CreatedOnToolsVersion = 12.1;
+					};
 					E309DF112187E55100E20F34 = {
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -834,11 +1031,21 @@
 				E3FC2E60214ACFF4000166BE /* NYCFireWire - Prod */,
 				E309DF112187E55100E20F34 /* NYCFireWire - Local */,
 				E37F253A2356436F0005F6D7 /* NYCFireWire - Staging */,
+				380972F52540E545003E132D /* NYCFireWireWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		380972F42540E545003E132D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38537D56254203C800D46102 /* Widget_Config.plist in Resources */,
+				380973002540E545003E132D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E309DF3D2187E55100E20F34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -853,11 +1060,11 @@
 				E3075B0C2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0E2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
 				E328A97523BD9AB200914370 /* UnifiedNativeAdCell.xib in Resources */,
-				38305B542537AF250023DDA2 /* homescreen.mp4 in Resources */,
 				E309DF412187E55100E20F34 /* IncidentTableViewCell.xib in Resources */,
 				E3075B082221EC6100B24846 /* DivisionTicket.wav in Resources */,
 				E3075B212223147700B24846 /* SpecialUnit.wav in Resources */,
 				E3E1BB5D2246D63800A3FE2A /* servicebell.wav in Resources */,
+				380972F02540E50C003E132D /* homescreen.mp4 in Resources */,
 				E309DF422187E55100E20F34 /* LaunchScreen.storyboard in Resources */,
 				E3075B1B2223147700B24846 /* EngineLadderTicket.wav in Resources */,
 				E309DF432187E55100E20F34 /* Local_Config.plist in Resources */,
@@ -883,12 +1090,12 @@
 				E37F25842356436F0005F6D7 /* ActingEngineTicket.wav in Resources */,
 				E37F25852356436F0005F6D7 /* StandbyForMessage.wav in Resources */,
 				E328A97623BD9AB200914370 /* UnifiedNativeAdCell.xib in Resources */,
-				38305B552537AF250023DDA2 /* homescreen.mp4 in Resources */,
 				E37F25862356436F0005F6D7 /* IncidentTableViewCell.xib in Resources */,
 				E37F25872356436F0005F6D7 /* DivisionTicket.wav in Resources */,
 				E37F25882356436F0005F6D7 /* SpecialUnit.wav in Resources */,
 				E37F25892356436F0005F6D7 /* servicebell.wav in Resources */,
 				E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */,
+				380972F12540E50C003E132D /* homescreen.mp4 in Resources */,
 				E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */,
 				E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */,
 				E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */,
@@ -910,11 +1117,11 @@
 				E3075B1E2223147700B24846 /* LadderTicket.wav in Resources */,
 				E3075B182223147700B24846 /* MDTRing.wav in Resources */,
 				E3075B112221EC6100B24846 /* TonesOnly.wav in Resources */,
-				38305B532537AF250023DDA2 /* homescreen.mp4 in Resources */,
 				E3FC2E9E214AD069000166BE /* Production_Config.plist in Resources */,
 				E3FC2E9C214AD069000166BE /* Main.storyboard in Resources */,
 				E3075B0B2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0D2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
+				380972EF2540E50C003E132D /* homescreen.mp4 in Resources */,
 				E3E1BB5C2246D63800A3FE2A /* servicebell.wav in Resources */,
 				E3FC2F26214B5267000166BE /* IncidentTableViewCell.xib in Resources */,
 				E3075B072221EC6100B24846 /* DivisionTicket.wav in Resources */,
@@ -935,41 +1142,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08E311816F10E6E047A7C0A1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		17F265124E6EF77FEA442CE4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A00FBCBC664CFE6C9624598A /* [CP] Embed Pods Frameworks */ = {
+		53E7A064A21CC6F8549A0DF3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -984,6 +1157,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74CE9B26A73EB4E98952434A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE2D366E25628D274CF78AAF /* [CP] Check Pods Manifest.lock */ = {
@@ -1002,6 +1192,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7FA99123B2720A93594174F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE20BDC7B07A5C8926C6936F /* [CP] Check Pods Manifest.lock */ = {
@@ -1044,9 +1251,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F581914A473D371B93202F03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYCFireWireWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		380972F22540E545003E132D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D506192541F0A5009593EC /* Comment.swift in Sources */,
+				38D505E12541EF13009593EC /* Location.swift in Sources */,
+				38D506572541F3F2009593EC /* FWWidgetLarge.swift in Sources */,
+				38D505D62541EECF009593EC /* APIController.swift in Sources */,
+				38D5066F2541FB83009593EC /* EventView.swift in Sources */,
+				38D5060F2541F076009593EC /* APIConstants.swift in Sources */,
+				38633C27254235A600A04F32 /* IncidentView.swift in Sources */,
+				38D506282541F0F9009593EC /* SimpleUser.swift in Sources */,
+				38D505D82541EECF009593EC /* APIController+Incidents.swift in Sources */,
+				38D505D12541EEC3009593EC /* UserDefaultsConstants.swift in Sources */,
+				38D505C22541EE1A009593EC /* FWWidgetSmall.swift in Sources */,
+				380973382540E611003E132D /* WidgetContent.swift in Sources */,
+				38D505CC2541EE5E009593EC /* Numbers+Helpers.swift in Sources */,
+				38D505C12541EE1A009593EC /* FWWidgetMedium.swift in Sources */,
+				380973022540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */,
+				38D506232541F0E2009593EC /* String+DateFormat.swift in Sources */,
+				38D506142541F086009593EC /* Constants.swift in Sources */,
+				38D5061E2541F0CC009593EC /* APIConstants+Endpoints.swift in Sources */,
+				38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */,
+				38D505C72541EE47009593EC /* Incident.swift in Sources */,
+				380972FD2540E545003E132D /* NYCFireWireWidget.swift in Sources */,
+				38D506872541FE23009593EC /* CustomText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E309DF132187E55100E20F34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1071,13 +1329,16 @@
 				E309DF1C2187E55100E20F34 /* FullUser.swift in Sources */,
 				E309DF1D2187E55100E20F34 /* RootViewController.swift in Sources */,
 				E309DF8A218CBF7800E20F34 /* DetailsViewController.swift in Sources */,
+				38D506912541FE26009593EC /* CustomText.swift in Sources */,
 				E309DF1E2187E55100E20F34 /* SlideOutMenuHeader.swift in Sources */,
+				380973362540E611003E132D /* WidgetContent.swift in Sources */,
 				E309DF1F2187E55100E20F34 /* MenuConfiguration.swift in Sources */,
 				E309DF202187E55100E20F34 /* APIConstants.swift in Sources */,
 				E309DF212187E55100E20F34 /* APIController.swift in Sources */,
 				E338E3DB224FB6990043F777 /* AudioManager.swift in Sources */,
 				E309DF222187E55100E20F34 /* APIConstants+Endpoints.swift in Sources */,
 				E309DF232187E55100E20F34 /* UIImage+Helpers.swift in Sources */,
+				38D5069C2541FE2B009593EC /* EventView.swift in Sources */,
 				E309DF242187E55100E20F34 /* Location.swift in Sources */,
 				E309DF252187E55100E20F34 /* String+Helpers.swift in Sources */,
 				E309DF262187E55100E20F34 /* UIViewController+Inherited.swift in Sources */,
@@ -1143,6 +1404,7 @@
 				E37F254A2356436F0005F6D7 /* FileUpdater.swift in Sources */,
 				E37F254B2356436F0005F6D7 /* UIView+Helpers.swift in Sources */,
 				E37F254C2356436F0005F6D7 /* FullUser.swift in Sources */,
+				380973032540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */,
 				E37F254D2356436F0005F6D7 /* RootViewController.swift in Sources */,
 				E37F254E2356436F0005F6D7 /* DetailsViewController.swift in Sources */,
 				E37F254F2356436F0005F6D7 /* SlideOutMenuHeader.swift in Sources */,
@@ -1163,6 +1425,7 @@
 				E37F255E2356436F0005F6D7 /* SettingsViewController.swift in Sources */,
 				E37F259C235F9D780005F6D7 /* Toast.swift in Sources */,
 				E37F255F2356436F0005F6D7 /* UIViewController+Navigation.swift in Sources */,
+				380973372540E611003E132D /* WidgetContent.swift in Sources */,
 				E37F25602356436F0005F6D7 /* ChatViewController.swift in Sources */,
 				E37F25612356436F0005F6D7 /* IAPHandler.swift in Sources */,
 				E37F25622356436F0005F6D7 /* TimelineView.swift in Sources */,
@@ -1172,6 +1435,8 @@
 				E37F25652356436F0005F6D7 /* SettingsCell.swift in Sources */,
 				E37F25662356436F0005F6D7 /* IncidentAnnotation.swift in Sources */,
 				E37F25672356436F0005F6D7 /* MapKit+Helpers.swift in Sources */,
+				38D5068C2541FE26009593EC /* CustomText.swift in Sources */,
+				38D506972541FE2A009593EC /* EventView.swift in Sources */,
 				E37F25682356436F0005F6D7 /* Incident.swift in Sources */,
 				E37F25692356436F0005F6D7 /* UserDefaultsConstants.swift in Sources */,
 				E37F256A2356436F0005F6D7 /* UIColor+Helpers.swift in Sources */,
@@ -1219,13 +1484,16 @@
 				E309DEFE218798C700E20F34 /* FullUser.swift in Sources */,
 				E3FC2EAF214AD069000166BE /* RootViewController.swift in Sources */,
 				E309DF89218CBF7800E20F34 /* DetailsViewController.swift in Sources */,
+				38D506922541FE27009593EC /* CustomText.swift in Sources */,
 				E3FC2F16214B0075000166BE /* SlideOutMenuHeader.swift in Sources */,
+				380973352540E611003E132D /* WidgetContent.swift in Sources */,
 				E3FC2F1A214B05DE000166BE /* MenuConfiguration.swift in Sources */,
 				E3FC2EA1214AD069000166BE /* APIConstants.swift in Sources */,
 				E3FC2EB1214AD069000166BE /* APIController.swift in Sources */,
 				E338E3DA224FB6990043F777 /* AudioManager.swift in Sources */,
 				E3FC2F0E214B0018000166BE /* APIConstants+Endpoints.swift in Sources */,
 				E3FC2EAA214AD069000166BE /* UIImage+Helpers.swift in Sources */,
+				38D5069D2541FE2B009593EC /* EventView.swift in Sources */,
 				E309DF042187991C00E20F34 /* Location.swift in Sources */,
 				E3FC2EAD214AD069000166BE /* String+Helpers.swift in Sources */,
 				E3FC2EAC214AD069000166BE /* UIViewController+Inherited.swift in Sources */,
@@ -1271,6 +1539,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		380973052540E545003E132D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 380972F52540E545003E132D /* NYCFireWireWidgetExtension */;
+			targetProxy = 380973042540E545003E132D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E3FC2E78214AD069000166BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1291,6 +1567,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		380973082540E546003E132D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100000;
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 10.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		380973092540E546003E132D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100000;
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 10.0.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E309DF472187E55100E20F34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */;
@@ -1300,7 +1631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Prod copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1321,7 +1652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Prod copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1337,12 +1668,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51A49B6C065E0425FECD3C51 /* Pods-NYCFireWire - Staging.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1358,12 +1690,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1498,15 +1831,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90108;
+				CURRENT_PROJECT_VERSION = 100000;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9.1.7;
+				MARKETING_VERSION = 10.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1521,15 +1854,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 90108;
+				CURRENT_PROJECT_VERSION = 100000;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 9.1.7;
+				MARKETING_VERSION = 10.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1540,6 +1873,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		380973072540E546003E132D /* Build configuration list for PBXNativeTarget "NYCFireWireWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380973082540E546003E132D /* Debug */,
+				380973092540E546003E132D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E309DF462187E55100E20F34 /* Build configuration list for PBXNativeTarget "NYCFireWire - Local" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

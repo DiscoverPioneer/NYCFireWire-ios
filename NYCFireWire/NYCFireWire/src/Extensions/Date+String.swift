@@ -9,21 +9,21 @@
 import Foundation
 
 public extension Date {
-    public func showInFormat(format: String) -> String {
+    func showInFormat(format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         formatter.timeZone = TimeZone.current
         return formatter.string(from: self)
     }
     
-    public func formattedDurationToDate(toDate: Date) -> String? {
+    func formattedDurationToDate(toDate: Date) -> String? {
         let interval = toDate.timeIntervalSince(self)
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .abbreviated
         return formatter.string(from: interval)
     }
     
-    public func smartStringFromDate() -> String {
+    func smartStringFromDate() -> String {
         let timeSinceNow = Date().timeIntervalSince(self)
         let timeSinceInMinutes = timeSinceNow / 60
         if timeSinceInMinutes < 61 {
@@ -51,10 +51,10 @@ public extension Date {
     
     func toLocalTime() -> Date {
         return self
-        let timezone = TimeZone.current
-        print("My Timezone is: \(timezone)\nTime:\(self)")
-        let delta = TimeInterval(timezone.secondsFromGMT() - TimeZone(abbreviation: "UTC")!.secondsFromGMT())
-        return addingTimeInterval(delta)
+//        let timezone = TimeZone.current
+//        print("My Timezone is: \(timezone)\nTime:\(self)")
+//        let delta = TimeInterval(timezone.secondsFromGMT() - TimeZone(abbreviation: "UTC")!.secondsFromGMT())
+//        return addingTimeInterval(delta)
         //        let seconds = TimeInterval(timezone.secondsFromGMT(for: self))
         //        return Date(timeInterval: seconds, since: self)
     }

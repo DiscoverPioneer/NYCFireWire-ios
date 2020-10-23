@@ -17,7 +17,7 @@ extension APIController {
         var allIncidents = [Incident]()
         let url = APIConstants.construct(endpoint: .allIncidentsEndpoint)
         makeRequest(type: .get, url: url, parameters: ["feed_type":feedType.lowercased()]) { (success, error, data) in
-            print("Incident data: \(data)")
+//            print("Incident data: \(data)")
             if let data = data,
                 let incidents = data["result"] as? [[String:Any?]] {
                 for rawIncident in incidents {

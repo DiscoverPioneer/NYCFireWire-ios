@@ -58,3 +58,31 @@ public struct UserDefaultConstants {
         return defaults.object(forKey: key) as? [String:Any]
     }
 }
+
+enum UserDefaultSuiteKeys: String {
+    case userTokenKey = "userToken"
+    case userEmailKey = "userEmail"
+    case selectedFeedType = "selectedFeedType"
+
+}
+
+public struct UserDefaultsSuite {
+    
+    public let suite = UserDefaults(suiteName: "group.com.Pioneer.NYCFireWire")!
+    
+    func setString(value: String, key: String) {
+        suite.setValue(value, forKey: key)
+    }
+    
+    func stringFor(key: UserDefaultSuiteKeys) -> String? {
+        return suite.string(forKey: key.rawValue)
+    }
+    
+    var userEmail: String? {
+        suite.string(forKey: UserDefaultSuiteKeys.userEmailKey.rawValue)
+    }
+    
+    var token: String? {
+        suite.string(forKey: UserDefaultSuiteKeys.userTokenKey.rawValue)
+    }
+}
