@@ -98,7 +98,7 @@ class NotificationManager {
 //                }
             }
         } else {
-            print("Cant find file in bundle.... \(name)")
+//            print("Cant find file in bundle.... \(name)")
         }
 //        if let bundlePath = Bundle.main.path(forResource: name, ofType: "wav") {
 ////            let fileName = "\(name).wav"

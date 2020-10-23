@@ -18,7 +18,7 @@ public enum TextFieldType {
 
 
 public extension UITextField {
-    public func isValid(type: TextFieldType) -> Bool {
+    func isValid(type: TextFieldType) -> Bool {
         let text = self.text ??  ""
         let isEmpty = text.count == 0 || text.isEmpty
         
@@ -40,7 +40,7 @@ public extension UITextField {
     func addDoneButtonOnKeyboard(backgroundTint: UIColor = UIColor.gray
         , buttonTint: UIColor = UIColor.white) {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 329, height: 50))
-        doneToolbar.barStyle = UIBarStyle.blackOpaque
+        doneToolbar.barStyle = UIBarStyle.black
         doneToolbar.isTranslucent = false
         doneToolbar.barTintColor = backgroundTint
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)

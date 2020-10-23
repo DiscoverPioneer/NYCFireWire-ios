@@ -53,6 +53,10 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(incident: Incident.placeholder.incident1, color: .black).previewContext(WidgetPreviewContext(family: .systemSmall))
+        if #available(iOS 14.0, *) {
+            EventView(incident: Incident.placeholder.incident1, color: .black).previewContext(WidgetPreviewContext(family: .systemSmall))
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

@@ -37,7 +37,11 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        WidgetCenter.shared.reloadAllTimelines()
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadAllTimelines()
+        } else {
+            // Fallback on earlier versions
+        }
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         title = "NYC Fire Wire"
@@ -67,7 +71,11 @@ class DashboardViewController: UIViewController {
                     UserDefaultsSuite().setString(value: token, key: UserDefaultSuiteKeys.userTokenKey.rawValue)
 
                 }
-                WidgetCenter.shared.reloadAllTimelines()
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadAllTimelines()
+                } else {
+                    // Fallback on earlier versions
+                }
                 
                 //Show Ads
                 if !IAPHandler.shared.isMonthlySubscriptionPurchased() {
@@ -526,7 +534,7 @@ extension DashboardViewController {
         for feed in scannerFeeds {
             actionSheet.addAction((UIAlertAction(title: feed.name, style: .default, handler: { (action) in
                 AnalyticsController.logEvent(eventName: "LiveScanner-\(feed.name)")
-                print("Feed Selected: \(feed.name), \(feed.url)")
+//                print("Feed Selected: \(feed.name), \(feed.url)")
                 if let url = feed.url {
                     self.listenToFeed(feedURL: url)
                 } else {
@@ -564,8 +572,8 @@ extension DashboardViewController: GADUnifiedNativeAdLoaderDelegate {
     }
 
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
-        print("Received native ad: \(nativeAd)")
-        print("Name: \(nativeAd.headline)")
+//        print("Received native ad: \(nativeAd)")
+//        print("Name: \(nativeAd.headline)")
 
       // Add the native ad to the list of native ads.
         AdController.shared.nativeAds.append(nativeAd)
@@ -598,16 +606,16 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
             OneSignal.sendTag("Long Island", value: "true", onSuccess: { (sucess) in
                 print("Updated tag1")
             }) { (error) in
-                print("Error Updating Tag... \(error)")
+//                print("Error Updating Tag... \(error)")
             }
         } else {
             OneSignal.deleteTag("Long Island", onSuccess: { (success) in
-                print("Deleted tag1: \(success)")
+//                print("Deleted tag1: \(success)")
                 OneSignal.getTags { (tags) in
-                    print("Tags: \(tags)")
+//                    print("Tags: \(tags)")
                 }
             }) { (error) in
-                print("Error Deleting Tag... \(error)")
+//                print("Error Deleting Tag... \(error)")
             }
             
             

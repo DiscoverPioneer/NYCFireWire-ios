@@ -54,7 +54,7 @@ class AudioManager: NSObject {
        
         if let playerItem = object as? AVPlayerItem, let metadataArray = playerItem.timedMetadata, keyPath == "timedMetadata" {
             for metaData in metadataArray {
-                print("Meta: \(metaData.stringValue)")
+//                print("Meta: \(metaData.stringValue)")
                 if let metadata = metaData.stringValue {
                     delegate?.audioManager(manager: self, didUpdateMetadata: metadata)
                 }

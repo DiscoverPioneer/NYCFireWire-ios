@@ -27,7 +27,6 @@
 		38305ABF2537A7920023DDA2 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
 		38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
 		38305B4A2537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */; };
-		38537D4C2542036700D46102 /* Widget - Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D4B2542036600D46102 /* Widget - Info.plist */; };
 		38537D56254203C800D46102 /* Widget_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D55254203C800D46102 /* Widget_Config.plist */; };
 		38633C27254235A600A04F32 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38633C26254235A600A04F32 /* IncidentView.swift */; };
 		38633C2C25423B0F00A04F32 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
@@ -983,7 +982,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Pioneer Mobile Applications, LLC";
 				TargetAttributes = {
 					380972F52540E545003E132D = {
@@ -1043,7 +1042,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38537D56254203C800D46102 /* Widget_Config.plist in Resources */,
-				38537D4C2542036700D46102 /* Widget - Info.plist in Resources */,
 				380973002540E545003E132D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1577,6 +1575,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100000;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1585,6 +1584,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 10.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
@@ -1603,6 +1603,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100000;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1611,6 +1612,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 10.0.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1832,7 +1834,7 @@
 				CURRENT_PROJECT_VERSION = 100000;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1855,7 +1857,7 @@
 				CURRENT_PROJECT_VERSION = 100000;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

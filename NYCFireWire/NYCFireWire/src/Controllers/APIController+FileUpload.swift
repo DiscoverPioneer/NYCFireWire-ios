@@ -58,7 +58,7 @@ extension APIController {
         request.httpMethod = "PUT"
         request.setValue(contentType, forHTTPHeaderField: "Content-Type")
         let uploadTask = session.uploadTask(with: request, from: data) { (data, response, error) in
-            print("Data: \(data)\nResponse:\(response)\nError:\(error)")
+//            print("Data: \(data)\nResponse:\(response)\nError:\(error)")
             completion(error == nil)
         }
         uploadTask.resume()

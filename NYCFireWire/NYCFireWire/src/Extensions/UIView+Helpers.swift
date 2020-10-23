@@ -12,14 +12,14 @@ import NVActivityIndicatorView
 
 public extension UIView {
     
-    public func addBottomBorder(thickness: CGFloat, color: UIColor) {
+    func addBottomBorder(thickness: CGFloat, color: UIColor) {
         let border = CALayer()
         border.frame = CGRect(x: 0, y: frame.height - thickness, width: frame.width, height: thickness)
         border.backgroundColor = color.cgColor
         layer.addSublayer(border)
     }
     
-    public func snapshot(of rect: CGRect? = nil) -> UIImage? {
+    func snapshot(of rect: CGRect? = nil) -> UIImage? {
         // snapshot entire view
         
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0)

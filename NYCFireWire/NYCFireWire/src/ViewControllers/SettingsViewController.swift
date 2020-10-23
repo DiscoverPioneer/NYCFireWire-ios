@@ -447,7 +447,7 @@ class SettingsViewController: UITableViewController, NotificationToggleCellDeleg
                 let filename = NotificationManager.shared.notificationSounds[sound]
                  let bundleURL = Bundle.main.url(forResource: filename, withExtension: "wav")
 
-                print("BUNDLE: \(bundleURL)")
+//                print("BUNDLE: \(bundleURL)")
                 if let fileURL = Bundle.main.path(forResource: filename, ofType: "wav") {
                     self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
                     self.audioPlayer?.play()
