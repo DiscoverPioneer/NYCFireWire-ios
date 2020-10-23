@@ -21,7 +21,7 @@ struct Provider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<WidgetContent>) -> Void) {
         var entries: [WidgetContent] = []
-        let feedType = "NYC"
+        let feedType = UserDefaultsSuite().stringFor(key: .selectedFeedType) ?? "NYC"
         if let email = UserDefaultsSuite().userEmail,
            let token = UserDefaultsSuite().token {
             let controller = APIController(email: email, token: token)

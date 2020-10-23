@@ -62,6 +62,7 @@ public struct UserDefaultConstants {
 enum UserDefaultSuiteKeys: String {
     case userTokenKey = "userToken"
     case userEmailKey = "userEmail"
+    case selectedFeedType = "selectedFeedType"
 
 }
 
@@ -71,6 +72,10 @@ public struct UserDefaultsSuite {
     
     func setString(value: String, key: String) {
         suite.setValue(value, forKey: key)
+    }
+    
+    func stringFor(key: UserDefaultSuiteKeys) -> String? {
+        return suite.string(forKey: key.rawValue)
     }
     
     var userEmail: String? {
