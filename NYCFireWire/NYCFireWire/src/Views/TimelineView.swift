@@ -355,7 +355,7 @@ open class TimelineView: UIView {
             configureTextView(textView)
             v.addSubview(textView)
             v.addConstraints([
-                textView.heightAnchor.constraint(equalToConstant: 30),
+//                textView.heightAnchor.constraint(equalToConstant: 30),
                 NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 3),
                 NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
