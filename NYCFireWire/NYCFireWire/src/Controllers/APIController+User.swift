@@ -91,6 +91,16 @@ extension APIController {
         }
     }
     
+    func setFeaturedImage(imageURL: URL?, id: Int, completion: @escaping (_ error: String?) -> Void) {
+        let url = APIConstants.baseURL + "/incident/\(id)/set-featured-image"
+        let params = ["image_url":imageURL]
+        makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
+            if let error = error {
+                completion(error.message)
+            }
+        }
+    }
+    
     func logout() {
         let url = APIConstants.construct(endpoint: .logoutEndpoint)
         makeRequest(type: .post, url: url, parameters: nil) { (success, error, data) in

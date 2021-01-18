@@ -22,9 +22,9 @@ class Location {
     var numberOfLikes: Int
     var isLiked: Bool
     var units = [String]()
+    let featuredImageURL: String?
     
-    
-    init(id: Int, createdAt: Date, location: CLLocation, title: String, subtitle: String?, address: String, numberOfComments: Int, numberOfViews: Int, boro: String, numberOfLikes: Int, isLiked: Bool) {
+    init(id: Int, createdAt: Date, location: CLLocation, title: String, subtitle: String?, address: String, numberOfComments: Int, numberOfViews: Int, boro: String, numberOfLikes: Int, isLiked: Bool, featuredImageURL: String?) {
         self.id = id
         self.createdAt = createdAt
         self.location = location
@@ -36,6 +36,7 @@ class Location {
         self.boro = boro
         self.numberOfLikes = numberOfLikes
         self.isLiked = isLiked
+        self.featuredImageURL = featuredImageURL
     }
     
     func like() {

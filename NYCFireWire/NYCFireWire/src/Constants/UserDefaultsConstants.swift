@@ -63,6 +63,8 @@ enum UserDefaultSuiteKeys: String {
     case userTokenKey = "userToken"
     case userEmailKey = "userEmail"
     case selectedFeedType = "selectedFeedType"
+    case selectedLocation = "selectedLocation"
+    case featuredImageURL = "featuredImageURL"
 
 }
 
@@ -70,12 +72,20 @@ public struct UserDefaultsSuite {
     
     public let suite = UserDefaults(suiteName: "group.com.Pioneer.NYCFireWire")!
     
+    func setInt(value: Int, key: String) {
+        suite.setValue(value, forKey: key)
+    }
+    
     func setString(value: String, key: String) {
         suite.setValue(value, forKey: key)
     }
     
     func stringFor(key: UserDefaultSuiteKeys) -> String? {
         return suite.string(forKey: key.rawValue)
+    }
+    
+    func intFor(key: UserDefaultSuiteKeys) -> Int? {
+        return suite.integer(forKey: key.rawValue)
     }
     
     var userEmail: String? {

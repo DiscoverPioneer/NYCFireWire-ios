@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncidentCell" rowHeight="150" id="KGk-i7-Jjw" customClass="IncidentTableViewCell" customModule="NYCFireWire___Local" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncidentCell" rowHeight="259" id="KGk-i7-Jjw" customClass="IncidentTableViewCell" customModule="NYCFireWire___Local" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brooklyn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5i-ih-V6P">
@@ -25,21 +24,6 @@
                         </constraints>
                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="*10-60/Major Technical Response*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-tz-eFI">
-                        <rect key="frame" x="0.0" y="27" width="320" height="19"/>
-                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOF-Jn-52N">
-                        <rect key="frame" x="0.0" y="54" width="320" height="64.5"/>
-                        <string key="text">BN-40 transmitting the 10-60, exterior wall 
-collapse in a  below grade excavation. 
-1 person confirmed buried</string>
-                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box 1471" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4G-gN-rit">
@@ -52,14 +36,14 @@ collapse in a  below grade excavation.
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58d-zv-ezr">
-                        <rect key="frame" x="0.0" y="147" width="320" height="3"/>
+                        <rect key="frame" x="0.0" y="256" width="320" height="3"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="3" id="5dg-bx-ORE"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-7y-Lax">
-                        <rect key="frame" x="10" y="123" width="306" height="20"/>
+                        <rect key="frame" x="10" y="232" width="306" height="20"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-Fj-3r8">
                                 <rect key="frame" x="0.0" y="0.0" width="139.5" height="20"/>
@@ -115,26 +99,46 @@ collapse in a  below grade excavation.
                             <constraint firstItem="2E5-Fj-3r8" firstAttribute="leading" secondItem="8lv-7y-Lax" secondAttribute="leading" id="pFF-eb-veW"/>
                         </constraints>
                     </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jfd-rK-mIa">
+                        <rect key="frame" x="26" y="23" width="268" height="199"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="*10-60/Major Technical Response*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-tz-eFI">
+                                <rect key="frame" x="0.0" y="0.0" width="268" height="19"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RWu-Ob-Uth">
+                                <rect key="frame" x="0.0" y="19" width="268" height="0.0"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOF-Jn-52N">
+                                <rect key="frame" x="0.0" y="19" width="268" height="180"/>
+                                <string key="text">BN-40 transmitting the 10-60, exterior wall 
+collapse in a  below grade excavation. 
+1 person confirmed buried</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <color key="backgroundColor" red="0.16470588235294117" green="0.16862745098039217" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
-                    <constraint firstItem="Tc4-tz-eFI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6ag-F6-Ofb"/>
-                    <constraint firstItem="Tc4-tz-eFI" firstAttribute="top" secondItem="C5i-ih-V6P" secondAttribute="bottom" constant="7" id="7BI-J3-0R4"/>
                     <constraint firstAttribute="trailing" secondItem="8lv-7y-Lax" secondAttribute="trailing" constant="4" id="A5P-Dx-Dql"/>
                     <constraint firstItem="C5i-ih-V6P" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="BKO-m4-wUb"/>
                     <constraint firstAttribute="trailing" secondItem="c4G-gN-rit" secondAttribute="trailing" constant="4" id="DTI-eI-fCT"/>
-                    <constraint firstAttribute="trailing" secondItem="jOF-Jn-52N" secondAttribute="trailing" id="EX2-bk-SZ6"/>
-                    <constraint firstItem="jOF-Jn-52N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fl0-bb-RUm"/>
                     <constraint firstItem="c4G-gN-rit" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OPL-qW-Cor"/>
                     <constraint firstItem="58d-zv-ezr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Sln-4t-SqP"/>
                     <constraint firstAttribute="bottom" secondItem="58d-zv-ezr" secondAttribute="bottom" id="Sy0-c9-nJz"/>
                     <constraint firstItem="C5i-ih-V6P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UoZ-Lp-ALA"/>
+                    <constraint firstItem="8lv-7y-Lax" firstAttribute="top" secondItem="Jfd-rK-mIa" secondAttribute="bottom" constant="10" id="ZmB-13-hvL"/>
                     <constraint firstItem="8lv-7y-Lax" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="awg-VS-cPQ"/>
-                    <constraint firstAttribute="trailing" secondItem="Tc4-tz-eFI" secondAttribute="trailing" id="bQ4-GF-z9w"/>
                     <constraint firstAttribute="trailing" secondItem="58d-zv-ezr" secondAttribute="trailing" id="cCn-iR-lhh"/>
                     <constraint firstItem="58d-zv-ezr" firstAttribute="top" secondItem="8lv-7y-Lax" secondAttribute="bottom" constant="4" id="d05-Ai-ukc"/>
-                    <constraint firstAttribute="bottom" secondItem="jOF-Jn-52N" secondAttribute="bottom" constant="31.5" id="ecc-kr-S4e"/>
-                    <constraint firstItem="jOF-Jn-52N" firstAttribute="top" secondItem="Tc4-tz-eFI" secondAttribute="bottom" constant="8" id="l5Q-LG-EJo"/>
+                    <constraint firstItem="Jfd-rK-mIa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="hnH-Yn-BDl"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Jfd-rK-mIa" secondAttribute="trailing" constant="10" id="ndq-NP-qMz"/>
+                    <constraint firstItem="Jfd-rK-mIa" firstAttribute="top" secondItem="C5i-ih-V6P" secondAttribute="bottom" constant="3" id="zdp-bl-suX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -143,13 +147,14 @@ collapse in a  below grade excavation.
                 <outlet property="boroLabel" destination="C5i-ih-V6P" id="zpW-7u-6LB"/>
                 <outlet property="boxLabel" destination="c4G-gN-rit" id="rmp-5L-ohA"/>
                 <outlet property="dateLabel" destination="aFt-vW-cxI" id="TPf-bz-YYo"/>
+                <outlet property="featuredImage" destination="RWu-Ob-Uth" id="FJ7-zK-NDH"/>
                 <outlet property="likeButton" destination="zXF-yu-xRd" id="Jjk-mk-gXn"/>
                 <outlet property="numberOfCommentsLabel" destination="eMV-ma-riq" id="uIB-5y-Pwz"/>
                 <outlet property="numberOfLikesLabel" destination="aXL-If-hKE" id="c07-1F-vlk"/>
                 <outlet property="subtitleLabel" destination="jOF-Jn-52N" id="A96-qw-ZP3"/>
                 <outlet property="titleLabel" destination="Tc4-tz-eFI" id="YZz-g3-VT2"/>
             </connections>
-            <point key="canvasLocation" x="-25.600000000000001" y="-15.292353823088456"/>
+            <point key="canvasLocation" x="-25.600000000000001" y="33.733133433283363"/>
         </tableViewCell>
     </objects>
     <resources>

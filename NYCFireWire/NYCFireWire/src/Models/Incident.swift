@@ -27,9 +27,10 @@ class Incident: Location {
             let numberOfViews = (dict["total_views"] as? Int) ?? 0
             let numberOfLikes = (dict["number_of_likes"] as? Int) ?? 0
             let isLiked: Bool = ((dict["number_of_likes"] as? Int) ?? 0).boolValue
+            let featuredImageURL = dict["featured_image_url"] as? String ?? nil
             self.boxNumber = boxNumber
 
-            super.init(id: id, createdAt: createdAt, location: CLLocation(latitude: lat, longitude: lng), title: title, subtitle: subtitle, address: address, numberOfComments:numberOfComments, numberOfViews: numberOfViews, boro: boro, numberOfLikes: numberOfLikes, isLiked: isLiked)
+            super.init(id: id, createdAt: createdAt, location: CLLocation(latitude: lat, longitude: lng), title: title, subtitle: subtitle, address: address, numberOfComments:numberOfComments, numberOfViews: numberOfViews, boro: boro, numberOfLikes: numberOfLikes, isLiked: isLiked, featuredImageURL: featuredImageURL)
             if let respondingUnits = dict["responding_units"] as? [String] {
                 self.units = respondingUnits
             }

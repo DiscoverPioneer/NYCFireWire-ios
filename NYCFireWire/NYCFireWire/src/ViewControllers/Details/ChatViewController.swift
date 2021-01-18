@@ -27,6 +27,7 @@ class ChatViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var postButton: UIButton!
     
+    var location: Location!
     var timeline: TimelineView?
     var dataSource: ChatViewControllerDataSource?
     var delegate: ChatViewControllerDelegate?
@@ -176,6 +177,25 @@ extension ChatViewController: TimelineViewDelegate {
             sheet.addAction(UIAlertAction(title: "Block user", style: .destructive, handler: { (action) in
                 APIController.defaults.blockUser(userID: comment.createdBy.id)
             }))
+            
+            if let string = comment.imageURL,
+                  let url = URL(string: string),
+                  let id =  UserDefaultsSuite().intFor(key: .selectedLocation),
+                  let locationURL = UserDefaultsSuite().stringFor(key: .featuredImageURL) {
+            
+//            if AppManager.shared.currentUser?.hasAdminAccess() == true  {
+                let isImage = locationURL == comment.imageURL
+                sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
+                   
+                        APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: id, completion: { error in
+                            if let error = error {
+                                self.showAlert(title: "Error setting image", message: "\(error)")
+                                return
+                            }
+                            self.showAlert(title: "Image Set", message: "")
+                        })
+                }))
+            }
             sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             present(sheet, animated: true, completion: nil)
         }

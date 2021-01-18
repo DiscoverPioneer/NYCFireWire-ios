@@ -284,6 +284,12 @@ extension DashboardViewController: UITableViewDataSource {
 //            }
             
             cell.numberOfCommentsLabel.text = "\(incident.numberOfComments)"
+            
+            if let image = incident.featuredImageURL {
+                cell.featuredImage.isHidden = false
+                cell.featuredImage.downloaded(from: image)
+            }
+            
             return cell
         } else {
             //Ad
@@ -340,6 +346,8 @@ extension DashboardViewController: UITableViewDelegate {
         if let location = allTableViewItems[indexPath.row] as? Incident, let vc = DetailsViewController.instantiateFromMainStoryboard() {
             vc.selectedLocation = location
             navigationController?.pushViewController(vc, animated: true)
+            UserDefaultsSuite().setInt(value: location.id, key: UserDefaultSuiteKeys.selectedLocation.rawValue)
+            UserDefaultsSuite().setString(value: location.featuredImageURL ?? "", key: UserDefaultSuiteKeys.featuredImageURL.rawValue)
         }
     }
     

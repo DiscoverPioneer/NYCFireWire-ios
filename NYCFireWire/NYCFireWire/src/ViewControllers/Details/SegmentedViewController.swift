@@ -14,12 +14,13 @@ class SegmentedViewController: ButtonBarPagerTabStripViewController {
     var selectedLocation: Location!
     var comments = [Comment]()
     var adminComments = [Comment]()
+    
     weak var officialDataVC: OfficialInformationViewController?
     weak var chatVC: ChatViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        chatVC?.location = selectedLocation
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.selectedBarBackgroundColor = UIColor.white
         settings.style.selectedBarHeight = 4.0
