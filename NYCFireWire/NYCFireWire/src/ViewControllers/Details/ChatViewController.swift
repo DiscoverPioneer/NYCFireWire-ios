@@ -12,6 +12,8 @@ import SafariServices
 
 protocol ChatViewControllerDataSource {
     func commentsFor(vc: ChatViewController) -> [Comment]
+    func incidentFor(vc: ChatViewController) -> Location
+
 }
 
 protocol ChatViewControllerDelegate {
@@ -178,10 +180,16 @@ extension ChatViewController: TimelineViewDelegate {
                 APIController.defaults.blockUser(userID: comment.createdBy.id)
             }))
             
+            
+            ///GET THE INCIDENT FROM THIS FUNCTION (example below) -- Take this and UserDefaultsSuite out when replaced
+            self.location = dataSource!.incidentFor(vc: self)
+            
+            
+            
             if let string = comment.imageURL,
                let url = URL(string: string),
                let id =  UserDefaultsSuite().intFor(key: .selectedLocation) {
-                
+                let image = location.featuredImageURL
                 if let locationURL = UserDefaultsSuite().stringFor(key: .locationImageURL) {
                     if AppManager.shared.currentUser?.hasAdminAccess() == true  {
                         let isImage = locationURL == comment.imageURL

@@ -58,9 +58,14 @@ class SegmentedViewController: ButtonBarPagerTabStripViewController {
 
 //MARK: - Official Information Delegate & Datasource
 extension SegmentedViewController: OfficialInformationViewControllerDataSource, ChatViewControllerDataSource, ChatViewControllerDelegate  {
+    
     func dataForOfficialInformation(vc: OfficialInformationViewController) -> (title: String, subtitle: String?, address: String, units: [String]) {
         return (selectedLocation.title, selectedLocation.subtitle, selectedLocation.address, selectedLocation.units)
     }
+    func incidentFor(vc: ChatViewController) -> Location {
+        return selectedLocation
+    }
+    
     func adminCommentsFor(vc: OfficialInformationViewController) -> [Comment] {
         return adminComments
     }
