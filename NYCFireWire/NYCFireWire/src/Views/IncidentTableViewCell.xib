@@ -99,7 +99,7 @@
                             <constraint firstItem="2E5-Fj-3r8" firstAttribute="leading" secondItem="8lv-7y-Lax" secondAttribute="leading" id="pFF-eb-veW"/>
                         </constraints>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jfd-rK-mIa">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jfd-rK-mIa">
                         <rect key="frame" x="26" y="23" width="268" height="199"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="*10-60/Major Technical Response*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc4-tz-eFI">
@@ -109,10 +109,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RWu-Ob-Uth">
-                                <rect key="frame" x="0.0" y="19" width="268" height="0.0"/>
+                                <rect key="frame" x="0.0" y="21.5" width="268" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Ua1-d5-MVg"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOF-Jn-52N">
-                                <rect key="frame" x="0.0" y="19" width="268" height="180"/>
+                                <rect key="frame" x="0.0" y="24" width="268" height="175"/>
                                 <string key="text">BN-40 transmitting the 10-60, exterior wall 
 collapse in a  below grade excavation. 
 1 person confirmed buried</string>

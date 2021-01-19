@@ -108,7 +108,7 @@ extension APIController {
         let params = ["image_url":imageURL]
         makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
             if let _ = data {
-                completion(true)
+                completion(success)
                 return
             }
             completion(false)
