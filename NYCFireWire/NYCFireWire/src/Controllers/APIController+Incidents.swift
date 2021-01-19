@@ -102,6 +102,19 @@ extension APIController {
         }
     }
     
+    func setFeaturedImage(imageURL: URL?, id: Int, completion:@escaping (_ success: Bool) -> Void) {
+        var url = APIConstants.construct(endpoint: .incidentDetailsEndpoint)
+        url.append("\(id)/set-featured-image")
+        let params = ["image_url":imageURL]
+        makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
+            if let _ = data {
+                completion(true)
+                return
+            }
+            completion(false)
+        }
+    }
+    
     func acknowledgeIncident(id: Int, completion:@escaping (_ success: Bool) -> Void) {
         var url = APIConstants.construct(endpoint: .incidentDetailsEndpoint)
         url.append("\(id)/acknowledge")

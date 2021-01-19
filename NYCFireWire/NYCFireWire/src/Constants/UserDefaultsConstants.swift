@@ -64,7 +64,7 @@ enum UserDefaultSuiteKeys: String {
     case userEmailKey = "userEmail"
     case selectedFeedType = "selectedFeedType"
     case selectedLocation = "selectedLocation"
-    case featuredImageURL = "featuredImageURL"
+    case locationImageURL = "featuredImageURL"
 
 }
 

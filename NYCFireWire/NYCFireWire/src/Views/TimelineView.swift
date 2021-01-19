@@ -51,7 +51,7 @@ public struct TimeFrame {
 /**
 	The shape of a bullet that appears next to each event in the Timeline.
 */
-public enum BulletType{
+public enum BulletType {
 	/**
 		Bullet shaped as a circle with no fill.
 	*/

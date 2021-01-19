@@ -287,7 +287,8 @@ extension DashboardViewController: UITableViewDataSource {
             
             if let image = incident.featuredImageURL {
                 cell.featuredImage.isHidden = false
-                cell.featuredImage.downloaded(from: image)
+                let url = URL(string: image)
+                cell.featuredImage.kf.setImage(with: url)
             }
             
             return cell
@@ -347,7 +348,7 @@ extension DashboardViewController: UITableViewDelegate {
             vc.selectedLocation = location
             navigationController?.pushViewController(vc, animated: true)
             UserDefaultsSuite().setInt(value: location.id, key: UserDefaultSuiteKeys.selectedLocation.rawValue)
-            UserDefaultsSuite().setString(value: location.featuredImageURL ?? "", key: UserDefaultSuiteKeys.featuredImageURL.rawValue)
+            UserDefaultsSuite().setString(value: location.featuredImageURL ?? "", key: UserDefaultSuiteKeys.locationImageURL.rawValue)
         }
     }
     
