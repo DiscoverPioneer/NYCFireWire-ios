@@ -13,7 +13,7 @@ import SafariServices
 protocol ChatViewControllerDataSource {
     func commentsFor(vc: ChatViewController) -> [Comment]
     func incidentFor(vc: ChatViewController) -> Location
-    
+
 }
 
 protocol ChatViewControllerDelegate {
@@ -184,18 +184,18 @@ extension ChatViewController: TimelineViewDelegate {
             if let string = comment.imageURL,
                let url = URL(string: string),
                let id =  UserDefaultsSuite().intFor(key: .selectedLocation) {
-                if AppManager.shared.currentUser?.hasAdminAccess() == true  {
-                    let isImage = location.featuredImageURL == comment.imageURL
-                    sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
-                        APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: id, completion: { success in
-                            if success {
-                                self.showAlert(title: "Image Set", message: "")
-                            }
-                            self.showAlert(title: "Error setting image", message: "")
-                            return
-                        })
-                    }))
-                }
+                    if AppManager.shared.currentUser?.hasAdminAccess() == true  {
+                        let isImage = location.featuredImageURL == comment.imageURL
+                        sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
+                            APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: id, completion: { success in
+                                if success {
+                                    self.showAlert(title: "Image Set", message: "")
+                                }
+                                self.showAlert(title: "Error setting image", message: "")
+                                return
+                            })
+                        }))
+                    }
             }
             sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             present(sheet, animated: true, completion: nil)

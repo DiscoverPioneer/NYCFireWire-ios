@@ -355,8 +355,7 @@ open class TimelineView: UIView {
             configureTextView(textView)
             v.addSubview(textView)
             v.addConstraints([
-//                textView.heightAnchor.constraint(equalToConstant: 30),
-                NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: -30),
                 NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 3),
                 NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
                 ])
@@ -366,6 +365,28 @@ open class TimelineView: UIView {
         } else {
            
         }
+        
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.tag = index
+        button.tintColor = .lightGray
+        button.setTitle("", for: .normal)
+        button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        button.addTarget(self, action: #selector(buttonWasTapped), for: .allEvents)
+        button.isSpringLoaded = true
+        if element.hideMore {
+                    button.isHidden = true
+                }
+        v.addSubview(button)
+        v.addConstraints([
+            NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 30),
+            NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 30),
+            NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: lastView, attribute: .trailing, multiplier: 1.0, constant: +30),
+            NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 0)
+
+        ])
+        lastView = button
         
         //image
         if let imageURL = element.imageURL {
@@ -424,26 +445,7 @@ open class TimelineView: UIView {
             v.addConstraint(NSLayoutConstraint(item: lastView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -20))
         }
         
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.tag = index
-        button.tintColor = .lightGray
-        button.setTitle("", for: .normal)
-        button.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        button.addTarget(self, action: #selector(buttonWasTapped), for: .allEvents)
-        button.isSpringLoaded = true
-        if element.hideMore {
-                    button.isHidden = true
-                }
-        v.addSubview(button)
-        v.addConstraints([
-            NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 40),
-            NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 40),
-            NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: lastView, attribute: .trailing, multiplier: 1.0, constant: 0)
-
-        ])
-        lastView = button
+       
         
         //draw the bottom line between the bullets
         let line = UIView()
