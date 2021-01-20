@@ -13,7 +13,7 @@ import SafariServices
 protocol ChatViewControllerDataSource {
     func commentsFor(vc: ChatViewController) -> [Comment]
     func incidentFor(vc: ChatViewController) -> Location
-
+    
 }
 
 protocol ChatViewControllerDelegate {
@@ -38,6 +38,7 @@ class ChatViewController: UIViewController, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.location = dataSource!.incidentFor(vc: self)
         finishedLoading = true
         reload()
         textView.contentInsetAdjustmentBehavior = .never
@@ -180,29 +181,20 @@ extension ChatViewController: TimelineViewDelegate {
                 APIController.defaults.blockUser(userID: comment.createdBy.id)
             }))
             
-            
-            ///GET THE INCIDENT FROM THIS FUNCTION (example below) -- Take this and UserDefaultsSuite out when replaced
-            self.location = dataSource!.incidentFor(vc: self)
-            
-            
-            
             if let string = comment.imageURL,
                let url = URL(string: string),
                let id =  UserDefaultsSuite().intFor(key: .selectedLocation) {
-                let image = location.featuredImageURL
-                if let locationURL = UserDefaultsSuite().stringFor(key: .locationImageURL) {
-                    if AppManager.shared.currentUser?.hasAdminAccess() == true  {
-                        let isImage = locationURL == comment.imageURL
-                        sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
-                            APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: id, completion: { success in
-                                if success {
-                                    self.showAlert(title: "Image Set", message: "")
-                                }
-                                self.showAlert(title: "Error setting image", message: "")
-                                return
-                            })
-                        }))
-                    }
+                if AppManager.shared.currentUser?.hasAdminAccess() == true  {
+                    let isImage = location.featuredImageURL == comment.imageURL
+                    sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
+                        APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: id, completion: { success in
+                            if success {
+                                self.showAlert(title: "Image Set", message: "")
+                            }
+                            self.showAlert(title: "Error setting image", message: "")
+                            return
+                        })
+                    }))
                 }
             }
             sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
