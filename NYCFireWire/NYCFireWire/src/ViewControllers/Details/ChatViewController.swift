@@ -182,12 +182,11 @@ extension ChatViewController: TimelineViewDelegate {
             }))
             
             if let string = comment.imageURL,
-               let url = URL(string: string),
-               let id =  UserDefaultsSuite().intFor(key: .selectedLocation) {
+               let url = URL(string: string){
                     if AppManager.shared.currentUser?.hasAdminAccess() == true  {
                         let isImage = location.featuredImageURL == comment.imageURL
                         sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
-                            APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: id, completion: { success in
+                            APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: self.location.id, completion: { success in
                                 if success {
                                     self.showAlert(title: "Image Set", message: "")
                                 }

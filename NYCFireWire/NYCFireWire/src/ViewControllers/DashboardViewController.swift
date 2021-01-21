@@ -291,9 +291,8 @@ extension DashboardViewController: UITableViewDataSource {
             cell.featuredImage.image = nil
             cell.featuredImage.isHidden = true
             
-            if let image = incident.featuredImageURL {
+            if let image = incident.featuredImageURL, let url = URL(string: image) {
                 cell.featuredImage.isHidden = false
-                let url = URL(string: image)
                 cell.featuredImage.kf.setImage(with: url)
             }
             
