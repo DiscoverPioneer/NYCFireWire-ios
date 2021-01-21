@@ -12,6 +12,8 @@ import SafariServices
 
 protocol ChatViewControllerDataSource {
     func commentsFor(vc: ChatViewController) -> [Comment]
+    func incidentFor(vc: ChatViewController) -> Location
+
 }
 
 protocol ChatViewControllerDelegate {
@@ -27,6 +29,7 @@ class ChatViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var postButton: UIButton!
     
+    var location: Location!
     var timeline: TimelineView?
     var dataSource: ChatViewControllerDataSource?
     var delegate: ChatViewControllerDelegate?
@@ -35,6 +38,7 @@ class ChatViewController: UIViewController, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.location = dataSource!.incidentFor(vc: self)
         finishedLoading = true
         reload()
         textView.contentInsetAdjustmentBehavior = .never
@@ -176,6 +180,22 @@ extension ChatViewController: TimelineViewDelegate {
             sheet.addAction(UIAlertAction(title: "Block user", style: .destructive, handler: { (action) in
                 APIController.defaults.blockUser(userID: comment.createdBy.id)
             }))
+            
+            if let string = comment.imageURL,
+               let url = URL(string: string){
+                    if AppManager.shared.currentUser?.hasAdminAccess() == true  {
+                        let isImage = location.featuredImageURL == comment.imageURL
+                        sheet.addAction(UIAlertAction(title: isImage ? "Remove Image" : "Set Featured Image", style: .destructive, handler: { (action) in
+                            APIController.defaults.setFeaturedImage(imageURL: isImage ? nil : url, id: self.location.id, completion: { success in
+                                if success {
+                                    self.showAlert(title: "Image Set", message: "")
+                                }
+                                self.showAlert(title: "Error setting image", message: "")
+                                return
+                            })
+                        }))
+                    }
+            }
             sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             present(sheet, animated: true, completion: nil)
         }

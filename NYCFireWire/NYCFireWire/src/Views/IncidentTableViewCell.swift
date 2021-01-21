@@ -22,6 +22,7 @@ class IncidentTableViewCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var featuredImage: UIImageView!
     
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var numberOfLikesLabel: UILabel!

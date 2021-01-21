@@ -22,7 +22,7 @@ enum APIEndpoint: String {
     case updateIncidentViewsCountEndpoint = "/incident/update-view-count"
     case createIncidentEndpoint = "/incident/create"
     case createTipEndpoint = "/incident/send-tip"
-
+    case setFeaturedImage = "/incident/set-featured-image"
     case fileSignEndpoint = "/file/sign"
 }
 

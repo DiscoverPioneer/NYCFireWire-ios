@@ -14,12 +14,13 @@ class SegmentedViewController: ButtonBarPagerTabStripViewController {
     var selectedLocation: Location!
     var comments = [Comment]()
     var adminComments = [Comment]()
+    
     weak var officialDataVC: OfficialInformationViewController?
     weak var chatVC: ChatViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        chatVC?.location = selectedLocation
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.selectedBarBackgroundColor = UIColor.white
         settings.style.selectedBarHeight = 4.0
@@ -57,9 +58,14 @@ class SegmentedViewController: ButtonBarPagerTabStripViewController {
 
 //MARK: - Official Information Delegate & Datasource
 extension SegmentedViewController: OfficialInformationViewControllerDataSource, ChatViewControllerDataSource, ChatViewControllerDelegate  {
+    
     func dataForOfficialInformation(vc: OfficialInformationViewController) -> (title: String, subtitle: String?, address: String, units: [String]) {
         return (selectedLocation.title, selectedLocation.subtitle, selectedLocation.address, selectedLocation.units)
     }
+    func incidentFor(vc: ChatViewController) -> Location {
+        return selectedLocation
+    }
+    
     func adminCommentsFor(vc: OfficialInformationViewController) -> [Comment] {
         return adminComments
     }

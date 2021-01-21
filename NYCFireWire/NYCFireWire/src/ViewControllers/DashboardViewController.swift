@@ -57,9 +57,9 @@ class DashboardViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: Notification.Name("TextFieldDismissed"), object: nil)
 
         view.addSubview(boroTextField)
-        refresh()
+//        refresh()
         IAPHandler.shared.fetchAvailableProducts()
-
+        
         APIController.defaults.getMe { (fullUser) in
             if let user = fullUser {
                 AppManager.shared.currentUser = user
@@ -99,6 +99,8 @@ class DashboardViewController: UIViewController {
                 }
             }
         }
+        
+
         self.mapViewHeightConstraint.constant = self.maxHeaderHeight
         
         mapView.addExpandButton()
@@ -177,7 +179,8 @@ class DashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavBar()
-
+       
+        refresh()
 //        self.mapViewHeightConstraint.constant = self.maxHeaderHeight
 //        updateHeader()
         mapView.setCenterCoordinate(centerCoordinate: CLLocationCoordinate2D(latitude: 40.7806341, longitude: -73.9242574), zoomLevel: 8, animated: true)
@@ -284,6 +287,15 @@ extension DashboardViewController: UITableViewDataSource {
 //            }
             
             cell.numberOfCommentsLabel.text = "\(incident.numberOfComments)"
+            
+            cell.featuredImage.image = nil
+            cell.featuredImage.isHidden = true
+            
+            if let image = incident.featuredImageURL, let url = URL(string: image) {
+                cell.featuredImage.isHidden = false
+                cell.featuredImage.kf.setImage(with: url)
+            }
+            
             return cell
         } else {
             //Ad
@@ -340,6 +352,8 @@ extension DashboardViewController: UITableViewDelegate {
         if let location = allTableViewItems[indexPath.row] as? Incident, let vc = DetailsViewController.instantiateFromMainStoryboard() {
             vc.selectedLocation = location
             navigationController?.pushViewController(vc, animated: true)
+            UserDefaultsSuite().setInt(value: location.id, key: UserDefaultSuiteKeys.selectedLocation.rawValue)
+            UserDefaultsSuite().setString(value: location.featuredImageURL ?? "", key: UserDefaultSuiteKeys.locationImageURL.rawValue)
         }
     }
     
