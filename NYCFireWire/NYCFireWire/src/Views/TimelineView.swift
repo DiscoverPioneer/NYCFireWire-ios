@@ -34,17 +34,19 @@ public struct TimeFrame {
 	*/
 	let imageURL: URL?
     
+    let isVideo: Bool
     /**
         An optional closure to call when an image is tapped.
     */
     let imageTapped: ((UIImageView) -> Void)?
     let hideMore: Bool
-    public init(date: String, text: String? = nil, imageURL: URL? = nil, imageTapped: ((UIImageView) -> Void)? = nil, hideMore: Bool = false) {
+    public init(date: String, text: String? = nil, imageURL: URL? = nil, isVideo: Bool = false, imageTapped: ((UIImageView) -> Void)? = nil, hideMore: Bool = false) {
         self.date = date
         self.text = text
         self.imageURL = imageURL
         self.imageTapped = imageTapped
         self.hideMore = hideMore
+        self.isVideo = isVideo
     }
 }
 
@@ -368,6 +370,62 @@ open class TimelineView: UIView {
         }
         
         //image
+        if element.isVideo {
+            if let imageURL = element.imageURL {
+            let backgroundViewForImage = UIView()
+            backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
+            backgroundViewForImage.backgroundColor = UIColor.black
+            backgroundViewForImage.layer.cornerRadius = 10
+            v.addSubview(backgroundViewForImage)
+            v.addConstraints([
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 130),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 10),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+            ])
+            let videoView = VideoView()
+            
+            
+            
+            videoView.layer.cornerRadius = 10
+            videoView.translatesAutoresizingMaskIntoConstraints = false
+            videoView.contentMode = UIView.ContentMode.scaleAspectFit
+            videoView.backgroundColor = .blue
+            backgroundViewForImage.addSubview(videoView)
+            
+            
+            videoView.url = imageURL
+            videoView.player?.play()
+            
+            
+            v.addConstraints([
+                NSLayoutConstraint(item: videoView, attribute: .left, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .left, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: videoView, attribute: .right, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .right, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: videoView, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: videoView, attribute: .bottom, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .bottom, multiplier: 1.0, constant: 0)
+            ])
+            
+            
+            let button = UIButton(type: .custom)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.backgroundColor = UIColor.clear
+            button.addTargetClosure {
+//                element.imageTapped?(videoView)
+//                videoView.popUpImageToFullScreen()
+            }
+            v.addSubview(button)
+            v.addConstraints([
+                NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
+            ])
+            
+            lastView = videoView
+            }
+        } else {
+       
         if let imageURL = element.imageURL {
             
             let backgroundViewForImage = UIView()
@@ -444,7 +502,7 @@ open class TimelineView: UIView {
 
         ])
         lastView = button
-        
+    }
         //draw the bottom line between the bullets
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false

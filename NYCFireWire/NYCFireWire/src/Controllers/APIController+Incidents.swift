@@ -58,7 +58,7 @@ extension APIController {
         }
     }
     
-    func postCommentFor(location: Location, comment: String,imageURL: String? = nil, completion:@escaping (_ comment: Comment?) -> Void) {
+    func postCommentFor(location: Location, comment: String,imageURL: String? = nil, isVideo: Bool = false, completion:@escaping (_ comment: Comment?) -> Void) {
         let url: String
         if location is Incident {
             url = APIConstants.construct(endpoint: "/incident/\(location.id)/comment")
@@ -66,11 +66,21 @@ extension APIController {
             url = APIConstants.construct(endpoint: "/incident-inquiry/\(location.id)/comment")
         }
         let params: [String:String]
-        if let imageURL = imageURL {
-            params = ["comment":comment,"image_url":imageURL]
+        
+        if isVideo {
+            if let imageURL = imageURL {
+                params = ["comment":comment,"video_url":imageURL]
+            } else {
+                params = ["comment":comment]
+            }
         } else {
-            params = ["comment":comment]
+            if let imageURL = imageURL {
+                params = ["comment":comment,"image_url":imageURL]
+            } else {
+                params = ["comment":comment]
+            }
         }
+       
         makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
             if let rawComment = data?["result"] as? [String:Any?] {
                 completion(Comment(dict: rawComment))
@@ -79,6 +89,8 @@ extension APIController {
             completion(nil)
         }
     }
+    
+    
     
     func createIncidentWithParams(params: [String:Any], completion:@escaping (_ success: Bool) -> Void) {
         let url = APIConstants.construct(endpoint: .createIncidentEndpoint)

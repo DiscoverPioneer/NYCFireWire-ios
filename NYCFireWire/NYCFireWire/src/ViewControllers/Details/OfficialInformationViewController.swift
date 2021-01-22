@@ -73,6 +73,8 @@ extension OfficialInformationViewController {
             for comment in adminComments {
                 if let urlString = comment.imageURL {
                     timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil,hideMore: true))
+                } else if let videoURL = comment.videoURL {
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: videoURL), isVideo: true, imageTapped: nil,hideMore: true))
                 } else {
                     timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, imageTapped: nil,hideMore: true))
                 }

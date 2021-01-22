@@ -17,7 +17,8 @@ protocol ChatViewControllerDataSource {
 protocol ChatViewControllerDelegate {
     func chatViewController(chatViewController: ChatViewController, didTapPostFor comment: String)
     func chatViewController(chatViewController: ChatViewController, didTapUploadFor comment: String, image: UIImage)
-    
+    func chatViewController(chatViewController: ChatViewController, didTapUploadVideoFor comment: String, url: URL)
+
 }
 
 class ChatViewController: UIViewController, IndicatorInfoProvider {
@@ -30,6 +31,7 @@ class ChatViewController: UIViewController, IndicatorInfoProvider {
     var timeline: TimelineView?
     var dataSource: ChatViewControllerDataSource?
     var delegate: ChatViewControllerDelegate?
+    var videoPicker: VideoPicker!
     
     var finishedLoading = false
     
@@ -201,28 +203,8 @@ extension ChatViewController {
     }
     
     @IBAction func imageUploadTapped() {
-        let alert = UIAlertController(title: "Upload an image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction((UIAlertAction(title: "Take Picture", style: .default, handler: { (alert) in
-            DispatchQueue.main.async {
-                self.getPhoto(type: .camera)
-            }
-        })))
-        
-        alert.addAction((UIAlertAction(title: "Photo Library", style: .default, handler: { (alert) in
-            DispatchQueue.main.async {
-                self.getPhoto(type: .photoLibrary)
-            }
-        })))
-        
-        alert.addAction((UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert) in
-        })))
-        
-        if let popoverController = alert.popoverPresentationController {
-            popoverController.sourceView = self.view
-            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popoverController.permittedArrowDirections = []
-        }
-        self.present(alert, animated: true, completion: nil)
+        self.videoPicker = VideoPicker(presentationController: self, delegate: self)
+        self.videoPicker.present(from: self.view)
     }
     
     override func imageFromPicker(_ image: UIImage) {
@@ -232,6 +214,40 @@ extension ChatViewController {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         alert.addAction((UIAlertAction(title: "Upload", style: .default, handler: { (alert) in
             self.delegate?.chatViewController(chatViewController: self, didTapUploadFor: useComment ? self.textView.text! : "Uploaded Image", image: image)
+        })))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert,animated:true,completion:nil)
+    }
+}
+
+
+extension ChatViewController: VideoPickerDelegate {
+    
+    func didSelect(image: UIImage?) {
+        guard let image = image else {
+            return
+        }
+        print("Selected image \(image)")
+        let useComment = (textView.text != nil && textView.text.count > 2)
+        let title = useComment==false ? "Do you want to upload this image?" : "Do you want to upload this image with the comment  ''\(textView.text ?? "")''?"
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        alert.addAction((UIAlertAction(title: "Upload", style: .default, handler: { (alert) in
+            self.delegate?.chatViewController(chatViewController: self, didTapUploadFor: useComment ? self.textView.text! : "Uploaded Image", image: image)
+        })))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert,animated:true,completion:nil)
+    }
+    
+    func didSelect(url: URL?) {
+        guard let url = url else {
+            return
+        }
+        print("Selected video \(url)")
+        let useComment = (textView.text != nil && textView.text.count > 2)
+        let title = useComment==false ? "Do you want to upload this video?" : "Do you want to upload this video with the comment  ''\(textView.text ?? "")''?"
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        alert.addAction((UIAlertAction(title: "Upload", style: .default, handler: { (alert) in
+            self.delegate?.chatViewController(chatViewController: self, didTapUploadVideoFor: useComment ? self.textView.text! : "Uploaded Video", url: url)
         })))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert,animated:true,completion:nil)

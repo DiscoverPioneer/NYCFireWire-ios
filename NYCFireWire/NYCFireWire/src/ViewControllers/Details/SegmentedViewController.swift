@@ -57,6 +57,7 @@ class SegmentedViewController: ButtonBarPagerTabStripViewController {
 
 //MARK: - Official Information Delegate & Datasource
 extension SegmentedViewController: OfficialInformationViewControllerDataSource, ChatViewControllerDataSource, ChatViewControllerDelegate  {
+
     func dataForOfficialInformation(vc: OfficialInformationViewController) -> (title: String, subtitle: String?, address: String, units: [String]) {
         return (selectedLocation.title, selectedLocation.subtitle, selectedLocation.address, selectedLocation.units)
     }
@@ -105,8 +106,32 @@ extension SegmentedViewController: OfficialInformationViewControllerDataSource, 
                 activity.stopAnimating()
             }
         }
-        
     }
+    
+    func chatViewController(chatViewController: ChatViewController, didTapUploadVideoFor comment: String, url: URL) {
+        guard let user = AppManager.shared.currentUser, user.verified else {
+            chatViewController.showAlert(title: "Verification", message: "You must verify you email in order to comment. Please do so in the settings page")
+            return
+        }
+        let activity = chatViewController.view.showActivity()
+        let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: nil)
+        APIController.defaults.uploadVideo(url: url, session: session) { (success, videoURL) in
+            if let videoURL = videoURL {
+                APIController.defaults.postCommentFor(location: self.selectedLocation, comment: comment, imageURL: videoURL, isVideo: true) { (comment) in
+                    activity.stopAnimating()
+                    if let comment = comment {
+                        self.comments.append(comment)
+                        chatViewController.textView.text = ""
+                        chatViewController.reload()
+                    }
+                }
+            } else {
+                self.showAlert(title: "Something went wrong", message: "We couldnt upload your image at this time. Please try again later")
+                activity.stopAnimating()
+            }
+        }
+    }
+    
 }
 
 //MARK: - Helpers
