@@ -128,6 +128,31 @@ extension UIViewController: UIImagePickerControllerDelegate, UINavigationControl
         )
     }
     
+    func getVideos(type: UIImagePickerController.SourceType) {PHPhotoLibrary.requestAuthorization({ (status) -> Void in
+        DispatchQueue.main.async {
+
+            if status == .authorized {
+                if UIImagePickerController.isSourceTypeAvailable(type){
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = type
+                    imagePicker.mediaTypes = ["public.movie"]
+                    imagePicker.allowsEditing = true
+                    DispatchQueue.main.async {
+                        self.present(imagePicker, animated: true, completion: nil)
+                    }
+                }else {
+                    let typeStr = (type.rawValue == 1) ? "Camera" : "PhotoLibrary"
+                    self.showAlert(title: "Wait!", message: "\(typeStr) not avaiable")
+                }
+            }else {
+                self.showAlert(title: "Wait!", message: "Access not granted")
+                print("access not granted")}
+        }
+        }
+        )
+    }
+    
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         DispatchQueue.main.async {
             self.dismiss(animated: true, completion: nil)
@@ -140,13 +165,16 @@ extension UIViewController: UIImagePickerControllerDelegate, UINavigationControl
             self.dismiss(animated: true, completion: nil)
             if let image = info[.editedImage] as? UIImage {
                 self.imageFromPicker(image)
-            }else{
+            }else if let video = info[.mediaURL] as? URL{
+                print("Media")
+                self.VideoFromPicker(video)
+            } else{
                 print("error accessing photo")
             }
         }
     }
     
     @objc func imageFromPicker(_ image: UIImage) {}
-    
+    @objc func VideoFromPicker(_ videoURL: URL) {}
     @objc func progressComplete() {}
 }

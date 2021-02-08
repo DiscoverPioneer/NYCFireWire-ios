@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E9B241A25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
+		1E9B241B25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
+		1E9B241C25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
-		380972EF2540E50C003E132D /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 380972EE2540E50C003E132D /* homescreen.mp4 */; };
-		380972F02540E50C003E132D /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 380972EE2540E50C003E132D /* homescreen.mp4 */; };
-		380972F12540E50C003E132D /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 380972EE2540E50C003E132D /* homescreen.mp4 */; };
 		380972F82540E545003E132D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F72540E545003E132D /* WidgetKit.framework */; };
 		380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F92540E545003E132D /* SwiftUI.framework */; };
 		380972FD2540E545003E132D /* NYCFireWireWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380972FC2540E545003E132D /* NYCFireWireWidget.swift */; };
@@ -375,8 +375,8 @@
 
 /* Begin PBXFileReference section */
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
+		1E9B241925D174100019C026 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
-		380972EE2540E50C003E132D /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NYCFireWireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		380972F72540E545003E132D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		380972F92540E545003E132D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -776,7 +776,7 @@
 		E3FC2E84214AD069000166BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				380972EE2540E50C003E132D /* homescreen.mp4 */,
+				1E9B241925D174100019C026 /* homescreen.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1064,7 +1064,7 @@
 				E3075B082221EC6100B24846 /* DivisionTicket.wav in Resources */,
 				E3075B212223147700B24846 /* SpecialUnit.wav in Resources */,
 				E3E1BB5D2246D63800A3FE2A /* servicebell.wav in Resources */,
-				380972F02540E50C003E132D /* homescreen.mp4 in Resources */,
+				1E9B241B25D174100019C026 /* homescreen.mp4 in Resources */,
 				E309DF422187E55100E20F34 /* LaunchScreen.storyboard in Resources */,
 				E3075B1B2223147700B24846 /* EngineLadderTicket.wav in Resources */,
 				E309DF432187E55100E20F34 /* Local_Config.plist in Resources */,
@@ -1095,7 +1095,7 @@
 				E37F25882356436F0005F6D7 /* SpecialUnit.wav in Resources */,
 				E37F25892356436F0005F6D7 /* servicebell.wav in Resources */,
 				E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */,
-				380972F12540E50C003E132D /* homescreen.mp4 in Resources */,
+				1E9B241C25D174100019C026 /* homescreen.mp4 in Resources */,
 				E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */,
 				E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */,
 				E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */,
@@ -1121,7 +1121,7 @@
 				E3FC2E9C214AD069000166BE /* Main.storyboard in Resources */,
 				E3075B0B2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0D2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
-				380972EF2540E50C003E132D /* homescreen.mp4 in Resources */,
+				1E9B241A25D174100019C026 /* homescreen.mp4 in Resources */,
 				E3E1BB5C2246D63800A3FE2A /* servicebell.wav in Resources */,
 				E3FC2F26214B5267000166BE /* IncidentTableViewCell.xib in Resources */,
 				E3075B072221EC6100B24846 /* DivisionTicket.wav in Resources */,

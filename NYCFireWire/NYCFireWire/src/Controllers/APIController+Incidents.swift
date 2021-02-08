@@ -80,6 +80,28 @@ extension APIController {
         }
     }
     
+    func postCommentVideoFor(location: Location, comment: String,videoURL: String? = nil, completion:@escaping (_ comment: Comment?) -> Void) {
+        let url: String
+        if location is Incident {
+            url = APIConstants.construct(endpoint: "/incident/\(location.id)/comment")
+        } else {
+            url = APIConstants.construct(endpoint: "/incident-inquiry/\(location.id)/comment")
+        }
+        let params: [String:String]
+        if let imageURL = videoURL {
+            params = ["comment":comment,"video_url":imageURL]
+        } else {
+            params = ["comment":comment]
+        }
+        makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
+            if let rawComment = data?["result"] as? [String:Any?] {
+                completion(Comment(dict: rawComment))
+                return
+            }
+            completion(nil)
+        }
+    }
+    
     func createIncidentWithParams(params: [String:Any], completion:@escaping (_ success: Bool) -> Void) {
         let url = APIConstants.construct(endpoint: .createIncidentEndpoint)
         makeRequest(type: .post, url: url, parameters: params) { (success, error, data) in
