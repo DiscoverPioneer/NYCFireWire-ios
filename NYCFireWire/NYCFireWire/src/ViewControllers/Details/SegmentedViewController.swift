@@ -113,6 +113,30 @@ extension SegmentedViewController: OfficialInformationViewControllerDataSource, 
         }
         
     }
+    
+    func chatViewController(chatViewController: ChatViewController, didTapUploadFor comment: String, video: URL) {
+        guard let user = AppManager.shared.currentUser, user.verified else {
+            chatViewController.showAlert(title: "Verification", message: "You must verify you email in order to comment. Please do so in the settings page")
+            return
+        }
+        let activity = chatViewController.view.showActivity()
+        let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: nil)
+        APIController.defaults.uploadVideo(image: video, session: session) { (success, imageURL) in
+            if let imageURL = imageURL {
+                APIController.defaults.postCommentVideoFor(location: self.selectedLocation, comment: comment, videoURL: imageURL) { (comment) in
+                    activity.stopAnimating()
+                    if let comment = comment {
+                        self.comments.append(comment)
+                        chatViewController.textView.text = ""
+                        chatViewController.reload()
+                    }
+                }
+            } else {
+                self.showAlert(title: "Something went wrong", message: "We couldnt upload your image at this time. Please try again later")
+                activity.stopAnimating()
+            }
+        }
+    }
 }
 
 //MARK: - Helpers

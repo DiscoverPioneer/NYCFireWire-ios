@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-
+import AVKit
+import AVFoundation
 class CLImageViewPopup: UIImageView, UIScrollViewDelegate {
     var tempRect: CGRect?
     var bgView: UIView!
@@ -91,5 +92,32 @@ class CLImageViewPopup: UIImageView, UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
       return imageView
+    }
+}
+
+class CLButtonViewPopup: UIButton {
+   
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CLButtonViewPopup.popUpVideoScreen(videoURL:)))
+        self.addGestureRecognizer(tapGesture)
+        self.isUserInteractionEnabled = true
+    }
+    
+    @objc func popUpVideoScreen(videoURL:URL) {
+        if let window = UIApplication.shared.delegate?.window {
+            let player = AVPlayer(url: videoURL)
+            let vc = AVPlayerViewController()
+            vc.player = player
+            window?.rootViewController?.present(vc, animated: true) { vc.player?.play() }
+        }
     }
 }

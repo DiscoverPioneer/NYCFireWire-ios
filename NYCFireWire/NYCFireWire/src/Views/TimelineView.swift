@@ -414,7 +414,7 @@ open class TimelineView: UIView {
             v.addSubview(imageView)
             
             
-            imageView.kf.indicatorType = .activity
+            /*imageView.kf.indicatorType = .activity
             imageView.kf.setImage(with: imageURL)
             
             
@@ -432,13 +432,79 @@ open class TimelineView: UIView {
                 element.imageTapped?(imageView)
                 imageView.popUpImageToFullScreen()
             }
-            v.addSubview(button)
+            v.addSubview(button)*/
+            
+            
+            if imageURL.pathExtension == "mp4"{
+                if let thumbnailImage = getThumbnailImage(forUrl: imageURL) {
+                    imageView.image = thumbnailImage
+                    
+                    let button = CLButtonViewPopup(type: .custom)
+                    //button.setImage(UIImage.init(named: "icn_play"), for: .normal)
+                    button.translatesAutoresizingMaskIntoConstraints = false
+                    button.backgroundColor = UIColor.clear
+                    button.addTargetClosure {
+                        button.popUpVideoScreen(videoURL: imageURL)
+                    }
+                    v.addSubview(button)
+                    
+                    let button2 = UIButton()
+                    button2.setBackgroundImage(UIImage.init(named: "icn_play"), for: .normal)
+                    button2.translatesAutoresizingMaskIntoConstraints = false
+                    button2.backgroundColor = UIColor.clear
+                    button2.isUserInteractionEnabled = false
+                    v.addSubview(button2)
+                    
+                    v.addConstraints([
+                        NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
+                        NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
+                        NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                        NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
+                    ])
+                    
+                    v.addConstraints([
+                        NSLayoutConstraint(item: button2, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 35),
+                        NSLayoutConstraint(item: button2, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 35),
+                        NSLayoutConstraint(item: button2, attribute: .centerX, relatedBy: .equal, toItem: button, attribute: .centerX, multiplier: 1.0, constant: 0),
+                        NSLayoutConstraint(item: button2, attribute: .centerY, relatedBy: .equal, toItem: button, attribute: .centerY, multiplier: 1.0, constant: 0)
+                    ])
+                }
+            }else{
+                imageView.kf.indicatorType = .activity
+                imageView.kf.setImage(with: imageURL)
+                
+                let button = UIButton(type: .custom)
+                button.translatesAutoresizingMaskIntoConstraints = false
+                button.backgroundColor = UIColor.clear
+                button.addTargetClosure {
+                    element.imageTapped?(imageView)
+                    imageView.popUpImageToFullScreen()
+                }
+                v.addSubview(button)
+                
+                v.addConstraints([
+                    NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
+                ])
+            }
+            
+            
             v.addConstraints([
+                NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .left, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: imageView, attribute: .right, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .right, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .bottom, multiplier: 1.0, constant: 0)
+            ])
+            
+            /*v.addConstraints([
                 NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
-            ])
+            ])*/
+            
             lastView = imageView
             
         } else {
@@ -468,6 +534,18 @@ open class TimelineView: UIView {
 		
 		return v
 	}
+    
+    func getThumbnailImage(forUrl url: URL) -> UIImage? {
+        let asset: AVAsset = AVAsset(url: url)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        do {
+            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60) , actualTime: nil)
+            return UIImage(cgImage: thumbnailImage)
+        } catch let error {
+            print(error)
+        }
+        return nil
+    }
 }
 
 extension TimelineView: UITextViewDelegate {
