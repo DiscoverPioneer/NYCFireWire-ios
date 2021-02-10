@@ -46,7 +46,7 @@ public class APIController {
                 completion(false, APIConstants.ErrorType.custom.error(message: error), data)
                 return
             }
-            // print("Made Request:\nURL:\(url)\nParameteres:\(parameters)\nData: \(data)")
+             print("Made Request:\nURL:\(url)\nParameteres:\(parameters)\nData: \(data)")
             completion(response.result.isSuccess || statusCode == 200, nil, data)
         }
     }

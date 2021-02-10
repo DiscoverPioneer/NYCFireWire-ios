@@ -35,6 +35,7 @@ class DashboardViewController: UIViewController {
     
     let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
     var alreadyFetched = false
+    var lastAutoFetch: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,13 +166,7 @@ class DashboardViewController: UIViewController {
     
     fileprivate func setupNavBar() {
         navigationController?.navigationBar.tintColor = UIColor.white
-//        let locationBtn = UIButton(type: .custom)
-//        locationBtn.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 20)
-//        locationBtn.setImage(UIImage(named:"LocationFinder"), for: .normal)
-//        locationBtn.addTarget(self, action: #selector(CreateIncidentViewController.scrollToUserLocation), for: UIControl.Event.touchUpInside)
-//        let locationButton = locationBtn.convertToBarButtonItem()
-        
-//        navigationItem.rightBarButtonItem = locationButton
+
         if AudioManager.shared.isPlaying {
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Stop Listening", style: .plain, target: self, action: #selector(listenLive))
         } else {
@@ -184,18 +179,19 @@ class DashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavBar()
-       
-        refresh()
-//        self.mapViewHeightConstraint.constant = self.maxHeaderHeight
-//        updateHeader()
+        if let lastRefresh = self.lastAutoFetch {
+            if minutesBetweenDates(lastRefresh, Date()) > 2 {
+                self.refresh()
+            } else {
+                print("Not auto Refreshing...")
+            }
+        } else {
+            refresh()
+        }
+
         mapView.setCenterCoordinate(centerCoordinate: CLLocationCoordinate2D(latitude: 40.7806341, longitude: -73.9242574), zoomLevel: 8, animated: true)
         self.currentRegion = mapView.region
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            if AdCountController().incrementCountForAd(id: "HomePageInterstitial") % 10 == 0 {
-//                AdController.shared.showInterstitialToViewController(viewController: self,adUnitID: .HomePageInterstitialID)
-//            }
-//        }
-        
+
         
     }
     
@@ -203,11 +199,21 @@ class DashboardViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    func minutesBetweenDates(_ oldDate: Date, _ newDate: Date) -> CGFloat {
+
+        //get both times sinces refrenced date and divide by 60 to get minutes
+        let newDateMinutes = newDate.timeIntervalSinceReferenceDate/60
+        let oldDateMinutes = oldDate.timeIntervalSinceReferenceDate/60
+
+        //then return the difference
+        return CGFloat(newDateMinutes - oldDateMinutes)
+    }
+    
     @objc func refresh() {
         let activity = view.showActivity()
         let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
         self.setFeedTypeLabel()
-        
+        self.lastAutoFetch = Date()
         let randomDelay = alreadyFetched ? 0 : Int.random(in: 1..<10)
         alreadyFetched = true
         print("Get ready to sleep")
