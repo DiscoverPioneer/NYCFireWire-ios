@@ -34,15 +34,18 @@ public struct TimeFrame {
 	*/
 	let imageURL: URL?
     
+    let videoURL: URL?
+    
     /**
         An optional closure to call when an image is tapped.
     */
     let imageTapped: ((UIImageView) -> Void)?
     let hideMore: Bool
-    public init(date: String, text: String? = nil, imageURL: URL? = nil, imageTapped: ((UIImageView) -> Void)? = nil, hideMore: Bool = false) {
+    public init(date: String, text: String? = nil, imageURL: URL? = nil, videoURL: URL? = nil,imageTapped: ((UIImageView) -> Void)? = nil, hideMore: Bool = false) {
         self.date = date
         self.text = text
         self.imageURL = imageURL
+        self.videoURL = videoURL
         self.imageTapped = imageTapped
         self.hideMore = hideMore
     }
@@ -389,7 +392,7 @@ open class TimelineView: UIView {
         lastView = button
         
         //image
-        if let imageURL = element.imageURL {
+        if let imageURL = element.imageURL, let videoURL = element.videoURL {
             
             let backgroundViewForImage = UIView()
             backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
@@ -413,62 +416,39 @@ open class TimelineView: UIView {
             imageView.contentMode = UIView.ContentMode.scaleAspectFit
             v.addSubview(imageView)
             
-            
-            /*imageView.kf.indicatorType = .activity
-            imageView.kf.setImage(with: imageURL)
-            
-            
-            v.addConstraints([
-                NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .left, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: imageView, attribute: .right, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .right, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
-                NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .bottom, multiplier: 1.0, constant: 0)
-            ])
-            
-            let button = UIButton(type: .custom)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.backgroundColor = UIColor.clear
-            button.addTargetClosure {
-                element.imageTapped?(imageView)
-                imageView.popUpImageToFullScreen()
-            }
-            v.addSubview(button)*/
-            
-            
-            if imageURL.pathExtension == "mp4"{
-                if let thumbnailImage = getThumbnailImage(forUrl: imageURL) {
-                    imageView.image = thumbnailImage
-                    
-                    let button = CLButtonViewPopup(type: .custom)
-                    //button.setImage(UIImage.init(named: "icn_play"), for: .normal)
-                    button.translatesAutoresizingMaskIntoConstraints = false
-                    button.backgroundColor = UIColor.clear
-                    button.addTargetClosure {
-                        button.popUpVideoScreen(videoURL: imageURL)
-                    }
-                    v.addSubview(button)
-                    
-                    let button2 = UIButton()
-                    button2.setBackgroundImage(UIImage.init(named: "icn_play"), for: .normal)
-                    button2.translatesAutoresizingMaskIntoConstraints = false
-                    button2.backgroundColor = UIColor.clear
-                    button2.isUserInteractionEnabled = false
-                    v.addSubview(button2)
-                    
-                    v.addConstraints([
-                        NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
-                        NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
-                        NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
-                        NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
-                    ])
-                    
-                    v.addConstraints([
-                        NSLayoutConstraint(item: button2, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 35),
-                        NSLayoutConstraint(item: button2, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 35),
-                        NSLayoutConstraint(item: button2, attribute: .centerX, relatedBy: .equal, toItem: button, attribute: .centerX, multiplier: 1.0, constant: 0),
-                        NSLayoutConstraint(item: button2, attribute: .centerY, relatedBy: .equal, toItem: button, attribute: .centerY, multiplier: 1.0, constant: 0)
-                    ])
+            if videoURL.pathExtension == "mp4"{
+                imageView.kf.indicatorType = .activity
+                imageView.kf.setImage(with: imageURL)
+                
+                let button = CLButtonViewPopup(type: .custom)
+                //button.setImage(UIImage.init(named: "icn_play"), for: .normal)
+                button.translatesAutoresizingMaskIntoConstraints = false
+                button.backgroundColor = UIColor.clear
+                button.addTargetClosure {
+                    button.popUpVideoScreen(videoURL: videoURL)
                 }
+                v.addSubview(button)
+                
+                let button2 = UIButton()
+                button2.setBackgroundImage(UIImage.init(named: "icn_play"), for: .normal)
+                button2.translatesAutoresizingMaskIntoConstraints = false
+                button2.backgroundColor = UIColor.clear
+                button2.isUserInteractionEnabled = false
+                v.addSubview(button2)
+                
+                v.addConstraints([
+                    NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
+                ])
+                
+                v.addConstraints([
+                    NSLayoutConstraint(item: button2, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 35),
+                    NSLayoutConstraint(item: button2, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 35),
+                    NSLayoutConstraint(item: button2, attribute: .centerX, relatedBy: .equal, toItem: button, attribute: .centerX, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: button2, attribute: .centerY, relatedBy: .equal, toItem: button, attribute: .centerY, multiplier: 1.0, constant: 0)
+                ])
             }else{
                 imageView.kf.indicatorType = .activity
                 imageView.kf.setImage(with: imageURL)
@@ -507,10 +487,61 @@ open class TimelineView: UIView {
             
             lastView = imageView
             
+        }else if let imageURL = element.imageURL{
+            let backgroundViewForImage = UIView()
+            backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
+            backgroundViewForImage.backgroundColor = UIColor.black
+            backgroundViewForImage.layer.cornerRadius = 10
+            v.addSubview(backgroundViewForImage)
+            v.addConstraints([
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 130),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 10),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
+                NSLayoutConstraint(item: backgroundViewForImage, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+            ])
+            
+            let imageView = CLImageViewPopup(frame: CGRect(x: 0,y: 0,width: 500,height: 500))
+            
+            
+            
+            imageView.layer.cornerRadius = 10
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.contentMode = UIView.ContentMode.scaleAspectFit
+            v.addSubview(imageView)
+            
+            
+            imageView.kf.indicatorType = .activity
+            imageView.kf.setImage(with: imageURL)
+            
+            let button = UIButton(type: .custom)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.backgroundColor = UIColor.clear
+            button.addTargetClosure {
+                element.imageTapped?(imageView)
+                imageView.popUpImageToFullScreen()
+            }
+            v.addSubview(button)
+            
+            v.addConstraints([
+                NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
+            ])
+            
+            v.addConstraints([
+                NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .left, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: imageView, attribute: .right, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .right, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .bottom, multiplier: 1.0, constant: 0)
+            ])
+            
+            
+            lastView = imageView
         } else {
             v.addConstraint(NSLayoutConstraint(item: lastView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -20))
         }
-        
        
         
         //draw the bottom line between the bullets

@@ -80,7 +80,7 @@ extension APIController {
         }
     }
     
-    func postCommentVideoFor(location: Location, comment: String,videoURL: String? = nil, completion:@escaping (_ comment: Comment?) -> Void) {
+    func postCommentVideoFor(location: Location, comment: String,imageURL: String? = nil,videoURL: String? = nil, completion:@escaping (_ comment: Comment?) -> Void) {
         let url: String
         if location is Incident {
             url = APIConstants.construct(endpoint: "/incident/\(location.id)/comment")
@@ -88,8 +88,8 @@ extension APIController {
             url = APIConstants.construct(endpoint: "/incident-inquiry/\(location.id)/comment")
         }
         let params: [String:String]
-        if let imageURL = videoURL {
-            params = ["comment":comment,"video_url":imageURL]
+        if let videoURL = videoURL, let imgURL = imageURL{
+            params = ["comment":comment,"video_url":videoURL, "image_url":imgURL]
         } else {
             params = ["comment":comment]
         }

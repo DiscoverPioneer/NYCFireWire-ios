@@ -8,7 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
-
+import Photos
 class SegmentedViewController: ButtonBarPagerTabStripViewController {
     
     var selectedLocation: Location!
@@ -123,19 +123,45 @@ extension SegmentedViewController: OfficialInformationViewControllerDataSource, 
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: nil)
         APIController.defaults.uploadVideo(image: video, session: session) { (success, imageURL) in
             if let imageURL = imageURL {
-                APIController.defaults.postCommentVideoFor(location: self.selectedLocation, comment: comment, videoURL: imageURL) { (comment) in
-                    activity.stopAnimating()
-                    if let comment = comment {
-                        self.comments.append(comment)
-                        chatViewController.textView.text = ""
-                        chatViewController.reload()
+                if let thumbnailImage = self.getThumbnailImage(forUrl: video) {
+                    let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: nil, delegateQueue: nil)
+                    APIController.defaults.uploadImage(image: thumbnailImage, session: session) { (success, imageURLnew) in
+                        if let imageURLNew = imageURLnew {
+                            APIController.defaults.postCommentVideoFor(location: self.selectedLocation, comment: comment, imageURL: imageURLNew, videoURL: imageURL) { (comment) in
+                                DispatchQueue.main.async {
+                                    activity.stopAnimating()
+                                    if let comment = comment {
+                                        self.comments.append(comment)
+                                        chatViewController.textView.text = ""
+                                        chatViewController.reload()
+                                    }
+                                }
+                            }
+                        } else {
+                            self.showAlert(title: "Something went wrong", message: "We couldnt upload your image at this time. Please try again later")
+                            activity.stopAnimating()
+                        }
                     }
+                }else{
+                    self.showAlert(title: "Something went wrong", message: "We couldnt upload your video at this time. Please try again later")
                 }
             } else {
                 self.showAlert(title: "Something went wrong", message: "We couldnt upload your image at this time. Please try again later")
                 activity.stopAnimating()
             }
         }
+    }
+    
+    func getThumbnailImage(forUrl url: URL) -> UIImage? {
+        let asset: AVAsset = AVAsset(url: url)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
+        do {
+            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60) , actualTime: nil)
+            return UIImage(cgImage: thumbnailImage)
+        } catch let error {
+            print(error)
+        }
+        return nil
     }
 }
 

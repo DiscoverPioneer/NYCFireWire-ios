@@ -71,10 +71,12 @@ extension OfficialInformationViewController {
             }
             
             for comment in adminComments {
-                if let urlString = comment.imageURL {
-                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil,hideMore: true))
+                if let urlString = comment.imageURL, let videourl = comment.videoURL {
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), videoURL: URL(string: videourl), imageTapped: nil,hideMore: true))
+                }else if let urlString = comment.imageURL {
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: URL(string: urlString), videoURL: nil, imageTapped: nil,hideMore: true))
                 } else {
-                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, imageTapped: nil,hideMore: true))
+                    timeFrames.append(TimeFrame(date:comment.createdAt.toLocalTime().smartStringFromDate() , text: comment.text, imageURL: nil, videoURL: nil, imageTapped: nil,hideMore: true))
                 }
             }
             let timeline = TimelineView(bulletType: .circle, timeFrames: timeFrames)
