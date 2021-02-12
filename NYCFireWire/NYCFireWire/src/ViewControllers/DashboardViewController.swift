@@ -34,6 +34,7 @@ class DashboardViewController: UIViewController {
     var allTableViewItems = [Any]()
     
     let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
+    var alreadyFetched = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,18 @@ class DashboardViewController: UIViewController {
 //        refresh()
         IAPHandler.shared.fetchAvailableProducts()
         
+        
+        
+
+        self.mapViewHeightConstraint.constant = self.maxHeaderHeight
+        
+        mapView.addExpandButton()
+        AnalyticsController.logEvent(eventName: "DashboardViewController")
+
+        
+    }
+    
+    func fetchMe() {
         APIController.defaults.getMe { (fullUser) in
             if let user = fullUser {
                 AppManager.shared.currentUser = user
@@ -99,14 +112,6 @@ class DashboardViewController: UIViewController {
                 }
             }
         }
-        
-
-        self.mapViewHeightConstraint.constant = self.maxHeaderHeight
-        
-        mapView.addExpandButton()
-        AnalyticsController.logEvent(eventName: "DashboardViewController")
-
-        
     }
     
     func showVerifyAlert(user: FullUser) {
@@ -202,14 +207,23 @@ class DashboardViewController: UIViewController {
         let activity = view.showActivity()
         let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
         self.setFeedTypeLabel()
-        APIController.defaults.getAllIncidents(feedType: feedType) { (incidents) in
-            self.allIncidents = incidents
-            self.setTableViewItems()
-            self.setPins()
-            self.tableView.reloadData()
-            self.tableView.refreshControl?.endRefreshing()
-            activity.removeFromSuperview()
+        
+        let randomDelay = alreadyFetched ? 0 : Int.random(in: 1..<10)
+        alreadyFetched = true
+        print("Get ready to sleep")
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(randomDelay)) {
+            print("Slept for: \(randomDelay) seconds")
+            self.fetchMe()
+            APIController.defaults.getAllIncidents(feedType: feedType) { (incidents) in
+                self.allIncidents = incidents
+                self.setTableViewItems()
+                self.setPins()
+                self.tableView.reloadData()
+                self.tableView.refreshControl?.endRefreshing()
+                activity.removeFromSuperview()
+            }
         }
+        
     }
     
     @IBAction func didTapIncidentHeaderLabel() {
