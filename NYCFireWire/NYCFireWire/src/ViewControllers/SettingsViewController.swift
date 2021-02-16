@@ -11,6 +11,8 @@ import AVFoundation
 
 class SettingsViewController: UITableViewController, NotificationToggleCellDelegate {
     
+    
+    
     let cellId = "cellId"
     let toggleId = "toggleId"
     

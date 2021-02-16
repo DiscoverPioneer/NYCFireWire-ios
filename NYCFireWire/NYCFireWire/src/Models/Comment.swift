@@ -21,9 +21,10 @@ struct Comment {
     let locationID: Int //Refers to either incident or incident inquiry
     let type: CommentType
     let imageURL: String?
-    
+    let videoURL: String?
     init?(dict: [String:Any?]) {
         self.imageURL = dict["image_url"] as? String
+        self.videoURL = dict["video_url"] as? String
         if
             let id = dict["id"] as? Int,
             let createdBy = dict["_user"] as? Int,

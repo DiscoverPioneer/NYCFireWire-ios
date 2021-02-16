@@ -145,10 +145,12 @@ extension ChatViewController {
                 if comment.createdBy.role == .super || comment.createdBy.role == .subadmin ||  comment.createdBy.role == .admin {
                     name = "Admin"
                 }
-                if let urlString = comment.imageURL {
-                    timeFrames.append(TimeFrame(date:name , text: comment.text, imageURL: URL(string: urlString), imageTapped: nil))
-                } else {
-                    timeFrames.append(TimeFrame(date:name , text: comment.text, imageURL: nil, imageTapped: nil))
+                if let urlString = comment.imageURL, let videourl = comment.videoURL {
+                    timeFrames.append(TimeFrame(date:name , text: comment.text, imageURL: URL(string: urlString), videoURL: URL(string: videourl), imageTapped: nil))
+                }else if let urlString = comment.imageURL{
+                    timeFrames.append(TimeFrame(date:name , text: comment.text, imageURL: URL(string: urlString), videoURL: nil, imageTapped: nil))
+                }else {
+                    timeFrames.append(TimeFrame(date:name , text: comment.text, imageURL: nil, videoURL: nil, imageTapped: nil))
                 }
             }
             let timeline = TimelineView(bulletType: .circle, timeFrames: timeFrames)
