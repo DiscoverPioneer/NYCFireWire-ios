@@ -99,7 +99,7 @@ class DashboardViewController: UIViewController {
                    let token = AppManager.shared.userToken {
                     UserDefaultsSuite().setString(value: email, key: UserDefaultSuiteKeys.userEmailKey.rawValue)
                     UserDefaultsSuite().setString(value: token, key: UserDefaultSuiteKeys.userTokenKey.rawValue)
-
+                
                 }
                 if #available(iOS 14.0, *) {
                     WidgetCenter.shared.reloadAllTimelines()
@@ -109,6 +109,7 @@ class DashboardViewController: UIViewController {
                 
                 //Show Ads
                 if !IAPHandler.shared.isMonthlySubscriptionPurchased() {
+                    self.showCustomAd()
                     if AdController.shared.shouldShowAdditionalAds() {
                         AdController.shared.preloadTableViewAds(vc: self, delegate: self)
                     }
@@ -213,6 +214,61 @@ class DashboardViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+    }
+    
+    func showCustomAd() {
+        let defaults = UserDefaults.standard
+        let defaultsKey = "DidShowFilterHintAlert1"
+        if !defaults.bool(forKey: defaultsKey) {
+            print("Pending other alert")
+            return
+        }
+        if !IAPHandler.shared.isMonthlySubscriptionPurchased() {
+            print("Getting ad....")
+            APIController.defaults.getAd { (ad) in
+                if let ad = ad, let url = URL(string: ad.ios_image_url) {
+                    if defaults.bool(forKey: ad.id) && !ad.always_show {
+                        return
+                    }
+                    defaults.setValue(true, forKey: ad.id)
+                    let uiAlertControl = UIAlertController(title: ad.title, message: ad.message, preferredStyle: .alert)
+                            
+                    func navigateToURL() {
+                        AnalyticsController.logEvent(eventName: "ClickedCustomAd-\(ad.id)")
+                        if let link = URL(string: ad.ios_link) {
+                            UIApplication.shared.open(link, options: [:], completionHandler: nil)
+                        }
+                    }
+                            
+                    let uiImageAlertAction = UIAlertAction(title: "", style: .default, handler: { action in
+                        navigateToURL()
+                    })
+                    let imageData = try? Data(contentsOf: url)
+                    let image = UIImage(data: imageData ?? Data()) ?? UIImage()
+                            
+                            // size the image
+                            let maxsize =  CGSize(width: 245, height: 300)
+                            
+                            let scaleSze = CGSize(width: 245, height: 245/image.size.width*image.size.height)
+                    let reSizedImage = image.resize(targetSize: scaleSze)
+                            
+                            uiImageAlertAction.setValue(reSizedImage.withRenderingMode(.alwaysOriginal), forKey: "image")
+                            uiAlertControl.addAction(uiImageAlertAction)
+                            uiAlertControl.addAction(UIAlertAction(title: "Check it out", style: .default, handler: { action in
+                                navigateToURL()
+                            }))
+                            uiAlertControl.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                        
+                            self.present(uiAlertControl, animated: true, completion: nil)
+                 
+                
+                    
+                    
+                    
+                }
+            }
+        }
     }
     
     func minutesBetweenDates(_ oldDate: Date, _ newDate: Date) -> CGFloat {

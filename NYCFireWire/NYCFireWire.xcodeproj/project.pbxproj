@@ -285,6 +285,12 @@
 		E3F2BF22247EE2ED0041C545 /* SendTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2BF21247EE2ED0041C545 /* SendTipViewController.swift */; };
 		E3F2BF23247EE2ED0041C545 /* SendTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2BF21247EE2ED0041C545 /* SendTipViewController.swift */; };
 		E3F2BF24247EE2ED0041C545 /* SendTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2BF21247EE2ED0041C545 /* SendTipViewController.swift */; };
+		E3F511D425E4C282009CF754 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511D325E4C282009CF754 /* Ad.swift */; };
+		E3F511D525E4C282009CF754 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511D325E4C282009CF754 /* Ad.swift */; };
+		E3F511D625E4C282009CF754 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511D325E4C282009CF754 /* Ad.swift */; };
+		E3F511DC25E4C395009CF754 /* APIController+Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511DB25E4C395009CF754 /* APIController+Ads.swift */; };
+		E3F511DD25E4C395009CF754 /* APIController+Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511DB25E4C395009CF754 /* APIController+Ads.swift */; };
+		E3F511DE25E4C395009CF754 /* APIController+Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511DB25E4C395009CF754 /* APIController+Ads.swift */; };
 		E3FC2E65214ACFF4000166BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E64214ACFF4000166BE /* AppDelegate.swift */; };
 		E3FC2E6C214ACFF5000166BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E6B214ACFF5000166BE /* Assets.xcassets */; };
 		E3FC2E9B214AD069000166BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E78214AD069000166BE /* LaunchScreen.storyboard */; };
@@ -459,6 +465,8 @@
 		E3E1BB5B2246D63800A3FE2A /* servicebell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = servicebell.wav; sourceTree = "<group>"; };
 		E3E438D823FA2D65007CCBA6 /* FormerFirehouseLocations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FormerFirehouseLocations.plist; sourceTree = "<group>"; };
 		E3F2BF21247EE2ED0041C545 /* SendTipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTipViewController.swift; sourceTree = "<group>"; };
+		E3F511D325E4C282009CF754 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		E3F511DB25E4C395009CF754 /* APIController+Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIController+Ads.swift"; sourceTree = "<group>"; };
 		E3FC2E61214ACFF4000166BE /* NYCFireWire - Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYCFireWire - Prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FC2E64214ACFF4000166BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3FC2E6B214ACFF5000166BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -802,6 +810,7 @@
 				E309DF012187991C00E20F34 /* Location.swift */,
 				E309DF022187991C00E20F34 /* SimpleUser.swift */,
 				E34C131F222A1D2B00383393 /* Firehouse.swift */,
+				E3F511D325E4C282009CF754 /* Ad.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -858,6 +867,7 @@
 			children = (
 				E3FC2E99214AD069000166BE /* APIController.swift */,
 				E309DEF92187961800E20F34 /* APIController+User.swift */,
+				E3F511DB25E4C395009CF754 /* APIController+Ads.swift */,
 				E3FC2F2D21504144000166BE /* APIController+Incidents.swift */,
 				E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */,
 				E34C1325222A337D00383393 /* AdController.swift */,
@@ -1341,6 +1351,7 @@
 				38D5069C2541FE2B009593EC /* EventView.swift in Sources */,
 				E309DF242187E55100E20F34 /* Location.swift in Sources */,
 				E309DF252187E55100E20F34 /* String+Helpers.swift in Sources */,
+				E3F511D525E4C282009CF754 /* Ad.swift in Sources */,
 				E309DF262187E55100E20F34 /* UIViewController+Inherited.swift in Sources */,
 				E3075AFD2218E1A500B24846 /* NotificationSettingsViewController.swift in Sources */,
 				E33582802194B01100F6916F /* NotificationToggleCell.swift in Sources */,
@@ -1367,6 +1378,7 @@
 				E309DF332187E55100E20F34 /* AppManager.swift in Sources */,
 				E309DF342187E55100E20F34 /* UITextView+Helpers.swift in Sources */,
 				E309DF352187E55100E20F34 /* AppDelegate.swift in Sources */,
+				E3F511DD25E4C395009CF754 /* APIController+Ads.swift in Sources */,
 				E309DF362187E55100E20F34 /* Comment.swift in Sources */,
 				E309DF372187E55100E20F34 /* PioneerMenuController.swift in Sources */,
 				E309DF382187E55100E20F34 /* Constants.swift in Sources */,
@@ -1406,6 +1418,7 @@
 				E37F254C2356436F0005F6D7 /* FullUser.swift in Sources */,
 				380973032540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */,
 				E37F254D2356436F0005F6D7 /* RootViewController.swift in Sources */,
+				E3F511DE25E4C395009CF754 /* APIController+Ads.swift in Sources */,
 				E37F254E2356436F0005F6D7 /* DetailsViewController.swift in Sources */,
 				E37F254F2356436F0005F6D7 /* SlideOutMenuHeader.swift in Sources */,
 				E37F25502356436F0005F6D7 /* MenuConfiguration.swift in Sources */,
@@ -1442,6 +1455,7 @@
 				E37F256A2356436F0005F6D7 /* UIColor+Helpers.swift in Sources */,
 				E37F256B2356436F0005F6D7 /* SignUpViewController.swift in Sources */,
 				E37F256C2356436F0005F6D7 /* SlideOutMenuCells.swift in Sources */,
+				E3F511D625E4C282009CF754 /* Ad.swift in Sources */,
 				E37F256D2356436F0005F6D7 /* AppManager.swift in Sources */,
 				E37F256E2356436F0005F6D7 /* UITextView+Helpers.swift in Sources */,
 				E37F256F2356436F0005F6D7 /* AppDelegate.swift in Sources */,
@@ -1496,6 +1510,7 @@
 				38D5069D2541FE2B009593EC /* EventView.swift in Sources */,
 				E309DF042187991C00E20F34 /* Location.swift in Sources */,
 				E3FC2EAD214AD069000166BE /* String+Helpers.swift in Sources */,
+				E3F511D425E4C282009CF754 /* Ad.swift in Sources */,
 				E3FC2EAC214AD069000166BE /* UIViewController+Inherited.swift in Sources */,
 				E3075AFC2218E1A500B24846 /* NotificationSettingsViewController.swift in Sources */,
 				E335827F2194B01100F6916F /* NotificationToggleCell.swift in Sources */,
@@ -1522,6 +1537,7 @@
 				E3FC2EA3214AD069000166BE /* AppManager.swift in Sources */,
 				E3FC2EA4214AD069000166BE /* UITextView+Helpers.swift in Sources */,
 				E3FC2E65214ACFF4000166BE /* AppDelegate.swift in Sources */,
+				E3F511DC25E4C395009CF754 /* APIController+Ads.swift in Sources */,
 				E309DF0A2187991C00E20F34 /* Comment.swift in Sources */,
 				E3FC2F0A214AFFE7000166BE /* PioneerMenuController.swift in Sources */,
 				E3FC2E9D214AD069000166BE /* Constants.swift in Sources */,
