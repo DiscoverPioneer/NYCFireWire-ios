@@ -12,6 +12,18 @@ import GoogleMobileAds
 import OneSignal
 import WidgetKit
 
+enum FeedType: String, CaseIterable {
+    case All
+    case NYC
+    case LongIsland = "Long Island"
+    case Brooklyn
+    case Bronx
+    case Manhattan
+    case Queens
+    case StatenIsland = "Staten Island"
+    case OutsideNYC = "Outside NYC"
+}
+
 class DashboardViewController: UIViewController {
     
     @IBOutlet weak var mapView: ExpandableMapView!
@@ -33,7 +45,11 @@ class DashboardViewController: UIViewController {
     var allAdsDict = [Int: GADUnifiedNativeAd]()
     var allTableViewItems = [Any]()
     
-    let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
+    var feedTypes: [String] {
+        return FeedType.allCases.map({$0.rawValue})
+    }
+    
+//    let feedTypes = ["All", "NYC", "Long Island", "Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island", "Outside NYC"]
     var alreadyFetched = false
     var lastAutoFetch: Date?
     
@@ -214,7 +230,7 @@ class DashboardViewController: UIViewController {
         let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
         self.setFeedTypeLabel()
         self.lastAutoFetch = Date()
-        let randomDelay = alreadyFetched ? 0 : Int.random(in: 1..<10)
+        let randomDelay = alreadyFetched ? 0 : Int.random(in: 1..<5)
         alreadyFetched = true
         print("Get ready to sleep")
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(randomDelay)) {
@@ -633,27 +649,81 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let title = feedTypes[row]
-        UserDefaults.standard.set(title, forKey: "selectedFeedType")
-        UserDefaultsSuite().setString(value: title, key: "selectedFeedType")
-        if title == "Long Island" || title == "All" {
-            OneSignal.sendTag("Long Island", value: "true", onSuccess: { (sucess) in
-                print("Updated tag1")
-            }) { (error) in
-//                print("Error Updating Tag... \(error)")
-            }
-        } else {
-            OneSignal.deleteTag("Long Island", onSuccess: { (success) in
-//                print("Deleted tag1: \(success)")
-                OneSignal.getTags { (tags) in
-//                    print("Tags: \(tags)")
-                }
-            }) { (error) in
-//                print("Error Deleting Tag... \(error)")
-            }
-            
-            
+        let title = FeedType.allCases[row]
+        UserDefaults.standard.set(title.rawValue, forKey: "selectedFeedType")
+        UserDefaultsSuite().setString(value: title.rawValue, key: "selectedFeedType")
+        var allFeedTags = feedTypes.reduce(into: [String: Bool]()) {
+            $0[$1] = true
         }
+        allFeedTags["All"] = nil
+        var tags = [String:Bool]()
+        
+        switch title {
+        case .All:
+            tags = allFeedTags
+            break
+        case .NYC:
+            let boros =  ["Brooklyn", "Bronx", "Manhattan", "Queens", "Staten Island"]
+            tags = boros.reduce(into: [String: Bool]()) {
+                $0[$1] = true
+            }
+            break
+        default:
+            tags = [title.rawValue:true]
+            break
+        }
+        
+        func setTags() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                OneSignal.sendTags(tags) { (success) in
+                    print("Success sending tags: \(success)")
+                } onFailure: { (error) in
+                    print("Error sending tags: \(error?.localizedDescription)")
+                }
+
+            }
+        }
+        
+        OneSignal.deleteTags(feedTypes) { (_) in
+            print("Deleting Tags: \(self.feedTypes)")
+            setTags()
+        } onFailure: { (error) in
+            print("Error deleting tags: \(error?.localizedDescription)")
+            setTags()
+        }
+
+//
+//        OneSignal.deleteTag("Long Island", onSuccess: { (success) in
+//            setTags()
+//        }) { (error) in
+//            setTags()
+//        }
+        
+        
+        
+        
+        
+        
+        
+//        if title == "Long Island" || title == "All" {
+//
+//            OneSignal.sendTag("Long Island", value: "true", onSuccess: { (sucess) in
+//                print("Updated tag1")
+//            }) { (error) in
+////                print("Error Updating Tag... \(error)")
+//            }
+//        } else {
+//            OneSignal.deleteTag("Long Island", onSuccess: { (success) in
+////                print("Deleted tag1: \(success)")
+//                OneSignal.getTags { (tags) in
+////                    print("Tags: \(tags)")
+//                }
+//            }) { (error) in
+////                print("Error Deleting Tag... \(error)")
+//            }
+//
+//
+//        }
         setFeedTypeLabel()
     }
     
