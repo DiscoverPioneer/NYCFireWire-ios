@@ -62,7 +62,7 @@ class SettingsViewController: UITableViewController, NotificationToggleCellDeleg
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationItem.title = "NYC Fire Wire"
+        navigationItem.title = ConfigHelper.navigationTitle
     }
     
     @objc func verifyButtonTapped() {

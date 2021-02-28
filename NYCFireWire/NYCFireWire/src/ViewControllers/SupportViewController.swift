@@ -10,6 +10,11 @@ import UIKit
 import MessageUI
 
 class SupportViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = ConfigHelper.navigationTitle
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +34,7 @@ class SupportViewController: UIViewController {
 //MARK: - Helpers
 extension SupportViewController {
     func sendEmail() {
-        sendEmail(to: "admin@nycfirewire.net", subject: "NYC Fire Wire App", message: "")
+        sendEmail(to: "admin@nycfirewire.net", subject: "\(ConfigHelper.navigationTitle) App", message: "")
     }
 }
 
@@ -52,7 +57,7 @@ extension SupportViewController {
     }
     
     @IBAction func shareButtonTapped(sender:Any) {
-        let items:[Any] = ["Hey! Have you checked out the NYC Fire Wire app??",URL(string: "https://www.nycfirewire.net/app")!]
+        let items:[Any] = ["Hey! Have you checked out the \(ConfigHelper.navigationTitle) app??",URL(string: "https://www.nycfirewire.net/app")!]
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(ac, animated: true)
     }

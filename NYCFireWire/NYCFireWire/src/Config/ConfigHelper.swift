@@ -23,6 +23,12 @@ struct ConfigHelper {
             return feeds
         }
     }
+    
+    static var navigationTitle: String {
+        print("Navigation Title: \(Constants.stringForKey(key: ConfigKeys.navigationTitle))")
+        return Constants.stringForKey(key: ConfigKeys.navigationTitle).returnIfFilled() ?? "NYC Fire Wire"
+    }
+    
 }
 
 struct ScannerFeed {

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3g-7A-uYW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3g-7A-uYW">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +11,7 @@
         <!--Root View Controller-->
         <scene sceneID="PDr-NX-drP">
             <objects>
-                <viewController storyboardIdentifier="RootViewController" id="cs6-aT-SuM" customClass="RootViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" id="cs6-aT-SuM" customClass="RootViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hwo-9z-zUu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +55,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="f40-TU-6gA"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="Ned-zU-Hb0" id="p7V-NR-Bzb"/>
+                        <outlet property="titleLabel" destination="7sM-BE-ReY" id="s3h-M7-OmW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CME-hg-Tc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +85,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="Ktv-Dl-jy6">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="E9s-cG-SAw" customClass="SignInViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="E9s-cG-SAw" customClass="SignInViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Lo-Mv-vOb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,6 +204,8 @@
                         <outlet property="emailTextField" destination="PRU-yZ-Agp" id="JkG-T5-mmY"/>
                         <outlet property="passwordTextField" destination="m3C-lk-NKR" id="Rlt-2E-1S3"/>
                         <outlet property="signUpButton" destination="9lZ-ef-Rsj" id="D6Y-DO-VIl"/>
+                        <outlet property="subtitleLabel" destination="XAg-MU-yAY" id="2Vq-Dk-643"/>
+                        <outlet property="titleLabel" destination="TJ6-RY-z07" id="gmt-l8-PQT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOb-Ei-FIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,7 +215,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="akx-ux-RgO">
             <objects>
-                <viewController storyboardIdentifier="DashboardViewController" id="mAy-uH-JJq" customClass="DashboardViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="mAy-uH-JJq" customClass="DashboardViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PoZ-4i-WjZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +223,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="bfx-1J-GTN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5R-lF-AjK" customClass="ExpandableMapView" customModule="NYCFireWire___Local" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5R-lF-AjK" customClass="ExpandableMapView" customModule="FireWire___Prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="gDZ-WY-WUU"/>
@@ -291,7 +296,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="rcw-Q9-YQN">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="UuY-zC-RVX" customClass="SignUpViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="UuY-zC-RVX" customClass="SignUpViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Icw-iK-lmf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,6 +359,8 @@
                     <connections>
                         <outlet property="formView" destination="xZ2-kK-aHs" id="cXN-8q-Keh"/>
                         <outlet property="signInButton" destination="HOe-PJ-CQo" id="BF5-Yt-kaI"/>
+                        <outlet property="subtitleLabel" destination="TzE-La-QJs" id="gDk-Fs-vo4"/>
+                        <outlet property="titleLabel" destination="taQ-Ej-4Nu" id="it0-69-W5S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHT-3t-oPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,12 +370,12 @@
         <!--Details View Controller-->
         <scene sceneID="BOv-Gs-syY">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" id="g7N-nh-gv4" customClass="DetailsViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="g7N-nh-gv4" customClass="DetailsViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mj1-LG-Sz7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-wC-VQv" customClass="ExpandableMapView" customModule="NYCFireWire___Local" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-wC-VQv" customClass="ExpandableMapView" customModule="FireWire___Prod" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="gHK-6g-guV"/>
@@ -406,7 +413,7 @@
         <!--Segmented View Controller-->
         <scene sceneID="9VO-5w-yed">
             <objects>
-                <viewController storyboardIdentifier="SegmentedViewController" id="V0z-7u-lFW" customClass="SegmentedViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SegmentedViewController" id="V0z-7u-lFW" customClass="SegmentedViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bxf-Mc-iZX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,7 +443,7 @@
         <!--Official Information View Controller-->
         <scene sceneID="tjC-aA-LhO">
             <objects>
-                <viewController storyboardIdentifier="OfficialInformationViewController" id="V4N-if-xb3" customClass="OfficialInformationViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OfficialInformationViewController" id="V4N-if-xb3" customClass="OfficialInformationViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="101-CH-evz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,7 +501,7 @@
         <!--Chat View Controller-->
         <scene sceneID="Z5Q-iQ-r16">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="WwX-9J-iKF" customClass="ChatViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="WwX-9J-iKF" customClass="ChatViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kbf-RV-x6H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,7 +509,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJF-th-Nz3">
                                 <rect key="frame" x="16" y="55" width="359" height="568"/>
                             </scrollView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L4q-8s-Cvy" customClass="GrowingTextView" customModule="NYCFireWire___Local" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L4q-8s-Cvy" customClass="GrowingTextView" customModule="FireWire___Prod" customModuleProvider="target">
                                 <rect key="frame" x="43" y="622" width="282" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="0.2595248288" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -567,7 +574,7 @@
         <!--Notification Settings View Controller-->
         <scene sceneID="Jmu-n7-lbx">
             <objects>
-                <viewController storyboardIdentifier="NotificationSettingsViewController" id="cty-OG-q3W" customClass="NotificationSettingsViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationSettingsViewController" id="cty-OG-q3W" customClass="NotificationSettingsViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B1D-Q1-MDO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -638,7 +645,7 @@
         <!--Support View Controller-->
         <scene sceneID="zsv-6l-Gb4">
             <objects>
-                <viewController storyboardIdentifier="SupportViewController" id="keY-mZ-pbl" customClass="SupportViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SupportViewController" id="keY-mZ-pbl" customClass="SupportViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bwh-SN-swN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -741,6 +748,9 @@
                             <constraint firstItem="XXD-kU-Wxo" firstAttribute="trailing" secondItem="3jq-J2-VGy" secondAttribute="trailing" constant="16" id="y1C-UL-pnW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="CHo-53-ZJa" id="Bkl-5K-05C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ht-aZ-qhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -749,7 +759,7 @@
         <!--Create Incident View Controller-->
         <scene sceneID="u5G-Yn-kGR">
             <objects>
-                <viewController storyboardIdentifier="CreateIncidentViewController" id="4Jv-DS-hrm" customClass="CreateIncidentViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateIncidentViewController" id="4Jv-DS-hrm" customClass="CreateIncidentViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gbj-QT-Q17">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -817,7 +827,7 @@
         <!--Subscribe View Controller-->
         <scene sceneID="1wh-Ow-yCJ">
             <objects>
-                <viewController storyboardIdentifier="SubscribeViewController" id="geQ-ZX-42c" customClass="SubscribeViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubscribeViewController" id="geQ-ZX-42c" customClass="SubscribeViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oaY-zj-AdD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1006,7 +1016,7 @@ CiAgA
         <!--Send Tip View Controller-->
         <scene sceneID="wEe-h8-xgP">
             <objects>
-                <viewController storyboardIdentifier="SendTipViewController" id="sBq-lz-q5l" customClass="SendTipViewController" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendTipViewController" id="sBq-lz-q5l" customClass="SendTipViewController" customModule="FireWire___Prod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i20-2Y-ugM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -62,7 +62,7 @@ class DashboardViewController: UIViewController {
         }
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        title = "NYC Fire Wire"
+        title = ConfigHelper.navigationTitle
         tableView.register(UINib(nibName: "IncidentTableViewCell", bundle: nil), forCellReuseIdentifier: "IncidentCell")
         tableView.register(UINib(nibName: "UnifiedNativeAdCell", bundle: nil), forCellReuseIdentifier: "UnifiedNativeAdCell")
         tableView.rowHeight = UITableView.automaticDimension
@@ -159,8 +159,9 @@ class DashboardViewController: UIViewController {
             return
         }
         let message = "Did you know that you can filter your feed? Try it out by tapping on the 'Incidents' Label."
-        
-        showAlert(title: "Hint!", message: message)
+        if Constants.stringForKey(key: ConfigKeys.singleFeed).returnIfFilled() == nil {
+            showAlert(title: "Hint!", message: message)
+        }
         defaults.set(true, forKey: defaultsKey)
     }
     
@@ -172,7 +173,7 @@ class DashboardViewController: UIViewController {
             showHintAlert()
             return
         }
-        let message = "Thank you for downloading the NYC Fire Wire app. We now have premium features that you can subscribe to use.\nThese include our Live Scanner feeds, custom notifications (specific units, boros, incident types, etc.), custom notification sounds, and an Ad-Free experience.\nNOTE: General push notifications will still be available in the free version."
+        let message = "Thank you for downloading the \(ConfigHelper.navigationTitle) app. We now have premium features that you can subscribe to use.\nThese include our Live Scanner feeds, custom notifications (specific units, boros, incident types, etc.), custom notification sounds, and an Ad-Free experience.\nNOTE: General push notifications will still be available in the free version."
         let freeButton = UIAlertAction(title: "Continue with free version", style: .default, handler: nil)
         let subscribeButton = UIAlertAction(title: "GET PREMIUM FEATURES", style: .default) { (action) in
             _ = self.hasMonthlySubscription()
@@ -260,12 +261,7 @@ class DashboardViewController: UIViewController {
                             }))
                             uiAlertControl.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                         
-                            self.present(uiAlertControl, animated: true, completion: nil)
-                 
-                
-                    
-                    
-                    
+                            self.present(uiAlertControl, animated: true, completion: nil) 
                 }
             }
         }
@@ -283,6 +279,11 @@ class DashboardViewController: UIViewController {
     
     @objc func refresh() {
         let activity = view.showActivity()
+        if let singleFeed = Constants.stringForKey(key: ConfigKeys.singleFeed).returnIfFilled() {
+            print("Found Single Feed")
+            UserDefaultsSuite().setString(value: singleFeed, key: "selectedFeedType")
+            UserDefaults.standard.setValue(singleFeed, forKey: "selectedFeedType")
+        }
         let feedType = UserDefaults.standard.string(forKey: "selectedFeedType") ?? "NYC"
         self.setFeedTypeLabel()
         self.lastAutoFetch = Date()
@@ -637,6 +638,11 @@ extension DashboardViewController {
         let actionSheet = UIAlertController(title: "Choose a feed", message: nil, preferredStyle: .actionSheet)
         actionSheet.modalPresentationStyle = .popover
         let scannerFeeds = ConfigHelper.availableFeeds
+        if scannerFeeds.count == 0 {
+            showAlert(title: "Not Available", message: "There are no available feeds at this time.")
+            return
+        }
+        
         for feed in scannerFeeds {
             actionSheet.addAction((UIAlertAction(title: feed.name, style: .default, handler: { (action) in
                 AnalyticsController.logEvent(eventName: "LiveScanner-\(feed.name)")
@@ -793,6 +799,9 @@ extension DashboardViewController: UIPickerViewDataSource, UIPickerViewDelegate 
     }
     
     func showBoroPicker() {
+        if Constants.stringForKey(key: ConfigKeys.singleFeed).returnIfFilled() != nil {
+            return
+        }
         let _ = boroTextField.usePickerView(dataSource: self, delegate: self)
         boroTextField.becomeFirstResponder()
 //        pickerView(picker, didSelectRow: 0, inComponent: 0)

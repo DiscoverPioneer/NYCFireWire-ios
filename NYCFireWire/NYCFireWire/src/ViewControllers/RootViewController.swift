@@ -10,6 +10,9 @@ import UIKit
 
 class RootViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
@@ -19,7 +22,7 @@ class RootViewController: UIViewController {
                 print("Synced config file")
             }
         }
-        
+        setLabels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +41,10 @@ class RootViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    func setLabels() {
+        titleLabel.text = ConfigHelper.navigationTitle
+        subtitleLabel.text = Constants.stringForKey(key: ConfigKeys.tagLine).returnIfFilled() ?? "New York's Bravest Fire News Network"
+    }
 }
 
 //MARK: - Helpers

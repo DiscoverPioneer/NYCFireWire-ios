@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11541CA4495E870F4DA3FE25 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352E247F14540E507C5803F9 /* Pods_NYCFireWireWidgetExtension.framework */; };
 		1E9B241A25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
 		1E9B241B25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
 		1E9B241C25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
@@ -56,9 +57,11 @@
 		38D5069C2541FE2B009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
 		38D5069D2541FE2B009593EC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
 		4380C04A56382888809AC092 /* Pods_NYCFireWire___Local.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */; };
-		708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */; };
+		5A4703543573BB407F1DB00B /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A3036111EE20C3788AD10E /* Pods_NYCFireWire___Prod.framework */; };
+		708A6CBA56691C206AFE3C89 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		7C0765480A40A43FFDE45A06 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */; };
+		90074AF18E78E67AABFD8F8F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		D2B6B65EBDFC31FC20E564C5 /* Pods_FireWireWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFDB5673F638FB46916E4A4 /* Pods_FireWireWidgetExtension.framework */; };
 		E301A8A4225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
 		E301A8A5225BF40300EBCCB6 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
 		E3075AFC2218E1A500B24846 /* NotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3075AFB2218E1A500B24846 /* NotificationSettingsViewController.swift */; };
@@ -267,6 +270,132 @@
 		E37F259A235F9D780005F6D7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2599235F9D770005F6D7 /* Toast.swift */; };
 		E37F259B235F9D780005F6D7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2599235F9D770005F6D7 /* Toast.swift */; };
 		E37F259C235F9D780005F6D7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2599235F9D770005F6D7 /* Toast.swift */; };
+		E3AF12E425E968E8007A9174 /* AnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328A96B23BD897B00914370 /* AnalyticsController.swift */; };
+		E3AF12E525E968E8007A9174 /* CreateIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88421A8861A004160C1 /* CreateIncidentViewController.swift */; };
+		E3AF12E625E968E8007A9174 /* UIButton+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88A21A888D4004160C1 /* UIButton+Helpers.swift */; };
+		E3AF12E725E968E8007A9174 /* SlideOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F05214AFFE7000166BE /* SlideOutMenuViewController.swift */; };
+		E3AF12E825E968E8007A9174 /* UIColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F00214AF7A8000166BE /* UIColorConstants.swift */; };
+		E3AF12E925E968E8007A9174 /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38305ABC2537A7920023DDA2 /* AssetConstants.swift */; };
+		E3AF12EA25E968E8007A9174 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33582822194B06E00F6916F /* SupportViewController.swift */; };
+		E3AF12EB25E968E8007A9174 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF8C218CC4E800E20F34 /* GrowingTextView.swift */; };
+		E3AF12EC25E968E8007A9174 /* Numbers+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */; };
+		E3AF12ED25E968E8007A9174 /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF022187991C00E20F34 /* SimpleUser.swift */; };
+		E3AF12EE25E968E8007A9174 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF81218CBF7700E20F34 /* SegmentedViewController.swift */; };
+		E3AF12EF25E968E8007A9174 /* MountainClimberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2EFC214AE4F8000166BE /* MountainClimberController.swift */; };
+		E3AF12F025E968E8007A9174 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
+		E3AF12F125E968E8007A9174 /* APIController+Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2D21504144000166BE /* APIController+Incidents.swift */; };
+		E3AF12F225E968E8007A9174 /* APIController+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DEF92187961800E20F34 /* APIController+User.swift */; };
+		E3AF12F325E968E8007A9174 /* FileUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30BCA8222C153DE00FAB50E /* FileUpdater.swift */; };
+		E3AF12F425E968E8007A9174 /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8C214AD069000166BE /* UIView+Helpers.swift */; };
+		E3AF12F525E968E8007A9174 /* FullUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DEFD218798C700E20F34 /* FullUser.swift */; };
+		E3AF12F625E968E8007A9174 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E95214AD069000166BE /* RootViewController.swift */; };
+		E3AF12F725E968E8007A9174 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF82218CBF7700E20F34 /* DetailsViewController.swift */; };
+		E3AF12F825E968E8007A9174 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		E3AF12F925E968E8007A9174 /* SlideOutMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F12214B0074000166BE /* SlideOutMenuHeader.swift */; };
+		E3AF12FA25E968E8007A9174 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		E3AF12FB25E968E8007A9174 /* MenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F19214B05DE000166BE /* MenuConfiguration.swift */; };
+		E3AF12FC25E968E8007A9174 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E82214AD069000166BE /* APIConstants.swift */; };
+		E3AF12FD25E968E8007A9174 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E99214AD069000166BE /* APIController.swift */; };
+		E3AF12FE25E968E8007A9174 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338E3D9224FB6990043F777 /* AudioManager.swift */; };
+		E3AF12FF25E968E8007A9174 /* APIConstants+Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F0D214B0018000166BE /* APIConstants+Endpoints.swift */; };
+		E3AF130025E968E8007A9174 /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8F214AD069000166BE /* UIImage+Helpers.swift */; };
+		E3AF130125E968E8007A9174 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		E3AF130225E968E8007A9174 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF012187991C00E20F34 /* Location.swift */; };
+		E3AF130325E968E8007A9174 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E92214AD069000166BE /* String+Helpers.swift */; };
+		E3AF130425E968E8007A9174 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511D325E4C282009CF754 /* Ad.swift */; };
+		E3AF130525E968E8007A9174 /* UIViewController+Inherited.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E91214AD069000166BE /* UIViewController+Inherited.swift */; };
+		E3AF130625E968E8007A9174 /* NotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3075AFB2218E1A500B24846 /* NotificationSettingsViewController.swift */; };
+		E3AF130725E968E8007A9174 /* NotificationToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335827C2194B01100F6916F /* NotificationToggleCell.swift */; };
+		E3AF130825E968E8007A9174 /* UITextField+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8A214AD069000166BE /* UITextField+Helpers.swift */; };
+		E3AF130925E968E8007A9174 /* OfficialInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF80218CBF7700E20F34 /* OfficialInformationViewController.swift */; };
+		E3AF130A25E968E8007A9174 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E97214AD069000166BE /* SignInViewController.swift */; };
+		E3AF130B25E968E8007A9174 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33582812194B06E00F6916F /* SettingsViewController.swift */; };
+		E3AF130C25E968E8007A9174 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2599235F9D770005F6D7 /* Toast.swift */; };
+		E3AF130D25E968E8007A9174 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8B214AD069000166BE /* UIViewController+Navigation.swift */; };
+		E3AF130E25E968E8007A9174 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF7F218CBF7700E20F34 /* ChatViewController.swift */; };
+		E3AF130F25E968E8007A9174 /* IAPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338E3DC224FC3F70043F777 /* IAPHandler.swift */; };
+		E3AF131025E968E8007A9174 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF8F218CC77E00E20F34 /* TimelineView.swift */; };
+		E3AF131125E968E8007A9174 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88D21A88953004160C1 /* LocationManager.swift */; };
+		E3AF131225E968E8007A9174 /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8D214AD069000166BE /* String+DateFormat.swift */; };
+		E3AF131325E968E8007A9174 /* SendTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F2BF21247EE2ED0041C545 /* SendTipViewController.swift */; };
+		E3AF131425E968E8007A9174 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335827B2194B01100F6916F /* SettingsCell.swift */; };
+		E3AF131525E968E8007A9174 /* IncidentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F312150450F000166BE /* IncidentAnnotation.swift */; };
+		E3AF131625E968E8007A9174 /* MapKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2921503886000166BE /* MapKit+Helpers.swift */; };
+		E3AF131725E968E8007A9174 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
+		E3AF131825E968E8007A9174 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E83214AD069000166BE /* UserDefaultsConstants.swift */; };
+		E3AF131925E968E8007A9174 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8E214AD069000166BE /* UIColor+Helpers.swift */; };
+		E3AF131A25E968E8007A9174 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2EF8214ADF39000166BE /* SignUpViewController.swift */; };
+		E3AF131B25E968E8007A9174 /* SlideOutMenuCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F11214B0074000166BE /* SlideOutMenuCells.swift */; };
+		E3AF131C25E968E8007A9174 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E86214AD069000166BE /* AppManager.swift */; };
+		E3AF131D25E968E8007A9174 /* UITextView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E89214AD069000166BE /* UITextView+Helpers.swift */; };
+		E3AF131E25E968E8007A9174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E64214ACFF4000166BE /* AppDelegate.swift */; };
+		E3AF131F25E968E8007A9174 /* APIController+Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F511DB25E4C395009CF754 /* APIController+Ads.swift */; };
+		E3AF132025E968E8007A9174 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF032187991C00E20F34 /* Comment.swift */; };
+		E3AF132125E968E8007A9174 /* PioneerMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F06214AFFE7000166BE /* PioneerMenuController.swift */; };
+		E3AF132225E968E8007A9174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E7D214AD069000166BE /* Constants.swift */; };
+		E3AF132325E968E8007A9174 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33582872194B2A800F6916F /* NotificationManager.swift */; };
+		E3AF132425E968E8007A9174 /* IncidentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F21214B5267000166BE /* IncidentTableViewCell.swift */; };
+		E3AF132525E968E8007A9174 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C131F222A1D2B00383393 /* Firehouse.swift */; };
+		E3AF132625E968E8007A9174 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C1325222A337D00383393 /* AdController.swift */; };
+		E3AF132725E968E8007A9174 /* APIController+FileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */; };
+		E3AF132825E968E8007A9174 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */; };
+		E3AF132925E968E8007A9174 /* CLImageViewPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2537235122540005F6D7 /* CLImageViewPopup.swift */; };
+		E3AF132A25E968E8007A9174 /* ConfigHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328A9AA23BFC79900914370 /* ConfigHelper.swift */; };
+		E3AF132B25E968E8007A9174 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E94214AD069000166BE /* DashboardViewController.swift */; };
+		E3AF132E25E968E8007A9174 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E338E3DF224FC5B50043F777 /* StoreKit.framework */; };
+		E3AF133125E968E8007A9174 /* NYCFireWire - Prod copy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */; };
+		E3AF133225E968E8007A9174 /* Staging_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E80214AD069000166BE /* Staging_Config.plist */; };
+		E3AF133325E968E8007A9174 /* FormerFirehouseLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3E438D823FA2D65007CCBA6 /* FormerFirehouseLocations.plist */; };
+		E3AF133425E968E8007A9174 /* LadderTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B162223147600B24846 /* LadderTicket.wav */; };
+		E3AF133525E968E8007A9174 /* MDTRing.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B132223147600B24846 /* MDTRing.wav */; };
+		E3AF133625E968E8007A9174 /* TonesOnly.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B062221EC6100B24846 /* TonesOnly.wav */; };
+		E3AF133725E968E8007A9174 /* Production_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E7E214AD069000166BE /* Production_Config.plist */; };
+		E3AF133825E968E8007A9174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E7A214AD069000166BE /* Main.storyboard */; };
+		E3AF133925E968E8007A9174 /* ActingEngineTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B032221EC6100B24846 /* ActingEngineTicket.wav */; };
+		E3AF133A25E968E8007A9174 /* StandbyForMessage.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B042221EC6100B24846 /* StandbyForMessage.wav */; };
+		E3AF133B25E968E8007A9174 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
+		E3AF133C25E968E8007A9174 /* servicebell.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3E1BB5B2246D63800A3FE2A /* servicebell.wav */; };
+		E3AF133D25E968E8007A9174 /* IncidentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2F22214B5267000166BE /* IncidentTableViewCell.xib */; };
+		E3AF133E25E968E8007A9174 /* DivisionTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B012221EC6100B24846 /* DivisionTicket.wav */; };
+		E3AF133F25E968E8007A9174 /* SpecialUnit.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B172223147700B24846 /* SpecialUnit.wav */; };
+		E3AF134025E968E8007A9174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E78214AD069000166BE /* LaunchScreen.storyboard */; };
+		E3AF134125E968E8007A9174 /* EngineLadderTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B142223147600B24846 /* EngineLadderTicket.wav */; };
+		E3AF134225E968E8007A9174 /* UnifiedNativeAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E328A97023BD9AB200914370 /* UnifiedNativeAdCell.xib */; };
+		E3AF134325E968E8007A9174 /* Local_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E7F214AD069000166BE /* Local_Config.plist */; };
+		E3AF134425E968E8007A9174 /* EngineLadderBatalionTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B052221EC6100B24846 /* EngineLadderBatalionTicket.wav */; };
+		E3AF134525E968E8007A9174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FC2E6B214ACFF5000166BE /* Assets.xcassets */; };
+		E3AF134625E968E8007A9174 /* EngineTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B152223147600B24846 /* EngineTicket.wav */; };
+		E3AF134725E968E8007A9174 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D8C6CF2281CBCA004404AE /* GoogleService-Info.plist */; };
+		E3AF134825E968E8007A9174 /* FirehouseLocations.plist in Resources */ = {isa = PBXBuildFile; fileRef = E34C131D222A1CCF00383393 /* FirehouseLocations.plist */; };
+		E3AF134925E968E8007A9174 /* BatalionTicket.wav in Resources */ = {isa = PBXBuildFile; fileRef = E3075B022221EC6100B24846 /* BatalionTicket.wav */; };
+		E3AF135F25E96990007A9174 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF032187991C00E20F34 /* Comment.swift */; };
+		E3AF136025E96990007A9174 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF012187991C00E20F34 /* Location.swift */; };
+		E3AF136125E96990007A9174 /* FWWidgetLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506562541F3F2009593EC /* FWWidgetLarge.swift */; };
+		E3AF136225E96990007A9174 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E99214AD069000166BE /* APIController.swift */; };
+		E3AF136325E96990007A9174 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5066E2541FB83009593EC /* EventView.swift */; };
+		E3AF136425E96990007A9174 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E82214AD069000166BE /* APIConstants.swift */; };
+		E3AF136525E96990007A9174 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38633C26254235A600A04F32 /* IncidentView.swift */; };
+		E3AF136625E96990007A9174 /* SimpleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E309DF022187991C00E20F34 /* SimpleUser.swift */; };
+		E3AF136725E96990007A9174 /* APIController+Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2D21504144000166BE /* APIController+Incidents.swift */; };
+		E3AF136825E96990007A9174 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E83214AD069000166BE /* UserDefaultsConstants.swift */; };
+		E3AF136925E96990007A9174 /* FWWidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BF2541EE19009593EC /* FWWidgetSmall.swift */; };
+		E3AF136A25E96990007A9174 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380973342540E611003E132D /* WidgetContent.swift */; };
+		E3AF136B25E96990007A9174 /* Numbers+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */; };
+		E3AF136C25E96990007A9174 /* FWWidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D505BE2541EE19009593EC /* FWWidgetMedium.swift */; };
+		E3AF136D25E96990007A9174 /* NYCFireWireWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 380972FE2540E545003E132D /* NYCFireWireWidget.intentdefinition */; };
+		E3AF136E25E96990007A9174 /* String+DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E8D214AD069000166BE /* String+DateFormat.swift */; };
+		E3AF136F25E96990007A9174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E7D214AD069000166BE /* Constants.swift */; };
+		E3AF137025E96990007A9174 /* APIConstants+Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F0D214B0018000166BE /* APIConstants+Endpoints.swift */; };
+		E3AF137125E96990007A9174 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2E90214AD069000166BE /* Date+String.swift */; };
+		E3AF137225E96990007A9174 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F1D214B48E2000166BE /* Incident.swift */; };
+		E3AF137325E96990007A9174 /* NYCFireWireWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380972FC2540E545003E132D /* NYCFireWireWidget.swift */; };
+		E3AF137425E96990007A9174 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D506862541FE23009593EC /* CustomText.swift */; };
+		E3AF137625E96990007A9174 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F92540E545003E132D /* SwiftUI.framework */; };
+		E3AF137725E96990007A9174 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F72540E545003E132D /* WidgetKit.framework */; };
+		E3AF137A25E96990007A9174 /* Widget_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38537D55254203C800D46102 /* Widget_Config.plist */; };
+		E3AF137B25E96990007A9174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380972FF2540E545003E132D /* Assets.xcassets */; };
+		E3AF138D25E96A07007A9174 /* FireWireWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3AF137F25E96990007A9174 /* FireWireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3AF13BD25E96BCC007A9174 /* OutsideNYC_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3AF13BC25E96BCC007A9174 /* OutsideNYC_Config.plist */; };
 		E3C9B88521A8861A004160C1 /* CreateIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88421A8861A004160C1 /* CreateIncidentViewController.swift */; };
 		E3C9B88621A8861A004160C1 /* CreateIncidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88421A8861A004160C1 /* CreateIncidentViewController.swift */; };
 		E3C9B88821A88889004160C1 /* Numbers+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */; };
@@ -331,6 +460,7 @@
 		E3FC2F2A21503886000166BE /* MapKit+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2921503886000166BE /* MapKit+Helpers.swift */; };
 		E3FC2F2E21504144000166BE /* APIController+Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F2D21504144000166BE /* APIController+Incidents.swift */; };
 		E3FC2F322150450F000166BE /* IncidentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC2F312150450F000166BE /* IncidentAnnotation.swift */; };
+		E75FC21799719F77E29B6F4A /* Pods_FireWire___Prod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B6642D5B994DE28269B2A0 /* Pods_FireWire___Prod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -340,6 +470,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 380972F52540E545003E132D;
 			remoteInfo = NYCFireWireWidgetExtension;
+		};
+		E3AF138E25E96A07007A9174 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3FC2E59214ACFF3000166BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3AF135C25E96990007A9174;
+			remoteInfo = FireWireWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -377,12 +514,28 @@
 			name = "Embed App Extension";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3AF139025E96A07007A9174 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3AF138D25E96A07007A9174 /* FireWireWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0BFDB5673F638FB46916E4A4 /* Pods_FireWireWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireWireWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B6642D5B994DE28269B2A0 /* Pods_FireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_FireWire___Prod.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
 		1E9B241925D174100019C026 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
+		281EC50C0FDE6974E0C5482B /* Pods-FireWireWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireWireWidgetExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireWireWidgetExtension/Pods-FireWireWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
+		352E247F14540E507C5803F9 /* Pods_NYCFireWireWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWireWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		355C86A0BB68CF496F0C1932 /* Pods-FireWire - Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireWire - Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireWire - Prod/Pods-FireWire - Prod.release.xcconfig"; sourceTree = "<group>"; };
 		380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NYCFireWireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		380972F72540E545003E132D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		380972F92540E545003E132D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -405,11 +558,11 @@
 		45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.release.xcconfig"; sourceTree = "<group>"; };
 		50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A49B6C065E0425FECD3C51 /* Pods-NYCFireWire - Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.debug.xcconfig"; sourceTree = "<group>"; };
-		5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Prod.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWireWidgetExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWireWidgetExtension/Pods-NYCFireWireWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		7569AD17A6D0A7FF935CCB7C /* Pods-NYCFireWire - Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Staging.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Staging/Pods-NYCFireWire - Staging.release.xcconfig"; sourceTree = "<group>"; };
-		791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYCFireWireWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80A3036111EE20C3788AD10E /* Pods_NYCFireWire___Prod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Prod.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_NYCFireWire___Local.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A225B84B57BD80526BAA2A42 /* Pods-FireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireWire - Prod/Pods-FireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		A98694E2FB3C3E9740D4F058 /* Pods-NYCFireWire - Prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.release.xcconfig"; sourceTree = "<group>"; };
 		E301A8A3225BF40300EBCCB6 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		E3075AFB2218E1A500B24846 /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
@@ -457,6 +610,11 @@
 		E37F2537235122540005F6D7 /* CLImageViewPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLImageViewPopup.swift; sourceTree = "<group>"; };
 		E37F25972356436F0005F6D7 /* NYCFireWire - Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYCFireWire - Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37F2599235F9D770005F6D7 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		E3AF135025E968E8007A9174 /* FireWire - Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FireWire - Prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3AF135125E968EA007A9174 /* NYCFireWire - Prod copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NYCFireWire - Prod copy2-Info.plist"; path = "/Users/philscarfi/Developer/Clients/NYCFireWire/NYCFireWire-ios/NYCFireWire/NYCFireWire - Prod copy2-Info.plist"; sourceTree = "<absolute>"; };
+		E3AF137F25E96990007A9174 /* FireWireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FireWireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3AF138025E96990007A9174 /* NYCFireWireWidgetExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NYCFireWireWidgetExtension copy-Info.plist"; path = "/Users/philscarfi/Developer/Clients/NYCFireWire/NYCFireWire-ios/NYCFireWire/NYCFireWireWidgetExtension copy-Info.plist"; sourceTree = "<absolute>"; };
+		E3AF13BC25E96BCC007A9174 /* OutsideNYC_Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OutsideNYC_Config.plist; sourceTree = "<group>"; };
 		E3C9B88421A8861A004160C1 /* CreateIncidentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIncidentViewController.swift; sourceTree = "<group>"; };
 		E3C9B88721A88889004160C1 /* Numbers+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numbers+Helpers.swift"; sourceTree = "<group>"; };
 		E3C9B88A21A888D4004160C1 /* UIButton+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Helpers.swift"; sourceTree = "<group>"; };
@@ -509,6 +667,7 @@
 		E3FC2F2921503886000166BE /* MapKit+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit+Helpers.swift"; sourceTree = "<group>"; };
 		E3FC2F2D21504144000166BE /* APIController+Incidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIController+Incidents.swift"; sourceTree = "<group>"; };
 		E3FC2F312150450F000166BE /* IncidentAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentAnnotation.swift; sourceTree = "<group>"; };
+		F744B971ADAD50412E11B788 /* Pods-FireWireWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireWireWidgetExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireWireWidgetExtension/Pods-FireWireWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,7 +677,8 @@
 			files = (
 				380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */,
 				380972F82540E545003E132D /* WidgetKit.framework in Frameworks */,
-				708A6CBA56691C206AFE3C89 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */,
+				708A6CBA56691C206AFE3C89 /* (null) in Frameworks */,
+				11541CA4495E870F4DA3FE25 /* Pods_NYCFireWireWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,13 +698,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3AF132C25E968E8007A9174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF132E25E968E8007A9174 /* StoreKit.framework in Frameworks */,
+				E75FC21799719F77E29B6F4A /* Pods_FireWire___Prod.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AF137525E96990007A9174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF137625E96990007A9174 /* SwiftUI.framework in Frameworks */,
+				E3AF137725E96990007A9174 /* WidgetKit.framework in Frameworks */,
+				D2B6B65EBDFC31FC20E564C5 /* Pods_FireWireWidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3FC2E5E214ACFF4000166BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7C0765480A40A43FFDE45A06 /* (null) in Frameworks */,
 				E338E3E0224FC5B50043F777 /* StoreKit.framework in Frameworks */,
-				90074AF18E78E67AABFD8F8F /* Pods_NYCFireWire___Prod.framework in Frameworks */,
+				90074AF18E78E67AABFD8F8F /* (null) in Frameworks */,
+				5A4703543573BB407F1DB00B /* Pods_NYCFireWire___Prod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +793,10 @@
 				45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */,
 				3D14FEA3EA228F7B337CFA50 /* Pods-NYCFireWireWidgetExtension.debug.xcconfig */,
 				655435AC6527B3F94DCA6F69 /* Pods-NYCFireWireWidgetExtension.release.xcconfig */,
+				A225B84B57BD80526BAA2A42 /* Pods-FireWire - Prod.debug.xcconfig */,
+				355C86A0BB68CF496F0C1932 /* Pods-FireWire - Prod.release.xcconfig */,
+				281EC50C0FDE6974E0C5482B /* Pods-FireWireWidgetExtension.debug.xcconfig */,
+				F744B971ADAD50412E11B788 /* Pods-FireWireWidgetExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -623,10 +807,12 @@
 				E338E3DF224FC5B50043F777 /* StoreKit.framework */,
 				984A26725BFFD668F221C5D0 /* Pods_NYCFireWire___Local.framework */,
 				50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */,
-				5EF2212F4BBEA773AD19288A /* Pods_NYCFireWire___Prod.framework */,
 				380972F72540E545003E132D /* WidgetKit.framework */,
 				380972F92540E545003E132D /* SwiftUI.framework */,
-				791F6402D8238537E745518C /* Pods_NYCFireWireWidgetExtension.framework */,
+				19B6642D5B994DE28269B2A0 /* Pods_FireWire___Prod.framework */,
+				0BFDB5673F638FB46916E4A4 /* Pods_FireWireWidgetExtension.framework */,
+				80A3036111EE20C3788AD10E /* Pods_NYCFireWire___Prod.framework */,
+				352E247F14540E507C5803F9 /* Pods_NYCFireWireWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -702,6 +888,8 @@
 				71A06F37851C544BCD022491 /* Frameworks */,
 				38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */,
 				38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */,
+				E3AF135125E968EA007A9174 /* NYCFireWire - Prod copy2-Info.plist */,
+				E3AF138025E96990007A9174 /* NYCFireWireWidgetExtension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -712,6 +900,8 @@
 				E309DF492187E55100E20F34 /* NYCFireWire - Local.app */,
 				E37F25972356436F0005F6D7 /* NYCFireWire - Staging.app */,
 				380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */,
+				E3AF135025E968E8007A9174 /* FireWire - Prod.app */,
+				E3AF137F25E96990007A9174 /* FireWireWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -765,6 +955,7 @@
 				E3FC2E7E214AD069000166BE /* Production_Config.plist */,
 				E3FC2E7F214AD069000166BE /* Local_Config.plist */,
 				E3FC2E80214AD069000166BE /* Staging_Config.plist */,
+				E3AF13BC25E96BCC007A9174 /* OutsideNYC_Config.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -965,6 +1156,45 @@
 			productReference = E37F25972356436F0005F6D7 /* NYCFireWire - Staging.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E3AF12E125E968E8007A9174 /* FireWire - Prod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3AF134D25E968E8007A9174 /* Build configuration list for PBXNativeTarget "FireWire - Prod" */;
+			buildPhases = (
+				E3AF12E225E968E8007A9174 /* [CP] Check Pods Manifest.lock */,
+				E3AF12E325E968E8007A9174 /* Sources */,
+				E3AF132C25E968E8007A9174 /* Frameworks */,
+				E3AF133025E968E8007A9174 /* Resources */,
+				E3AF134C25E968E8007A9174 /* [CP] Embed Pods Frameworks */,
+				E3AF139025E96A07007A9174 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3AF138F25E96A07007A9174 /* PBXTargetDependency */,
+			);
+			name = "FireWire - Prod";
+			productName = NYCFireWire;
+			productReference = E3AF135025E968E8007A9174 /* FireWire - Prod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3AF135C25E96990007A9174 /* FireWireWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3AF137C25E96990007A9174 /* Build configuration list for PBXNativeTarget "FireWireWidgetExtension" */;
+			buildPhases = (
+				E3AF135D25E96990007A9174 /* [CP] Check Pods Manifest.lock */,
+				E3AF135E25E96990007A9174 /* Sources */,
+				E3AF137525E96990007A9174 /* Frameworks */,
+				E3AF137925E96990007A9174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireWireWidgetExtension;
+			productName = NYCFireWireWidgetExtension;
+			productReference = E3AF137F25E96990007A9174 /* FireWireWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E3FC2E60214ACFF4000166BE /* NYCFireWire - Prod */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3FC2E73214ACFF5000166BE /* Build configuration list for PBXNativeTarget "NYCFireWire - Prod" */;
@@ -1042,6 +1272,8 @@
 				E309DF112187E55100E20F34 /* NYCFireWire - Local */,
 				E37F253A2356436F0005F6D7 /* NYCFireWire - Staging */,
 				380972F52540E545003E132D /* NYCFireWireWidgetExtension */,
+				E3AF12E125E968E8007A9174 /* FireWire - Prod */,
+				E3AF135C25E96990007A9174 /* FireWireWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -1114,6 +1346,48 @@
 				E37F25902356436F0005F6D7 /* EngineTicket.wav in Resources */,
 				E37F25912356436F0005F6D7 /* BatalionTicket.wav in Resources */,
 				E37F25922356436F0005F6D7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AF133025E968E8007A9174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF133125E968E8007A9174 /* NYCFireWire - Prod copy-Info.plist in Resources */,
+				E3AF133225E968E8007A9174 /* Staging_Config.plist in Resources */,
+				E3AF133325E968E8007A9174 /* FormerFirehouseLocations.plist in Resources */,
+				E3AF133425E968E8007A9174 /* LadderTicket.wav in Resources */,
+				E3AF133525E968E8007A9174 /* MDTRing.wav in Resources */,
+				E3AF133625E968E8007A9174 /* TonesOnly.wav in Resources */,
+				E3AF133725E968E8007A9174 /* Production_Config.plist in Resources */,
+				E3AF133825E968E8007A9174 /* Main.storyboard in Resources */,
+				E3AF133925E968E8007A9174 /* ActingEngineTicket.wav in Resources */,
+				E3AF133A25E968E8007A9174 /* StandbyForMessage.wav in Resources */,
+				E3AF133B25E968E8007A9174 /* homescreen.mp4 in Resources */,
+				E3AF133C25E968E8007A9174 /* servicebell.wav in Resources */,
+				E3AF133D25E968E8007A9174 /* IncidentTableViewCell.xib in Resources */,
+				E3AF133E25E968E8007A9174 /* DivisionTicket.wav in Resources */,
+				E3AF133F25E968E8007A9174 /* SpecialUnit.wav in Resources */,
+				E3AF134025E968E8007A9174 /* LaunchScreen.storyboard in Resources */,
+				E3AF134125E968E8007A9174 /* EngineLadderTicket.wav in Resources */,
+				E3AF134225E968E8007A9174 /* UnifiedNativeAdCell.xib in Resources */,
+				E3AF134325E968E8007A9174 /* Local_Config.plist in Resources */,
+				E3AF134425E968E8007A9174 /* EngineLadderBatalionTicket.wav in Resources */,
+				E3AF134525E968E8007A9174 /* Assets.xcassets in Resources */,
+				E3AF134625E968E8007A9174 /* EngineTicket.wav in Resources */,
+				E3AF134725E968E8007A9174 /* GoogleService-Info.plist in Resources */,
+				E3AF13BD25E96BCC007A9174 /* OutsideNYC_Config.plist in Resources */,
+				E3AF134825E968E8007A9174 /* FirehouseLocations.plist in Resources */,
+				E3AF134925E968E8007A9174 /* BatalionTicket.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AF137925E96990007A9174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF137A25E96990007A9174 /* Widget_Config.plist in Resources */,
+				E3AF137B25E96990007A9174 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1238,6 +1512,63 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-NYCFireWire - Local-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AF12E225E968E8007A9174 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireWire - Prod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AF134C25E968E8007A9174 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireWire - Prod/Pods-FireWire - Prod-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireWire - Prod/Pods-FireWire - Prod-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireWire - Prod/Pods-FireWire - Prod-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AF135D25E96990007A9174 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireWireWidgetExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1474,6 +1805,114 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3AF12E325E968E8007A9174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF12E425E968E8007A9174 /* AnalyticsController.swift in Sources */,
+				E3AF12E525E968E8007A9174 /* CreateIncidentViewController.swift in Sources */,
+				E3AF12E625E968E8007A9174 /* UIButton+Helpers.swift in Sources */,
+				E3AF12E725E968E8007A9174 /* SlideOutMenuViewController.swift in Sources */,
+				E3AF12E825E968E8007A9174 /* UIColorConstants.swift in Sources */,
+				E3AF12E925E968E8007A9174 /* AssetConstants.swift in Sources */,
+				E3AF12EA25E968E8007A9174 /* SupportViewController.swift in Sources */,
+				E3AF12EB25E968E8007A9174 /* GrowingTextView.swift in Sources */,
+				E3AF12EC25E968E8007A9174 /* Numbers+Helpers.swift in Sources */,
+				E3AF12ED25E968E8007A9174 /* SimpleUser.swift in Sources */,
+				E3AF12EE25E968E8007A9174 /* SegmentedViewController.swift in Sources */,
+				E3AF12EF25E968E8007A9174 /* MountainClimberController.swift in Sources */,
+				E3AF12F025E968E8007A9174 /* Date+String.swift in Sources */,
+				E3AF12F125E968E8007A9174 /* APIController+Incidents.swift in Sources */,
+				E3AF12F225E968E8007A9174 /* APIController+User.swift in Sources */,
+				E3AF12F325E968E8007A9174 /* FileUpdater.swift in Sources */,
+				E3AF12F425E968E8007A9174 /* UIView+Helpers.swift in Sources */,
+				E3AF12F525E968E8007A9174 /* FullUser.swift in Sources */,
+				E3AF12F625E968E8007A9174 /* RootViewController.swift in Sources */,
+				E3AF12F725E968E8007A9174 /* DetailsViewController.swift in Sources */,
+				E3AF12F825E968E8007A9174 /* CustomText.swift in Sources */,
+				E3AF12F925E968E8007A9174 /* SlideOutMenuHeader.swift in Sources */,
+				E3AF12FA25E968E8007A9174 /* WidgetContent.swift in Sources */,
+				E3AF12FB25E968E8007A9174 /* MenuConfiguration.swift in Sources */,
+				E3AF12FC25E968E8007A9174 /* APIConstants.swift in Sources */,
+				E3AF12FD25E968E8007A9174 /* APIController.swift in Sources */,
+				E3AF12FE25E968E8007A9174 /* AudioManager.swift in Sources */,
+				E3AF12FF25E968E8007A9174 /* APIConstants+Endpoints.swift in Sources */,
+				E3AF130025E968E8007A9174 /* UIImage+Helpers.swift in Sources */,
+				E3AF130125E968E8007A9174 /* EventView.swift in Sources */,
+				E3AF130225E968E8007A9174 /* Location.swift in Sources */,
+				E3AF130325E968E8007A9174 /* String+Helpers.swift in Sources */,
+				E3AF130425E968E8007A9174 /* Ad.swift in Sources */,
+				E3AF130525E968E8007A9174 /* UIViewController+Inherited.swift in Sources */,
+				E3AF130625E968E8007A9174 /* NotificationSettingsViewController.swift in Sources */,
+				E3AF130725E968E8007A9174 /* NotificationToggleCell.swift in Sources */,
+				E3AF130825E968E8007A9174 /* UITextField+Helpers.swift in Sources */,
+				E3AF130925E968E8007A9174 /* OfficialInformationViewController.swift in Sources */,
+				E3AF130A25E968E8007A9174 /* SignInViewController.swift in Sources */,
+				E3AF130B25E968E8007A9174 /* SettingsViewController.swift in Sources */,
+				E3AF130C25E968E8007A9174 /* Toast.swift in Sources */,
+				E3AF130D25E968E8007A9174 /* UIViewController+Navigation.swift in Sources */,
+				E3AF130E25E968E8007A9174 /* ChatViewController.swift in Sources */,
+				E3AF130F25E968E8007A9174 /* IAPHandler.swift in Sources */,
+				E3AF131025E968E8007A9174 /* TimelineView.swift in Sources */,
+				E3AF131125E968E8007A9174 /* LocationManager.swift in Sources */,
+				E3AF131225E968E8007A9174 /* String+DateFormat.swift in Sources */,
+				E3AF131325E968E8007A9174 /* SendTipViewController.swift in Sources */,
+				E3AF131425E968E8007A9174 /* SettingsCell.swift in Sources */,
+				E3AF131525E968E8007A9174 /* IncidentAnnotation.swift in Sources */,
+				E3AF131625E968E8007A9174 /* MapKit+Helpers.swift in Sources */,
+				E3AF131725E968E8007A9174 /* Incident.swift in Sources */,
+				E3AF131825E968E8007A9174 /* UserDefaultsConstants.swift in Sources */,
+				E3AF131925E968E8007A9174 /* UIColor+Helpers.swift in Sources */,
+				E3AF131A25E968E8007A9174 /* SignUpViewController.swift in Sources */,
+				E3AF131B25E968E8007A9174 /* SlideOutMenuCells.swift in Sources */,
+				E3AF131C25E968E8007A9174 /* AppManager.swift in Sources */,
+				E3AF131D25E968E8007A9174 /* UITextView+Helpers.swift in Sources */,
+				E3AF131E25E968E8007A9174 /* AppDelegate.swift in Sources */,
+				E3AF131F25E968E8007A9174 /* APIController+Ads.swift in Sources */,
+				E3AF132025E968E8007A9174 /* Comment.swift in Sources */,
+				E3AF132125E968E8007A9174 /* PioneerMenuController.swift in Sources */,
+				E3AF132225E968E8007A9174 /* Constants.swift in Sources */,
+				E3AF132325E968E8007A9174 /* NotificationManager.swift in Sources */,
+				E3AF132425E968E8007A9174 /* IncidentTableViewCell.swift in Sources */,
+				E3AF132525E968E8007A9174 /* Firehouse.swift in Sources */,
+				E3AF132625E968E8007A9174 /* AdController.swift in Sources */,
+				E3AF132725E968E8007A9174 /* APIController+FileUpload.swift in Sources */,
+				E3AF132825E968E8007A9174 /* SubscribeViewController.swift in Sources */,
+				E3AF132925E968E8007A9174 /* CLImageViewPopup.swift in Sources */,
+				E3AF132A25E968E8007A9174 /* ConfigHelper.swift in Sources */,
+				E3AF132B25E968E8007A9174 /* DashboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AF135E25E96990007A9174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AF135F25E96990007A9174 /* Comment.swift in Sources */,
+				E3AF136025E96990007A9174 /* Location.swift in Sources */,
+				E3AF136125E96990007A9174 /* FWWidgetLarge.swift in Sources */,
+				E3AF136225E96990007A9174 /* APIController.swift in Sources */,
+				E3AF136325E96990007A9174 /* EventView.swift in Sources */,
+				E3AF136425E96990007A9174 /* APIConstants.swift in Sources */,
+				E3AF136525E96990007A9174 /* IncidentView.swift in Sources */,
+				E3AF136625E96990007A9174 /* SimpleUser.swift in Sources */,
+				E3AF136725E96990007A9174 /* APIController+Incidents.swift in Sources */,
+				E3AF136825E96990007A9174 /* UserDefaultsConstants.swift in Sources */,
+				E3AF136925E96990007A9174 /* FWWidgetSmall.swift in Sources */,
+				E3AF136A25E96990007A9174 /* WidgetContent.swift in Sources */,
+				E3AF136B25E96990007A9174 /* Numbers+Helpers.swift in Sources */,
+				E3AF136C25E96990007A9174 /* FWWidgetMedium.swift in Sources */,
+				E3AF136D25E96990007A9174 /* NYCFireWireWidget.intentdefinition in Sources */,
+				E3AF136E25E96990007A9174 /* String+DateFormat.swift in Sources */,
+				E3AF136F25E96990007A9174 /* Constants.swift in Sources */,
+				E3AF137025E96990007A9174 /* APIConstants+Endpoints.swift in Sources */,
+				E3AF137125E96990007A9174 /* Date+String.swift in Sources */,
+				E3AF137225E96990007A9174 /* Incident.swift in Sources */,
+				E3AF137325E96990007A9174 /* NYCFireWireWidget.swift in Sources */,
+				E3AF137425E96990007A9174 /* CustomText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3FC2E5D214ACFF4000166BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1560,6 +1999,11 @@
 			isa = PBXTargetDependency;
 			target = 380972F52540E545003E132D /* NYCFireWireWidgetExtension */;
 			targetProxy = 380973042540E545003E132D /* PBXContainerItemProxy */;
+		};
+		E3AF138F25E96A07007A9174 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3AF135C25E96990007A9174 /* FireWireWidgetExtension */;
+			targetProxy = E3AF138E25E96A07007A9174 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1720,6 +2164,107 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E3AF134E25E968E8007A9174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A225B84B57BD80526BAA2A42 /* Pods-FireWire - Prod.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 010000;
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				INFOPLIST_FILE = "NYCFireWire - Prod copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nycfirewire.firewire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3AF134F25E968E8007A9174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 355C86A0BB68CF496F0C1932 /* Pods-FireWire - Prod.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 010000;
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				INFOPLIST_FILE = "NYCFireWire - Prod copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nycfirewire.firewire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E3AF137D25E96990007A9174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 281EC50C0FDE6974E0C5482B /* Pods-FireWireWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 010000;
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				INFOPLIST_FILE = "NYCFireWireWidgetExtension copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nycfirewire.firewire.NYCFireWireWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3AF137E25E96990007A9174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F744B971ADAD50412E11B788 /* Pods-FireWireWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 010000;
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				INFOPLIST_FILE = "NYCFireWireWidgetExtension copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nycfirewire.firewire.NYCFireWireWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1912,6 +2457,24 @@
 			buildConfigurations = (
 				E37F25952356436F0005F6D7 /* Debug */,
 				E37F25962356436F0005F6D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3AF134D25E968E8007A9174 /* Build configuration list for PBXNativeTarget "FireWire - Prod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AF134E25E968E8007A9174 /* Debug */,
+				E3AF134F25E968E8007A9174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3AF137C25E96990007A9174 /* Build configuration list for PBXNativeTarget "FireWireWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3AF137D25E96990007A9174 /* Debug */,
+				E3AF137E25E96990007A9174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -37,7 +37,7 @@ class SendTipViewController: UIViewController {
             activity.stopAnimating()
             print("Created Tip:")
             if success {
-                self.showBasicAlert(title: "Tip Submitted", message: "Thanks for submitting your tip! The NYC Fire Wire Team will review it ASAP.", dismissed: {
+                self.showBasicAlert(title: "Tip Submitted", message: "Thanks for submitting your tip! The \(ConfigHelper.navigationTitle) Team will review it ASAP.", dismissed: {
                     self.infoTextView.text = ""
                     AppManager.shared.menu?.currentState = .menuExpanded
                     AppManager.shared.menu?.didSelectMenuOption(index: 0)

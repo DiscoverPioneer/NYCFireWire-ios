@@ -12,7 +12,7 @@ class SlideOutMenuHeader: UICollectionViewCell {
     
     let headerLabel : UILabel = {
         let label = UILabel()
-        label.text = "NYC Fire Wire"
+        label.text = ConfigHelper.navigationTitle
 //        label.font = UIFont.mainFontBold(size: 64)
         label.textColor = UIColor.white
         return label

@@ -63,7 +63,7 @@ class DetailsViewController: UIViewController {
     }
     
     @objc func share() {
-        let title = "Check out this incident on NYC Fire Wire"
+        let title = "Check out this incident on \(ConfigHelper.navigationTitle)"
         let baseURL = Constants.constantForKey(key: ConfigKeys.webBaseURI) as! String
         let url = "\(baseURL)/alert-details/id=\(selectedLocation.id)"
 

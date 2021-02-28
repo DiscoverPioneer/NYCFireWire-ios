@@ -13,6 +13,9 @@ let SignUpText = "Don't have an account?\nGet started"
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
@@ -27,6 +30,7 @@ class SignInViewController: UIViewController {
             print("Something went wrong trying to play video")
         }
         
+        setLabels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +39,11 @@ class SignInViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    func setLabels() {
+        titleLabel.text = ConfigHelper.navigationTitle
+        subtitleLabel.text = Constants.stringForKey(key: ConfigKeys.tagLine).returnIfFilled() ?? "New York's Bravest Fire News Network"
     }
     
 }

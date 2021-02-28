@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>apiBaseURI</key>
+	<string>https://nycfirewire.herokuapp.com/api/v1</string>
+	<key>webBaseURI</key>
+	<string>https://nycfirewire.herokuapp.com</string>
+	<key>onesignalAppID</key>
+	<string>8721de76-7494-4ec0-a4c1-a85f0c995cf5</string>
+	<key>liveStreamURI</key>
+	<string>http://108.6.32.103:4035/NYC+Fire.m3u</string>
+	<key>hideAdditionalAds</key>
+	<false/>
+	<key>singleFeed</key>
+	<string>United States</string>
+	<key>navigationTitle</key>
+	<string>Fire Wire</string>
+	<key>tagLine</key>
+	<string>Stay up to date on major incidents across the U.S.</string>
+	<key>availableScannerFeeds</key>
+	<array/>
+</dict>
+</plist>

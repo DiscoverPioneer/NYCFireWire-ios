@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E37F253A2356436F0005F6D7"
-               BuildableName = "NYCFireWire - Staging.app"
-               BlueprintName = "NYCFireWire - Staging"
+               BlueprintIdentifier = "E3AF12E125E968E8007A9174"
+               BuildableName = "FireWire - Prod.app"
+               BlueprintName = "FireWire - Prod"
                ReferencedContainer = "container:NYCFireWire.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E37F253A2356436F0005F6D7"
-            BuildableName = "NYCFireWire - Staging.app"
-            BlueprintName = "NYCFireWire - Staging"
+            BlueprintIdentifier = "E3AF12E125E968E8007A9174"
+            BuildableName = "FireWire - Prod.app"
+            BlueprintName = "FireWire - Prod"
             ReferencedContainer = "container:NYCFireWire.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E37F253A2356436F0005F6D7"
-            BuildableName = "NYCFireWire - Staging.app"
-            BlueprintName = "NYCFireWire - Staging"
+            BlueprintIdentifier = "E3AF12E125E968E8007A9174"
+            BuildableName = "FireWire - Prod.app"
+            BlueprintName = "FireWire - Prod"
             ReferencedContainer = "container:NYCFireWire.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

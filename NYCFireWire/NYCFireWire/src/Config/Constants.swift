@@ -13,6 +13,9 @@ struct ConfigKeys {
     static let onesignalAppID = "onesignalAppID"
     static let liveStreamURI = "liveStreamURI"
     static let hideAdditionalAds = "hideAdditionalAds"
+    static let singleFeed = "singleFeed"
+    static let navigationTitle = "navigationTitle"
+    static let tagLine = "tagLine"
 }
 
 struct Constants {

@@ -9,6 +9,15 @@
 import Foundation
 
 extension String {
+    
+    func returnIfFilled() -> String? {
+        let test = self.replacingOccurrences(of: " ", with: "")
+        if test.isEmpty && test.count < 1 {
+            return nil
+        }
+        return self
+    }
+    
     var numbersInString: String {
         let pattern = UnicodeScalar("0")..."9"
         return String(unicodeScalars

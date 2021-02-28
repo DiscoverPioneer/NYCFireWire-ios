@@ -86,7 +86,7 @@ struct NYCFireWireWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             NYCFireWireWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("NYC Fire Wire")
+        .configurationDisplayName("Fire Wire")
         .description("This is a display of the most recent incidents.")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }

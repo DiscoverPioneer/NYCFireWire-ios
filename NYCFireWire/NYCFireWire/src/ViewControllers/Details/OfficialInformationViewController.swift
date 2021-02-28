@@ -104,7 +104,7 @@ extension OfficialInformationViewController: TimelineViewDelegate {
             let sheet = UIAlertController(title: "Flag User Comment?", message: nil, preferredStyle: .actionSheet)
             sheet.addAction(UIAlertAction(title: "Report user", style: .destructive, handler: { (action) in
                 let message = "I would like to report the comment with id: \(comment.id)\nPosted By: \(comment.createdBy.firstName) \(comment.createdBy.lastName)\nUser ID: \(comment.createdBy.id)\nContent: \(comment.text) \n\nPlease describe why below:\n\n"
-                self.sendEmail(to: "admin@nycfirewire.net", subject: "REPORT: NYC Fire Wire App", message: message)
+                self.sendEmail(to: "admin@nycfirewire.net", subject: "REPORT: \(ConfigHelper.navigationTitle) App", message: message)
             }))
             sheet.addAction(UIAlertAction(title: "Block user", style: .destructive, handler: { (action) in
                 APIController.defaults.blockUser(userID: comment.createdBy.id)

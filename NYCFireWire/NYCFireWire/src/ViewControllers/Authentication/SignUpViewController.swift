@@ -11,7 +11,8 @@ import UIKit
 let SignInText = "Already have an account?\nSign in"
 
 class SignUpViewController: UIViewController {
-    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var formView: UIView!
     @IBOutlet weak var signInButton: UIButton!
     let formVC = MountainClimberController()
@@ -20,6 +21,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setLabels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +30,11 @@ class SignUpViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    func setLabels() {
+        titleLabel.text = ConfigHelper.navigationTitle
+        subtitleLabel.text = Constants.stringForKey(key: ConfigKeys.tagLine).returnIfFilled() ?? "New York's Bravest Fire News Network"
     }
     
 }
@@ -105,7 +112,7 @@ extension SignUpViewController {
         print("Signing Up...")
         if textFieldsAreValid() {
             //here
-            let alert = UIAlertController(title: "Agree to terms and conditions", message: "By signing up for NYC Fire Wire, you agree to the terms and conditions", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Agree to terms and conditions", message: "By signing up for \(ConfigHelper.navigationTitle), you agree to the terms and conditions", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "I agree", style: .default, handler: { (action) in
                 self.completeSignup()
             }))
