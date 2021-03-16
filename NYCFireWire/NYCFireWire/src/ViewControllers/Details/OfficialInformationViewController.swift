@@ -115,8 +115,18 @@ extension OfficialInformationViewController: TimelineViewDelegate {
     }
     
     func linkWasTapped(timelineView: TimelineView, url: URL) {
-        let vc = SFSafariViewController(url: url)
-        navigationController?.present(vc, animated: true, completion: nil)
+        
+        if url.absoluteString.contains("youtu.be"){
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "YoutubeVideoPlayVC") as! YoutubeVideoPlayVC
+            vc.videoUrl = url.absoluteString
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = SFSafariViewController(url: url)
+            navigationController?.present(vc, animated: true, completion: nil)
+        }
+        
+//        let vc = SFSafariViewController(url: url)
+//        navigationController?.present(vc, animated: true, completion: nil)
     }
     
     

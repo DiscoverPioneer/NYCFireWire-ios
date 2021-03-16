@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E9B241A25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
-		1E9B241B25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
-		1E9B241C25D174100019C026 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B241925D174100019C026 /* homescreen.mp4 */; };
+		04131F1C25FA711200AA4DAC /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04131F1B25FA711200AA4DAC /* homescreen.mp4 */; };
+		04131F4425FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
+		04131F4525FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
+		04131F4625FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
+		0440969425FA7FDD000A2449 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440969325FA7FDD000A2449 /* YTPlayerView.m */; };
+		0440969525FA7FDD000A2449 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440969325FA7FDD000A2449 /* YTPlayerView.m */; };
+		0440969625FA7FDD000A2449 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440969325FA7FDD000A2449 /* YTPlayerView.m */; };
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
 		380972F82540E545003E132D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F72540E545003E132D /* WidgetKit.framework */; };
 		380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F92540E545003E132D /* SwiftUI.framework */; };
@@ -380,8 +384,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04131F1B25FA711200AA4DAC /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
+		04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoPlayVC.swift; sourceTree = "<group>"; };
+		0440961125FA79E5000A2449 /* NYCFireWire - Prod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Prod-Bridging-Header.h"; sourceTree = "<group>"; };
+		0440961225FA79E6000A2449 /* NYCFireWire - Local-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Local-Bridging-Header.h"; sourceTree = "<group>"; };
+		0440961325FA79E7000A2449 /* NYCFireWire - Staging-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Staging-Bridging-Header.h"; sourceTree = "<group>"; };
+		0440969225FA7FDA000A2449 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		0440969325FA7FDD000A2449 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
-		1E9B241925D174100019C026 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NYCFireWireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		380972F72540E545003E132D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -667,6 +677,7 @@
 				E309DF80218CBF7700E20F34 /* OfficialInformationViewController.swift */,
 				E309DF81218CBF7700E20F34 /* SegmentedViewController.swift */,
 				E309DF82218CBF7700E20F34 /* DetailsViewController.swift */,
+				04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -726,6 +737,11 @@
 				E309DF8B218CC4E800E20F34 /* Libraries */,
 				E3FC2E70214ACFF5000166BE /* Info.plist */,
 				E3D8C6CF2281CBCA004404AE /* GoogleService-Info.plist */,
+				0440961125FA79E5000A2449 /* NYCFireWire - Prod-Bridging-Header.h */,
+				0440961225FA79E6000A2449 /* NYCFireWire - Local-Bridging-Header.h */,
+				0440961325FA79E7000A2449 /* NYCFireWire - Staging-Bridging-Header.h */,
+				0440969225FA7FDA000A2449 /* YTPlayerView.h */,
+				0440969325FA7FDD000A2449 /* YTPlayerView.m */,
 			);
 			path = NYCFireWire;
 			sourceTree = "<group>";
@@ -784,7 +800,7 @@
 		E3FC2E84214AD069000166BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E9B241925D174100019C026 /* homescreen.mp4 */,
+				04131F1B25FA711200AA4DAC /* homescreen.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -999,6 +1015,7 @@
 						CreatedOnToolsVersion = 12.1;
 					};
 					E309DF112187E55100E20F34 = {
+						LastSwiftMigration = 1220;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1008,9 +1025,12 @@
 							};
 						};
 					};
+					E37F253A2356436F0005F6D7 = {
+						LastSwiftMigration = 1220;
+					};
 					E3FC2E60214ACFF4000166BE = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1220;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1074,7 +1094,6 @@
 				E3075B082221EC6100B24846 /* DivisionTicket.wav in Resources */,
 				E3075B212223147700B24846 /* SpecialUnit.wav in Resources */,
 				E3E1BB5D2246D63800A3FE2A /* servicebell.wav in Resources */,
-				1E9B241B25D174100019C026 /* homescreen.mp4 in Resources */,
 				E309DF422187E55100E20F34 /* LaunchScreen.storyboard in Resources */,
 				E3075B1B2223147700B24846 /* EngineLadderTicket.wav in Resources */,
 				E309DF432187E55100E20F34 /* Local_Config.plist in Resources */,
@@ -1105,7 +1124,7 @@
 				E37F25882356436F0005F6D7 /* SpecialUnit.wav in Resources */,
 				E37F25892356436F0005F6D7 /* servicebell.wav in Resources */,
 				E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */,
-				1E9B241C25D174100019C026 /* homescreen.mp4 in Resources */,
+				04131F1C25FA711200AA4DAC /* homescreen.mp4 in Resources */,
 				E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */,
 				E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */,
 				E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */,
@@ -1131,7 +1150,6 @@
 				E3FC2E9C214AD069000166BE /* Main.storyboard in Resources */,
 				E3075B0B2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0D2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
-				1E9B241A25D174100019C026 /* homescreen.mp4 in Resources */,
 				E3E1BB5C2246D63800A3FE2A /* servicebell.wav in Resources */,
 				E3FC2F26214B5267000166BE /* IncidentTableViewCell.xib in Resources */,
 				E3075B072221EC6100B24846 /* DivisionTicket.wav in Resources */,
@@ -1361,6 +1379,7 @@
 				E33582842194B06E00F6916F /* SettingsViewController.swift in Sources */,
 				E37F259B235F9D780005F6D7 /* Toast.swift in Sources */,
 				E309DF2A2187E55100E20F34 /* UIViewController+Navigation.swift in Sources */,
+				0440969525FA7FDD000A2449 /* YTPlayerView.m in Sources */,
 				E309DF84218CBF7800E20F34 /* ChatViewController.swift in Sources */,
 				E338E3DE224FC3F70043F777 /* IAPHandler.swift in Sources */,
 				E309DF91218CC77E00E20F34 /* TimelineView.swift in Sources */,
@@ -1391,6 +1410,7 @@
 				E37F2539235122540005F6D7 /* CLImageViewPopup.swift in Sources */,
 				E328A9AC23BFC79900914370 /* ConfigHelper.swift in Sources */,
 				E309DF3A2187E55100E20F34 /* DashboardViewController.swift in Sources */,
+				04131F4525FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1414,12 +1434,14 @@
 				E37F25482356436F0005F6D7 /* APIController+Incidents.swift in Sources */,
 				E37F25492356436F0005F6D7 /* APIController+User.swift in Sources */,
 				E37F254A2356436F0005F6D7 /* FileUpdater.swift in Sources */,
+				04131F4625FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */,
 				E37F254B2356436F0005F6D7 /* UIView+Helpers.swift in Sources */,
 				E37F254C2356436F0005F6D7 /* FullUser.swift in Sources */,
 				380973032540E545003E132D /* NYCFireWireWidget.intentdefinition in Sources */,
 				E37F254D2356436F0005F6D7 /* RootViewController.swift in Sources */,
 				E3F511DE25E4C395009CF754 /* APIController+Ads.swift in Sources */,
 				E37F254E2356436F0005F6D7 /* DetailsViewController.swift in Sources */,
+				0440969625FA7FDD000A2449 /* YTPlayerView.m in Sources */,
 				E37F254F2356436F0005F6D7 /* SlideOutMenuHeader.swift in Sources */,
 				E37F25502356436F0005F6D7 /* MenuConfiguration.swift in Sources */,
 				E37F25512356436F0005F6D7 /* APIConstants.swift in Sources */,
@@ -1520,6 +1542,7 @@
 				E33582832194B06E00F6916F /* SettingsViewController.swift in Sources */,
 				E37F259A235F9D780005F6D7 /* Toast.swift in Sources */,
 				E3FC2EA6214AD069000166BE /* UIViewController+Navigation.swift in Sources */,
+				0440969425FA7FDD000A2449 /* YTPlayerView.m in Sources */,
 				E309DF83218CBF7800E20F34 /* ChatViewController.swift in Sources */,
 				E338E3DD224FC3F70043F777 /* IAPHandler.swift in Sources */,
 				E309DF90218CC77E00E20F34 /* TimelineView.swift in Sources */,
@@ -1550,6 +1573,7 @@
 				E37F2538235122540005F6D7 /* CLImageViewPopup.swift in Sources */,
 				E328A9AB23BFC79900914370 /* ConfigHelper.swift in Sources */,
 				E3FC2EAE214AD069000166BE /* DashboardViewController.swift in Sources */,
+				04131F4425FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1590,9 +1614,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 100004;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1605,6 +1629,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1618,9 +1643,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 100004;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1632,6 +1657,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1643,9 +1669,10 @@
 			baseConfigurationReference = 1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "NYCFireWire - Prod copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1654,6 +1681,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireWire/NYCFireWire - Local-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1664,9 +1694,10 @@
 			baseConfigurationReference = 45342BAE967AFB85805E2010 /* Pods-NYCFireWire - Local.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "NYCFireWire - Prod copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1675,6 +1706,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireWire/NYCFireWire - Local-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1686,9 +1719,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1697,6 +1731,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireWire/NYCFireWire - Staging-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1708,9 +1745,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1719,6 +1757,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireWire/NYCFireWire - Staging-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1845,10 +1885,11 @@
 			baseConfigurationReference = 329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 100005;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1858,6 +1899,9 @@
 				MARKETING_VERSION = 10.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireWire/NYCFireWire - Prod-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1868,10 +1912,11 @@
 			baseConfigurationReference = A98694E2FB3C3E9740D4F058 /* Pods-NYCFireWire - Prod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 100005;
-				DEVELOPMENT_TEAM = GZ55QHPVX2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1881,6 +1926,8 @@
 				MARKETING_VERSION = 10.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCFireWire/NYCFireWire - Prod-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

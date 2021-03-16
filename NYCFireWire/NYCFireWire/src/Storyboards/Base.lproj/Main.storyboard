@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3g-7A-uYW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3g-7A-uYW">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -562,7 +561,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCU-1j-EcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2959.1999999999998" y="1749.1754122938532"/>
+            <point key="canvasLocation" x="3010" y="1755"/>
+        </scene>
+        <!--Youtube Video PlayVC-->
+        <scene sceneID="KsC-dh-Pdu">
+            <objects>
+                <viewController storyboardIdentifier="YoutubeVideoPlayVC" id="5y2-jE-D1S" customClass="YoutubeVideoPlayVC" customModule="NYCFireWire___Local" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XNd-6L-jui">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-X7-nrp" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-n4-g1X" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Of-n4-g1X" secondAttribute="height" multiplier="1:1" id="7Yh-Jj-Rzv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZjY-Su-HkM"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qIx-X7-nrp" firstAttribute="top" secondItem="ZjY-Su-HkM" secondAttribute="top" id="Idm-GD-knT"/>
+                            <constraint firstItem="ZjY-Su-HkM" firstAttribute="trailing" secondItem="9Of-n4-g1X" secondAttribute="trailing" id="LJx-Sm-r2R"/>
+                            <constraint firstItem="qIx-X7-nrp" firstAttribute="leading" secondItem="ZjY-Su-HkM" secondAttribute="leading" id="TUD-cp-JK8"/>
+                            <constraint firstItem="ZjY-Su-HkM" firstAttribute="bottom" secondItem="qIx-X7-nrp" secondAttribute="bottom" id="XUl-3y-Qxw"/>
+                            <constraint firstItem="9Of-n4-g1X" firstAttribute="centerX" secondItem="XNd-6L-jui" secondAttribute="centerX" id="qTB-Fl-p8Z"/>
+                            <constraint firstItem="9Of-n4-g1X" firstAttribute="centerY" secondItem="XNd-6L-jui" secondAttribute="centerY" id="raJ-lx-Nfg"/>
+                            <constraint firstItem="ZjY-Su-HkM" firstAttribute="trailing" secondItem="qIx-X7-nrp" secondAttribute="trailing" id="uX8-TN-TFV"/>
+                            <constraint firstItem="9Of-n4-g1X" firstAttribute="leading" secondItem="ZjY-Su-HkM" secondAttribute="leading" id="uzX-7W-dhl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="qIx-X7-nrp" id="F4E-1Y-CHl"/>
+                        <outlet property="youtubePlayerView" destination="9Of-n4-g1X" id="UxZ-Sv-HZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYh-BH-0EF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735" y="1761"/>
         </scene>
         <!--Notification Settings View Controller-->
         <scene sceneID="Jmu-n7-lbx">
@@ -1050,11 +1091,6 @@ CiAgA
             <point key="canvasLocation" x="2445.5999999999999" y="2430.1349325337333"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="L4q-8s-Cvy">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Background" width="375" height="667"/>
         <systemColor name="labelColor">

@@ -87,6 +87,7 @@ PODS:
   - RSSelectionMenu (5.3.2)
   - SwiftVideoBackground (3.4.0)
   - XLPagerTabStrip (9.0.0)
+  - YouTubePlayer (0.7.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -103,6 +104,7 @@ DEPENDENCIES:
   - RSSelectionMenu (~> 5.3.2)
   - SwiftVideoBackground (~> 3.0)
   - XLPagerTabStrip (from `https://github.com/xmartlabs/XLPagerTabStrip`, branch `master`)
+  - YouTubePlayer
 
 SPEC REPOS:
   trunk:
@@ -129,6 +131,7 @@ SPEC REPOS:
     - PromisesObjC
     - RSSelectionMenu
     - SwiftVideoBackground
+    - YouTubePlayer
 
 EXTERNAL SOURCES:
   XLPagerTabStrip:
@@ -165,7 +168,8 @@ SPEC CHECKSUMS:
   RSSelectionMenu: cd8e2d2b87f0ab0cefb22b69cb97eb44923373ed
   SwiftVideoBackground: 826e0567c737ded2a211aa309e9951c643695e8f
   XLPagerTabStrip: 6af5fe7b41c21f371860df6bac2ddf12818c5103
+  YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: 7ba48fced73a9f9ebb5ddea82c8dd4bfcdbdc76a
+PODFILE CHECKSUM: 9287ea1dea790fb2013aead9902c46c17ffd4881
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0

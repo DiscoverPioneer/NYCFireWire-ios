@@ -16,6 +16,8 @@ def shared_pods
     pod 'MerchantKit'
     pod 'Firebase/Core'
     pod 'FacebookCore'
+    pod 'YouTubePlayer'
+#    pod 'youtube-ios-player-helper'
 
 end
 
