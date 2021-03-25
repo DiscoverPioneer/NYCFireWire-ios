@@ -8,7 +8,8 @@
 
 import UIKit
 import YouTubePlayer
-
+import youtube_ios_player_helper
+import NVActivityIndicatorView
 //import YTPlayerView
 
 class YoutubeVideoPlayVC: UIViewController,YTPlayerViewDelegate{
@@ -17,6 +18,8 @@ class YoutubeVideoPlayVC: UIViewController,YTPlayerViewDelegate{
     @IBOutlet weak var youtubePlayerView: YouTubePlayerView!
     
     var videoUrl = String()
+    var activity : NVActivityIndicatorView?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +27,19 @@ class YoutubeVideoPlayVC: UIViewController,YTPlayerViewDelegate{
     }
     
     func initView(){
-//        videoView.delegate = self
-//        videoView.load(withVideoId:"sCbbMZ-q4-I")
-//        videoView.loadVideo(byURL: "https://www.youtube.com/watch?v=sCbbMZ-q4-I", startSeconds: 0)
+        videoView.isHidden = true
+        videoView.delegate = self
+        activity = self.view.showActivity()
+        videoView.load(withVideoId:videoUrl.youtubeID ?? "")
         
-        // Load video from YouTube URL
         let myVideoURL = URL(string: "https://www.youtube.com/watch?v=sCbbMZ-q4-I")
         youtubePlayerView.loadVideoURL(myVideoURL!)
     }
     
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
-        
+        videoView.isHidden = false
+        activity?.stopAnimating()
+        playerView.playVideo()
     }
     
     func playerView(_ playerView: YTPlayerView, receivedError error: YTPlayerError) {

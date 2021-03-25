@@ -571,11 +571,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-X7-nrp" customClass="YTPlayerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-X7-nrp" customClass="YTPlayerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-w5-fM8">
+                                        <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="K9v-YX-HbQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="js3-X9-PfE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UGT-w5-fM8" firstAttribute="centerY" secondItem="qIx-X7-nrp" secondAttribute="centerY" id="QMR-E9-UVJ"/>
+                                    <constraint firstItem="UGT-w5-fM8" firstAttribute="centerX" secondItem="qIx-X7-nrp" secondAttribute="centerX" id="VLV-5g-Cta"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-n4-g1X" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-n4-g1X" customClass="YouTubePlayerView" customModule="YouTubePlayer">
                                 <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -595,6 +609,11 @@
                             <constraint firstItem="ZjY-Su-HkM" firstAttribute="trailing" secondItem="qIx-X7-nrp" secondAttribute="trailing" id="uX8-TN-TFV"/>
                             <constraint firstItem="9Of-n4-g1X" firstAttribute="leading" secondItem="ZjY-Su-HkM" secondAttribute="leading" id="uzX-7W-dhl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9Of-n4-g1X"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="videoView" destination="qIx-X7-nrp" id="F4E-1Y-CHl"/>
@@ -1091,6 +1110,11 @@ CiAgA
             <point key="canvasLocation" x="2445.5999999999999" y="2430.1349325337333"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="L4q-8s-Cvy">
+            <size key="intrinsicContentSize" width="-1" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Background" width="375" height="667"/>
         <systemColor name="labelColor">

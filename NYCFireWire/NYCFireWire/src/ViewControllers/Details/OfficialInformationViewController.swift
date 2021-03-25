@@ -116,7 +116,7 @@ extension OfficialInformationViewController: TimelineViewDelegate {
     
     func linkWasTapped(timelineView: TimelineView, url: URL) {
         
-        if url.absoluteString.contains("youtu.be"){
+        if url.absoluteString.contains("youtu.be") || url.absoluteString.contains("www.youtube.com/watch?"){
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "YoutubeVideoPlayVC") as! YoutubeVideoPlayVC
             vc.videoUrl = url.absoluteString
             self.navigationController?.pushViewController(vc, animated: true)

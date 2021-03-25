@@ -11,9 +11,6 @@
 		04131F4425FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
 		04131F4525FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
 		04131F4625FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
-		0440969425FA7FDD000A2449 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440969325FA7FDD000A2449 /* YTPlayerView.m */; };
-		0440969525FA7FDD000A2449 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440969325FA7FDD000A2449 /* YTPlayerView.m */; };
-		0440969625FA7FDD000A2449 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440969325FA7FDD000A2449 /* YTPlayerView.m */; };
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
 		380972F82540E545003E132D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F72540E545003E132D /* WidgetKit.framework */; };
 		380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F92540E545003E132D /* SwiftUI.framework */; };
@@ -389,8 +386,6 @@
 		0440961125FA79E5000A2449 /* NYCFireWire - Prod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Prod-Bridging-Header.h"; sourceTree = "<group>"; };
 		0440961225FA79E6000A2449 /* NYCFireWire - Local-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Local-Bridging-Header.h"; sourceTree = "<group>"; };
 		0440961325FA79E7000A2449 /* NYCFireWire - Staging-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Staging-Bridging-Header.h"; sourceTree = "<group>"; };
-		0440969225FA7FDA000A2449 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
-		0440969325FA7FDD000A2449 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		1D5FC471209BFB4669110F90 /* Pods-NYCFireWire - Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Local.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Local/Pods-NYCFireWire - Local.debug.xcconfig"; sourceTree = "<group>"; };
 		329664AAD38F29F8CD8601D0 /* Pods-NYCFireWire - Prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCFireWire - Prod.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYCFireWire - Prod/Pods-NYCFireWire - Prod.debug.xcconfig"; sourceTree = "<group>"; };
 		380972F62540E545003E132D /* NYCFireWireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NYCFireWireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -740,8 +735,6 @@
 				0440961125FA79E5000A2449 /* NYCFireWire - Prod-Bridging-Header.h */,
 				0440961225FA79E6000A2449 /* NYCFireWire - Local-Bridging-Header.h */,
 				0440961325FA79E7000A2449 /* NYCFireWire - Staging-Bridging-Header.h */,
-				0440969225FA7FDA000A2449 /* YTPlayerView.h */,
-				0440969325FA7FDD000A2449 /* YTPlayerView.m */,
 			);
 			path = NYCFireWire;
 			sourceTree = "<group>";
@@ -1379,7 +1372,6 @@
 				E33582842194B06E00F6916F /* SettingsViewController.swift in Sources */,
 				E37F259B235F9D780005F6D7 /* Toast.swift in Sources */,
 				E309DF2A2187E55100E20F34 /* UIViewController+Navigation.swift in Sources */,
-				0440969525FA7FDD000A2449 /* YTPlayerView.m in Sources */,
 				E309DF84218CBF7800E20F34 /* ChatViewController.swift in Sources */,
 				E338E3DE224FC3F70043F777 /* IAPHandler.swift in Sources */,
 				E309DF91218CC77E00E20F34 /* TimelineView.swift in Sources */,
@@ -1441,7 +1433,6 @@
 				E37F254D2356436F0005F6D7 /* RootViewController.swift in Sources */,
 				E3F511DE25E4C395009CF754 /* APIController+Ads.swift in Sources */,
 				E37F254E2356436F0005F6D7 /* DetailsViewController.swift in Sources */,
-				0440969625FA7FDD000A2449 /* YTPlayerView.m in Sources */,
 				E37F254F2356436F0005F6D7 /* SlideOutMenuHeader.swift in Sources */,
 				E37F25502356436F0005F6D7 /* MenuConfiguration.swift in Sources */,
 				E37F25512356436F0005F6D7 /* APIConstants.swift in Sources */,
@@ -1542,7 +1533,6 @@
 				E33582832194B06E00F6916F /* SettingsViewController.swift in Sources */,
 				E37F259A235F9D780005F6D7 /* Toast.swift in Sources */,
 				E3FC2EA6214AD069000166BE /* UIViewController+Navigation.swift in Sources */,
-				0440969425FA7FDD000A2449 /* YTPlayerView.m in Sources */,
 				E309DF83218CBF7800E20F34 /* ChatViewController.swift in Sources */,
 				E338E3DD224FC3F70043F777 /* IAPHandler.swift in Sources */,
 				E309DF90218CC77E00E20F34 /* TimelineView.swift in Sources */,
