@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 import GLKit
 import Kingfisher
+import XCDYouTubeKit
+import SDWebImage
 
 protocol TimelineViewDelegate {
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int)
@@ -351,19 +353,80 @@ open class TimelineView: UIView {
         var lastView: UIView = dateLabel
         
         if let text = element.text {
-            let textView = UITextView()
-            textView.backgroundColor = self.backgroundColor
-            textView.text = text
-            textView.delegate = self
-            configureTextView(textView)
-            v.addSubview(textView)
-            v.addConstraints([
-                NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: -30),
-                NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 3),
-                NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+            if (element.text!.contains("www.youtube.com")) || (element.text!.contains("www.youtube.com")){
+                let link = element.text
+                
+                let backgroundViewForImage = UIView()
+                backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
+                backgroundViewForImage.backgroundColor = UIColor.black
+                backgroundViewForImage.layer.cornerRadius = 10
+                backgroundViewForImage.clipsToBounds = true
+                
+                v.addSubview(backgroundViewForImage)
+                v.addConstraints([
+                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 80),
+                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 10),
+                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
+                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
                 ])
-            textView.textAlignment = .natural
-            lastView = textView
+                 
+                
+                let img = UIImageView.init(frame: CGRect.init(x: 8, y: 15, width: 50, height: 50))
+                img.kf.indicatorType = .activity
+                let lable = UILabel.init(frame: CGRect.init(x: 70, y: 15, width: 300, height: 20))
+                lable.text = "YouTube title"
+                lable.font = UIFont.systemFont(ofSize: 13)
+                lable.textColor = UIColor.white
+                
+                let lable1 = UILabel.init(frame: CGRect.init(x: 70, y: 40, width: 300, height: 20))
+                lable1.text = "Link"
+                lable1.font = UIFont.systemFont(ofSize: 13)
+                lable1.textColor = UIColor(red: 110/255, green: 110/255, blue: 110/255, alpha: 1)
+//                lable1.backgroundColor = UIColor.gray
+//
+//                img.backgroundColor = UIColor.blue
+                backgroundViewForImage.addSubview(img)
+                backgroundViewForImage.addSubview(lable)
+                backgroundViewForImage.addSubview(lable1)
+                
+                if let videoID = link?.youtubeID {
+                    XCDYouTubeClient.default().getVideoWithIdentifier(videoID) { (video, error) in
+                        guard video != nil && video?.streamURL != nil else {
+                            return
+                        }
+//                        img.kf.indicatorType = .activity
+                        img.kf.setImage(with: video?.thumbnailURLs?.first)
+                        
+                        img.sd_setImage(with: video?.thumbnailURLs?.first, placeholderImage: UIImage(),options: .refreshCached) { (img, error, sdtype, url) in }
+                        lable.text = video?.title
+                        lable1.text = link
+                        
+                    }
+                }
+                
+                print(self.frame)
+                backgroundViewForImage.isUserInteractionEnabled = true
+                backgroundViewForImage.tag = index
+                backgroundViewForImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TimelineView.viewWasTapped(tapGesture:))))
+                lastView = backgroundViewForImage
+            }else{
+                let textView = UITextView()
+                textView.backgroundColor = self.backgroundColor
+                textView.text = text
+                textView.delegate = self
+                configureTextView(textView)
+                v.addSubview(textView)
+                v.addConstraints([
+                    NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: -30),
+                    NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1.0, constant: 3),
+                    NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+                    ])
+                textView.textAlignment = .natural
+                lastView = textView
+            }
+            
+           
 
         } else {
            
@@ -540,11 +603,62 @@ open class TimelineView: UIView {
             
             lastView = imageView
         } else {
-            v.addConstraint(NSLayoutConstraint(item: lastView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -20))
+//            if (element.text!.contains("www.youtube.com")){
+//                let backgroundViewForImage = UIView()
+//                backgroundViewForImage.translatesAutoresizingMaskIntoConstraints = false
+//                backgroundViewForImage.backgroundColor = UIColor.black
+//                backgroundViewForImage.layer.cornerRadius = 10
+//                v.addSubview(backgroundViewForImage)
+//                v.addConstraints([
+//                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 130),
+//                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 10),
+//                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
+//                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
+//                ])
+//
+//                let imageView = CLImageViewPopup(frame: CGRect(x: 0,y: 0,width: 500,height: 500))
+//
+//
+//
+//                imageView.layer.cornerRadius = 10
+//                imageView.translatesAutoresizingMaskIntoConstraints = false
+//                imageView.contentMode = UIView.ContentMode.scaleAspectFit
+//                v.addSubview(imageView)
+//
+//
+//                imageView.kf.indicatorType = .activity
+////                imageView.kf.setImage(with: imageURL)
+//
+//                let button = UIButton(type: .custom)
+//                button.translatesAutoresizingMaskIntoConstraints = false
+//                button.backgroundColor = UIColor.clear
+//                button.addTargetClosure {
+//                    element.imageTapped?(imageView)
+//                    imageView.popUpImageToFullScreen()
+//                }
+//                v.addSubview(button)
+//
+//                v.addConstraints([
+//                    NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .width, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .height, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .leading, multiplier: 1.0, constant: 0)
+//                ])
+//
+//                v.addConstraints([
+//                    NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .left, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: imageView, attribute: .right, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .right, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .top, multiplier: 1.0, constant: 0),
+//                    NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: backgroundViewForImage, attribute: .bottom, multiplier: 1.0, constant: 0)
+//                ])
+//            }else{
+                v.addConstraint(NSLayoutConstraint(item: lastView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -20))
+//            }
+           
         }
-       
-        
         //draw the bottom line between the bullets
+        
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         line.backgroundColor = lineColor
@@ -577,6 +691,67 @@ open class TimelineView: UIView {
         }
         return nil
     }
+    
+    
+//    func loadYouTubeVideo(videoID: String) {
+//        //self.showSpinner(onView: self.view, withTitle: "Loading...")
+//        XCDYouTubeClient.default().getVideoWithIdentifier(videoID) { (video, error) in
+//            guard video != nil && video?.streamURL != nil else {
+//                ProgressHUD.dismiss()
+//                self.showAlert(withTitle: "Error", message: "video URL not supported for screen cast")
+//                return
+//            }
+//            HttpServerManager.shared.stopServer()
+//
+//          var urlList = [String]()
+////          print(video)
+////          for i in 0..<(video?.streamURLs.count)!{
+////            urlList.append((video?.streamURLs[i]!.absoluteString)!)
+////          }
+//          var dic = Dictionary<AnyHashable,URL>.init()
+//          dic = video!.streamURLs
+////          video?.streamURLs.filter({ (<#Dictionary<AnyHashable, URL>.Element#>) -> Bool in
+////            <#code#>
+////          })
+//          let url = "https://r1---sn-bu2a-nu8s.googlevideo.com/videoplayback%3Fexpire%3D1615809362%26ei%3D8vZOYPPhM8nQz7sPldSz8AU%26ip%3D103.240.76.114%26id%3Do-ALzJU9OsuQNemuQpPYAovrC81ZWPzcl3RrLyuh-TZNO5%26itag%3D137%26aitags%3D133%252C134%252C135%252C136%252C137%252C160%252C242%252C243%252C244%252C247%252C248%252C278%26source%3Dyoutube%26requiressl%3Dyes%26mh%3D3U%26mm%3D31%252C29%26mn%3Dsn-bu2a-nu8s%252Csn-gwpa-cvhy%26ms%3Dau%252Crdu%26mv%3Dm%26mvi%3D1%26pl%3D24%26initcwndbps%3D818750%26vprv%3D1%26mime%3Dvideo%252Fmp4%26ns%3Dh7T8CnliTlWbdik8FoKcU-YF%26gir%3Dyes%26clen%3D316204049%26dur%3D4911.240%26lmt%3D1615379785088963%26mt%3D1615787593%26fvip%3D4%26keepalive%3Dyes%26fexp%3D24001373%252C24007246%26c%3DWEB%26txp%3D5535432%26n%3DF6qW9nQPXfZJ8b%26sparams%3Dexpire%252Cei%252Cip%252Cid%252Caitags%252Csource%252Crequiressl%252Cvprv%252Cmime%252Cns%252Cgir%252Cclen%252Cdur%252Clmt%26lsparams%3Dmh%252Cmm%252Cmn%252Cms%252Cmv%252Cmvi%252Cpl%252Cinitcwndbps%26lsig%3DAG3C_xAwRgIhAKxIP0JAXNsNCbGP1QeGW_10vWQnHx1kvbN8u8mLlxiNAiEAhTrDugYfq7uvhbblMikF-wgRKeB4p9dsM3jvH7JtCJo%253D"
+//
+//          let url1 = NSString(string: url).removingPercentEncoding!
+//           print(url1)
+//          if let url240 = video?.streamURLs[YouTubeVideoQuality.small240], let url360 = video?.streamURLs[YouTubeVideoQuality.medium360], let url720 = video?.streamURLs[YouTubeVideoQuality.hd720]{
+//            if url720.absoluteString.count != 0{
+//              urlList.append(url720.absoluteString)
+//            }
+//            if url360.absoluteString.count != 0{
+//              urlList.append(url360.absoluteString)
+//            }
+//            if url240.absoluteString.count != 0{
+//              urlList.append(url240.absoluteString)
+//            }
+//
+//            let script = "var vids = document.getElementsByTagName('video'); for( var i = 0; i < vids.length; i++ ){vids.item(i).pause()}"
+//            self.browserwebView.evaluateJavaScript(script, completionHandler:nil)
+//
+//            if urlList.count > 0{
+//              ProgressHUD.dismiss()
+//              self.playVideo(videoauthor: video!.author, videotitle: video!.title, videothumimg: video!.thumbnailURLs?.first, videoURL:urlList[0])
+//            }
+//
+//          }
+//
+////            LocalFilesManager.downloadFile(from: video!.streamURL!, completion: { error in
+////                if error == nil  {
+////                  self.playVideo(videoauthor: video!.author, videotitle: video!.title, videothumimg: video!.thumbnailURLs?.first, videoURL:"")
+////                } else {
+////                    ProgressHUD.dismiss()
+////                    self.showAlert(withTitle: "Error", message: error!.localizedDescription)
+////                }
+////            })
+//
+//        }
+//
+//    }
+    
+  
 }
 
 extension TimelineView: UITextViewDelegate {

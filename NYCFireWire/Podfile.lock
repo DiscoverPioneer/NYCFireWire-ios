@@ -85,7 +85,11 @@ PODS:
   - OneSignal (2.15.3)
   - PromisesObjC (1.2.10)
   - RSSelectionMenu (5.3.2)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
   - SwiftVideoBackground (3.4.0)
+  - XCDYouTubeKit (2.15.2)
   - XLPagerTabStrip (9.0.0)
   - youtube-ios-player-helper (1.0.3)
   - YouTubePlayer (0.7.2)
@@ -103,7 +107,9 @@ DEPENDENCIES:
   - OneSignal (< 3.0, >= 2.6.2)
   - RSSelectionMenu
   - RSSelectionMenu (~> 5.3.2)
+  - SDWebImage
   - SwiftVideoBackground (~> 3.0)
+  - XCDYouTubeKit
   - XLPagerTabStrip (from `https://github.com/xmartlabs/XLPagerTabStrip`, branch `master`)
   - youtube-ios-player-helper
   - YouTubePlayer
@@ -132,7 +138,9 @@ SPEC REPOS:
     - OneSignal
     - PromisesObjC
     - RSSelectionMenu
+    - SDWebImage
     - SwiftVideoBackground
+    - XCDYouTubeKit
     - youtube-ios-player-helper
     - YouTubePlayer
 
@@ -169,11 +177,13 @@ SPEC CHECKSUMS:
   OneSignal: d85b81aa313ed8040522b884f556267883d652c2
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   RSSelectionMenu: cd8e2d2b87f0ab0cefb22b69cb97eb44923373ed
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SwiftVideoBackground: 826e0567c737ded2a211aa309e9951c643695e8f
+  XCDYouTubeKit: b120aced3d8638ffb570c5450cddb5a1dac448c7
   XLPagerTabStrip: 6af5fe7b41c21f371860df6bac2ddf12818c5103
   youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: b07abb376190ab5ae954b197f1821163e30fe1e3
+PODFILE CHECKSUM: a2d4706859e6e4f8fa2e556de40a82c5afde28d2
 
 COCOAPODS: 1.10.0

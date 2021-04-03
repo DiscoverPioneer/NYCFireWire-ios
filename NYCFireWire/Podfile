@@ -18,6 +18,9 @@ def shared_pods
     pod 'FacebookCore'
     pod 'YouTubePlayer'
     pod 'youtube-ios-player-helper'
+    
+    pod "XCDYouTubeKit"
+    pod 'SDWebImage'
 
 end
 
