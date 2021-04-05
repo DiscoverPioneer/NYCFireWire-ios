@@ -353,7 +353,7 @@ open class TimelineView: UIView {
         var lastView: UIView = dateLabel
         
         if let text = element.text {
-            if (element.text!.contains("www.youtube.com")) || (element.text!.contains("www.youtube.com")){
+            if (element.text!.contains("youtu.be")) || (element.text!.contains("www.youtube.com")){
                 let link = element.text
                 
                 let backgroundViewForImage = UIView()
@@ -364,10 +364,10 @@ open class TimelineView: UIView {
                 
                 v.addSubview(backgroundViewForImage)
                 v.addConstraints([
-                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: 0),
+                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .trailing, relatedBy: .equal, toItem: dateLabel, attribute: .trailing, multiplier: 1.0, constant: -10),
                     NSLayoutConstraint(item: backgroundViewForImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 80),
                     NSLayoutConstraint(item: backgroundViewForImage, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 10),
-                    NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
+                    //NSLayoutConstraint(item: backgroundViewForImage, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
                     NSLayoutConstraint(item: backgroundViewForImage, attribute: .leading, relatedBy: .equal, toItem: dateLabel, attribute: .leading, multiplier: 1.0, constant: 0)
                 ])
                  
@@ -404,12 +404,30 @@ open class TimelineView: UIView {
                         
                     }
                 }
-                
+                img.isUserInteractionEnabled = false
+                lable.isUserInteractionEnabled = false
+                lable1.isUserInteractionEnabled = false
                 print(self.frame)
                 backgroundViewForImage.isUserInteractionEnabled = true
                 backgroundViewForImage.tag = index
                 backgroundViewForImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TimelineView.viewWasTapped(tapGesture:))))
                 lastView = backgroundViewForImage
+                
+                
+                let textView = UITextView()
+                textView.backgroundColor = self.backgroundColor
+                textView.text = link
+                textView.delegate = self
+                configureTextView(textView)
+                v.addSubview(textView)
+                v.addConstraints([
+                    NSLayoutConstraint(item: textView, attribute: .trailing, relatedBy: .equal, toItem: lastView, attribute: .trailing, multiplier: 1.0, constant: -30),
+                    NSLayoutConstraint(item: textView, attribute: .top, relatedBy: .equal, toItem: lastView, attribute: .bottom, multiplier: 1.0, constant: 3),
+                    NSLayoutConstraint(item: textView, attribute: .bottom, relatedBy: .equal, toItem: v, attribute: .bottom, multiplier: 1.0, constant: -10),
+                    NSLayoutConstraint(item: textView, attribute: .leading, relatedBy: .equal, toItem: lastView, attribute: .leading, multiplier: 1.0, constant: 0)
+                    ])
+                textView.textAlignment = .natural
+                lastView = textView
             }else{
                 let textView = UITextView()
                 textView.backgroundColor = self.backgroundColor
