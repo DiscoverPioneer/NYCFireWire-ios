@@ -212,6 +212,21 @@ extension ChatViewController: TimelineViewDelegate {
     
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int) {
         // replaced byt button for now
+        
+        if let comments = dataSource?.commentsFor(vc: self) {
+            let comment = comments[index]
+            
+            if comment.text.contains("youtu.be") || comment.text.contains("www.youtube.com/watch?") {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "YoutubeVideoPlayVC") as! YoutubeVideoPlayVC
+                vc.videoUrl = comment.text
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                let vc = SFSafariViewController(url: URL.init(string: comment.text)!)
+                navigationController?.present(vc, animated: true, completion: nil)
+            }
+        }
+        
+        
     }
     
 }
