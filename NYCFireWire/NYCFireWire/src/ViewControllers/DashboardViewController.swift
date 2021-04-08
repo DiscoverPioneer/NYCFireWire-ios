@@ -516,7 +516,7 @@ extension DashboardViewController: UITableViewDelegate {
     }
     
     func expandHeader() {
-        self.view.layoutIfNeeded()
+//        self.view.layoutIfNeeded()
         UIView.animate(withDuration: 0.2, animations: {
             self.mapViewHeightConstraint.constant = self.maxHeaderHeight
             self.view.layoutIfNeeded()

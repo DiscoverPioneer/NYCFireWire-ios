@@ -10,9 +10,7 @@
 		04131F4425FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
 		04131F4525FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
 		04131F4625FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
-		1EE2B5D6261F37760002DF02 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1EE2B5D5261F37760002DF02 /* homescreen.mp4 */; };
 		1EE2B5D7261F37760002DF02 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1EE2B5D5261F37760002DF02 /* homescreen.mp4 */; };
-		1EE2B5D8261F37760002DF02 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1EE2B5D5261F37760002DF02 /* homescreen.mp4 */; };
 		299DD08F746B103C767AB023 /* Pods_NYCFireWire___Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50463FB27E0BFFEC6E4A47A1 /* Pods_NYCFireWire___Staging.framework */; };
 		380972F82540E545003E132D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F72540E545003E132D /* WidgetKit.framework */; };
 		380972FA2540E545003E132D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380972F92540E545003E132D /* SwiftUI.framework */; };
@@ -181,9 +179,8 @@
 		E34C1321222A1D2B00383393 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C131F222A1D2B00383393 /* Firehouse.swift */; };
 		E34C1326222A337D00383393 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C1325222A337D00383393 /* AdController.swift */; };
 		E34C1327222A337D00383393 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C1325222A337D00383393 /* AdController.swift */; };
-		E34EDB7D261EA7A8007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
-		E34EDB7E261EA7A8007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
-		E34EDB7F261EA7A8007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
+		E34EDB8D261FB970007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
+		E34EDB96261FBC51007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
 		E37F253523510BDB0005F6D7 /* APIController+FileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */; };
 		E37F253623510BDB0005F6D7 /* APIController+FileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */; };
 		E37F2538235122540005F6D7 /* CLImageViewPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2537235122540005F6D7 /* CLImageViewPopup.swift */; };
@@ -710,6 +707,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E34EDB88261FB924007E81F1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				1EE2B5D5261F37760002DF02 /* homescreen.mp4 */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		E3FC2E58214ACFF3000166BE = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +727,7 @@
 				71A06F37851C544BCD022491 /* Frameworks */,
 				38305B472537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist */,
 				38305B492537AEC50023DDA2 /* NYCFireWire - Local copy-Info.plist */,
+				E34EDB88261FB924007E81F1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -802,14 +808,6 @@
 				38305ABC2537A7920023DDA2 /* AssetConstants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		E3FC2E84214AD069000166BE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1EE2B5D5261F37760002DF02 /* homescreen.mp4 */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		E3FC2E85214AD069000166BE /* Managers */ = {
@@ -1118,6 +1116,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34EDB96261FBC51007E81F1 /* homescreen.mp4 in Resources */,
 				E37F257E2356436F0005F6D7 /* Staging_Config.plist in Resources */,
 				E37F257F2356436F0005F6D7 /* LadderTicket.wav in Resources */,
 				E37F25802356436F0005F6D7 /* MDTRing.wav in Resources */,
@@ -1132,7 +1131,6 @@
 				E37F25882356436F0005F6D7 /* SpecialUnit.wav in Resources */,
 				E37F25892356436F0005F6D7 /* servicebell.wav in Resources */,
 				E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */,
-				1EE2B5D8261F37760002DF02 /* homescreen.mp4 in Resources */,
 				E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */,
 				E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */,
 				E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */,
@@ -1148,6 +1146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34EDB8D261FB970007E81F1 /* homescreen.mp4 in Resources */,
 				38305B482537AEB10023DDA2 /* NYCFireWire - Prod copy-Info.plist in Resources */,
 				E3FC2EA0214AD069000166BE /* Staging_Config.plist in Resources */,
 				E3E438D923FA2D65007CCBA6 /* FormerFirehouseLocations.plist in Resources */,
@@ -1158,7 +1157,6 @@
 				E3FC2E9C214AD069000166BE /* Main.storyboard in Resources */,
 				E3075B0B2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0D2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
-				1EE2B5D6261F37760002DF02 /* homescreen.mp4 in Resources */,
 				E3E1BB5C2246D63800A3FE2A /* servicebell.wav in Resources */,
 				E3FC2F26214B5267000166BE /* IncidentTableViewCell.xib in Resources */,
 				E3075B072221EC6100B24846 /* DivisionTicket.wav in Resources */,
@@ -1731,7 +1729,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1758,7 +1756,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWire - Local copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
