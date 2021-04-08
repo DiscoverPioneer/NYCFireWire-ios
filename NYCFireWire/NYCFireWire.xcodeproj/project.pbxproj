@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04131F1C25FA711200AA4DAC /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04131F1B25FA711200AA4DAC /* homescreen.mp4 */; };
 		04131F4425FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
 		04131F4525FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
 		04131F4625FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */; };
@@ -179,6 +178,9 @@
 		E34C1321222A1D2B00383393 /* Firehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C131F222A1D2B00383393 /* Firehouse.swift */; };
 		E34C1326222A337D00383393 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C1325222A337D00383393 /* AdController.swift */; };
 		E34C1327222A337D00383393 /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34C1325222A337D00383393 /* AdController.swift */; };
+		E34EDB7D261EA7A8007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
+		E34EDB7E261EA7A8007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
+		E34EDB7F261EA7A8007E81F1 /* homescreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */; };
 		E37F253523510BDB0005F6D7 /* APIController+FileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */; };
 		E37F253623510BDB0005F6D7 /* APIController+FileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */; };
 		E37F2538235122540005F6D7 /* CLImageViewPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F2537235122540005F6D7 /* CLImageViewPopup.swift */; };
@@ -381,7 +383,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		04131F1B25FA711200AA4DAC /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		04131F4325FA76BB00AA4DAC /* YoutubeVideoPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoPlayVC.swift; sourceTree = "<group>"; };
 		0440961125FA79E5000A2449 /* NYCFireWire - Prod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Prod-Bridging-Header.h"; sourceTree = "<group>"; };
 		0440961225FA79E6000A2449 /* NYCFireWire - Local-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCFireWire - Local-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -458,6 +459,7 @@
 		E34C131D222A1CCF00383393 /* FirehouseLocations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FirehouseLocations.plist; sourceTree = "<group>"; };
 		E34C131F222A1D2B00383393 /* Firehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firehouse.swift; sourceTree = "<group>"; };
 		E34C1325222A337D00383393 /* AdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
+		E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = homescreen.mp4; sourceTree = "<group>"; };
 		E37F253423510BDB0005F6D7 /* APIController+FileUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIController+FileUpload.swift"; sourceTree = "<group>"; };
 		E37F2537235122540005F6D7 /* CLImageViewPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLImageViewPopup.swift; sourceTree = "<group>"; };
 		E37F25972356436F0005F6D7 /* NYCFireWire - Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYCFireWire - Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -696,6 +698,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		E34EDB7B261EA7A8007E81F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E34EDB7C261EA7A8007E81F1 /* homescreen.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E3FC2E58214ACFF3000166BE = {
 			isa = PBXGroup;
 			children = (
@@ -742,10 +752,10 @@
 		E3FC2E76214AD069000166BE /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E34EDB7B261EA7A8007E81F1 /* Resources */,
 				E3FC2E77214AD069000166BE /* Storyboards */,
 				E3FC2E7C214AD069000166BE /* Config */,
 				E3FC2E81214AD069000166BE /* Constants */,
-				E3FC2E84214AD069000166BE /* Resources */,
 				E3FC2E85214AD069000166BE /* Managers */,
 				E3FC2E87214AD069000166BE /* Models */,
 				E3FC2E88214AD069000166BE /* Extensions */,
@@ -788,14 +798,6 @@
 				38305ABC2537A7920023DDA2 /* AssetConstants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		E3FC2E84214AD069000166BE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				04131F1B25FA711200AA4DAC /* homescreen.mp4 */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		E3FC2E85214AD069000166BE /* Managers */ = {
@@ -1087,6 +1089,7 @@
 				E3075B082221EC6100B24846 /* DivisionTicket.wav in Resources */,
 				E3075B212223147700B24846 /* SpecialUnit.wav in Resources */,
 				E3E1BB5D2246D63800A3FE2A /* servicebell.wav in Resources */,
+				E34EDB7E261EA7A8007E81F1 /* homescreen.mp4 in Resources */,
 				E309DF422187E55100E20F34 /* LaunchScreen.storyboard in Resources */,
 				E3075B1B2223147700B24846 /* EngineLadderTicket.wav in Resources */,
 				E309DF432187E55100E20F34 /* Local_Config.plist in Resources */,
@@ -1117,7 +1120,7 @@
 				E37F25882356436F0005F6D7 /* SpecialUnit.wav in Resources */,
 				E37F25892356436F0005F6D7 /* servicebell.wav in Resources */,
 				E37F258A2356436F0005F6D7 /* LaunchScreen.storyboard in Resources */,
-				04131F1C25FA711200AA4DAC /* homescreen.mp4 in Resources */,
+				E34EDB7F261EA7A8007E81F1 /* homescreen.mp4 in Resources */,
 				E37F258B2356436F0005F6D7 /* EngineLadderTicket.wav in Resources */,
 				E37F258C2356436F0005F6D7 /* Local_Config.plist in Resources */,
 				E37F258E2356436F0005F6D7 /* EngineLadderBatalionTicket.wav in Resources */,
@@ -1143,6 +1146,7 @@
 				E3FC2E9C214AD069000166BE /* Main.storyboard in Resources */,
 				E3075B0B2221EC6100B24846 /* ActingEngineTicket.wav in Resources */,
 				E3075B0D2221EC6100B24846 /* StandbyForMessage.wav in Resources */,
+				E34EDB7D261EA7A8007E81F1 /* homescreen.mp4 in Resources */,
 				E3E1BB5C2246D63800A3FE2A /* servicebell.wav in Resources */,
 				E3FC2F26214B5267000166BE /* IncidentTableViewCell.xib in Resources */,
 				E3075B072221EC6100B24846 /* DivisionTicket.wav in Resources */,
