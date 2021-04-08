@@ -95,7 +95,18 @@ extension OfficialInformationViewController {
 
 extension OfficialInformationViewController: TimelineViewDelegate {
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int) {
-        
+        if let adminComments = dataSource?.adminCommentsFor(vc: self) {
+            let comment = adminComments[index]
+            
+            if comment.text.contains("youtu.be") || comment.text.contains("www.youtube.com/watch?") {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "YoutubeVideoPlayVC") as! YoutubeVideoPlayVC
+                vc.videoUrl = comment.text
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                let vc = SFSafariViewController(url: URL.init(string: comment.text)!)
+                navigationController?.present(vc, animated: true, completion: nil)
+            }
+        }
     }
     
     func moreButtonWasTapped(timelineView: TimelineView, didTapElementAt index: Int) {
