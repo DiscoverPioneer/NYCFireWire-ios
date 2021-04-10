@@ -96,6 +96,10 @@ extension OfficialInformationViewController {
 extension OfficialInformationViewController: TimelineViewDelegate {
     func timelineView(timelineView: TimelineView, didTapElementAt index: Int) {
         if let adminComments = dataSource?.adminCommentsFor(vc: self) {
+            var index = index
+            if let data = dataSource?.dataForOfficialInformation(vc: self), data.units.count > 0 {
+                index = index - 1
+            }
             let comment = adminComments[index]
             
             if comment.text.contains("youtu.be") || comment.text.contains("www.youtube.com/watch?") {
