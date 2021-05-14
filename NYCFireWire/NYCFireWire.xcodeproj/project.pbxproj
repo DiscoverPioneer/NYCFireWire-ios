@@ -1620,7 +1620,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 100004;
+				CURRENT_PROJECT_VERSION = 100006;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1629,7 +1629,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 10.0.4;
+				MARKETING_VERSION = 10.0.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
@@ -1650,7 +1650,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Local.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 100004;
+				CURRENT_PROJECT_VERSION = 100006;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = "NYCFireWireWidget/Widget - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1659,7 +1659,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 10.0.4;
+				MARKETING_VERSION = 10.0.6;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684.NYCFireWireWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1897,7 +1897,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 100005;
+				CURRENT_PROJECT_VERSION = 100006;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
@@ -1905,7 +1905,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 10.0.5;
+				MARKETING_VERSION = 10.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1925,7 +1925,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NYCFireWire - Prod.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 100005;
+				CURRENT_PROJECT_VERSION = 100006;
 				DEVELOPMENT_TEAM = GZ55QHPVX2;
 				INFOPLIST_FILE = NYCFireWire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
@@ -1933,7 +1933,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 10.0.5;
+				MARKETING_VERSION = 10.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kbf.app13822684;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

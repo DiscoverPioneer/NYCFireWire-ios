@@ -11,6 +11,10 @@ import Foundation
 extension APIController {
     func getAd(completion: @escaping (_ user: Ad?) -> Void) {
         let url = "https://pioneerapplications.com/AppResources/nycfirewire/ads.json"
+        if let myURL = URL(string: url) {
+            URLCache.shared.removeCachedResponse(for: URLRequest(url: myURL))
+        }
+
         makeRequest(type: .get, url: url, parameters: nil) { (success, error, data) in
             if let data = data, let ad = Ad(json: data) {
                 completion(ad)
